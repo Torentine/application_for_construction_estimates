@@ -213,7 +213,7 @@ def run_tests(sections: Dict) -> None:
 
 
 if __name__ == "__main__":
-    xml_file_path = "376-УКС_С Раздел ПД № 11 02-01-02 АР.xml"
+    xml_file_path = "02-01-01 КР_изм1 !.xml"
     sections = extract_sections_works_units_prices_and_materials(xml_file_path)
 
     print("Полная структура сметы с ценами:")
