@@ -110,7 +110,7 @@ class SmetaProcessor:
             return False
 
     def process_xml_estimate(self, xml_path, estimate_id):
-        """Обработка XML сметы с использованием функционала из xml_start.py"""
+        """Обработка XML сметы"""
         try:
             print("\nЗагружаем и анализируем смету...")
 
@@ -139,8 +139,8 @@ class SmetaProcessor:
             return False, 0
 
     def process_local_estimate(self, estimate_info):
-        """Обрабатываем одну локальную смету с поддержкой разных форматов"""
-        estimate_id, local_name, object_estimate_name, object_name, _ = estimate_info
+        """Обрабатываем одну локальную смету"""
+        estimate_id = estimate_info[0]
 
         while True:
             self.display_estimate_info(estimate_info)
@@ -149,74 +149,86 @@ class SmetaProcessor:
             if file_path.lower() == 'q':
                 return False
 
-            if not self.validate_file_path(file_path):
+            if not file_path:
+                print("Ошибка: Путь к файлу не может быть пустым!")
+                continue
+
+            if not os.path.isfile(file_path):
+                print("Ошибка: Файл не найден")
                 continue
 
             file_type = identify_file_type(file_path)
             print(f"Определен тип файла: {file_type}")
 
             try:
-                processor_map = {
-                    "XML": self.process_xml_estimate,
-                    "XLSX": self.process_xlsx_estimate,
-                    "XLS": self.process_xls_estimate,
-                    "GGE": self.process_gge_estimate
-                }
-
-                if file_type in processor_map:
-                    if file_type == "XML":
-                        success, total_cost = processor_map[file_type](file_path, estimate_id)
-                    else:
-                        success, total_cost = processor_map[file_type](file_path, estimate_id)
-
+                if file_type == "XML":
+                    success, total_cost = self.process_xml_estimate(file_path, estimate_id)
                     if success:
                         self.update_estimate_price(estimate_id, total_cost)
-                        print(f"\n{file_type} смета успешно обработана! Стоимость: {total_cost:.2f} руб.")
                         return True
+                elif file_type in ["XLSX", "XLS", "GGE"]:
+                    print(f"\nОбработка {file_type} формата для локальных смет находится в разработке")
+                    print("Пожалуйста, используйте XML формат или дождитесь обновления")
                 else:
-                    print(f"\nФормат {file_type} не поддерживается")
-                    print("Доступные форматы: XML, XLSX, XLS, GGE")
+                    print(f"\nФормат {file_type} не поддерживается для локальных смет")
+                    print("Поддерживаемые форматы: XML, XLSX, XLS, GGE")
 
             except Exception as e:
                 print(f"\nОшибка обработки: {str(e)}")
 
-            if not self.ask_retry():
+            choice = input("\nПопробовать другой файл? (y/n): ").lower()
+            if choice != 'y':
                 return False
 
-    def validate_file_path(self, file_path):
-        """Проверяет валидность пути к файлу"""
-        if not file_path:
-            print("Ошибка: Путь к файлу не может быть пустым!")
-            return False
 
-        if not os.path.isfile(file_path):
-            print("Ошибка: Файл не найден")
-            return False
+def process_object_smetas(processor):
+    """Обрабатываем объектные сметы, пока пользователь не введет 'нет'"""
+    print("\n" + "=" * 60)
+    print("ЗАГРУЗКА ОБЪЕКТНЫХ СМЕТ".center(60))
+    print("=" * 60)
 
-        return True
+    while True:
+        obj_smeta_path = input("\nВведите путь к объектной смете (или 'нет' для завершения): ").strip()
 
-    def ask_retry(self):
-        """Спрашивает о повторной попытке"""
-        choice = input("\nПопробовать другой файл? (y/n): ").lower()
-        return choice == 'y'
+        if obj_smeta_path.lower() == 'нет':
+            break
 
-    def process_xlsx_estimate(self, file_path, estimate_id):
-        """Заглушка для обработки XLSX формата"""
-        print("\nОбработка XLSX формата для локальных смет находится в разработке")
-        print("Пожалуйста, используйте XML формат или дождитесь обновления")
-        return False, 0
+        if not obj_smeta_path:
+            print("Ошибка: Путь не может быть пустым!")
+            continue
 
-    def process_xls_estimate(self, file_path, estimate_id):
-        """Заглушка для обработки XLS формата"""
-        print("\nОбработка XLS (Excel 97-2003) формата для локальных смет находится в разработке")
-        print("Рекомендуется конвертировать в XLSX или XML формат")
-        return False, 0
+        if not os.path.isfile(obj_smeta_path):
+            print("Ошибка: Файл не найден!")
+            continue
 
-    def process_gge_estimate(self, file_path, estimate_id):
-        """Заглушка для обработки GGE формата"""
-        print("\nОбработка GGE формата для локальных смет находится в разработке")
-        print("Пожалуйста, используйте XML формат или дождитесь обновления")
-        return False, 0
+        if processor.process_object_smeta(obj_smeta_path):
+            print("\nОбъектная смета успешно обработана!")
+        else:
+            print("\nОшибка обработки объектной сметы")
+
+
+def process_local_smetas(processor):
+    """Обрабатываем локальные сметы"""
+    print("\n" + "=" * 60)
+    print("ОБРАБОТКА ЛОКАЛЬНЫХ СМЕТ".center(60))
+    print("=" * 60)
+
+    estimates = processor.get_unprocessed_local_estimates()
+    if not estimates:
+        print("\nВсе локальные сметы уже обработаны (нет записей с NULL в цене)")
+        return
+
+    print(f"\nНайдено {len(estimates)} необработанных локальных смет:")
+    for idx, (id, name, _, _, _) in enumerate(estimates, 1):
+        print(f"{idx}. {name} (ID: {id})")
+
+    for estimate in estimates:
+        if not processor.process_local_estimate(estimate):
+            break
+
+        choice = input("\nОбработать следующую смету? (y/n): ").lower()
+        if choice != 'y':
+            break
 
 
 def main():
@@ -225,35 +237,11 @@ def main():
     print("=" * 60)
 
     with SmetaProcessor() as processor:
-        # Шаг 1: Обработка объектной сметы
-        obj_smeta_path = input("\nВведите путь к объектной смете (Enter для пропуска): ").strip()
-        if obj_smeta_path and os.path.isfile(obj_smeta_path):
-            if processor.process_object_smeta(obj_smeta_path):
-                print("\nОбъектная смета успешно обработана!")
-            else:
-                print("\nОшибка обработки объектной сметы")
+        # Этап 1: Загрузка объектных смет
+        process_object_smetas(processor)
 
-        # Шаг 2: Обработка локальных смет
-        print("\n" + "=" * 60)
-        print("ОБРАБОТКА ЛОКАЛЬНЫХ СМЕТ".center(60))
-        print("=" * 60)
-
-        estimates = processor.get_unprocessed_local_estimates()
-        if not estimates:
-            print("\nВсе локальные сметы уже обработаны (нет записей с NULL в цене)")
-            return
-
-        print(f"\nНайдено {len(estimates)} необработанных локальных смет:")
-        for idx, (id, name, _, _, _) in enumerate(estimates, 1):
-            print(f"{idx}. {name} (ID: {id})")
-
-        for estimate in estimates:
-            if not processor.process_local_estimate(estimate):
-                break
-
-            choice = input("\nОбработать следующую смету? (y/n): ").lower()
-            if choice != 'y':
-                break
+        # Этап 2: Обработка локальных смет
+        process_local_smetas(processor)
 
     print("\n" + "=" * 60)
     print("РАБОТА ПРОГРАММЫ ЗАВЕРШЕНА".center(60))
