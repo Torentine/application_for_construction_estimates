@@ -1,9 +1,12 @@
 import os
+import tkinter as tk
+from tkinter import ttk, filedialog, messagebox
+from tkinterdnd2 import TkinterDnD, DND_FILES
 import psycopg2
 from psycopg2 import sql
 from parsing_object_smeta import parse_and_save_smeta
 from type_opr import identify_file_type
-from parsing_xml_db import parse_xml_estimate, print_estimate_structure, run_tests
+from parsing_xml_db import parse_xml_estimate
 
 # Конфигурация подключения к БД
 DB_CONFIG = {
@@ -13,6 +16,205 @@ DB_CONFIG = {
     "host": "localhost",
     "port": "5432"
 }
+
+
+class DragDropWidget(tk.Label):
+    def __init__(self, master, **kwargs):
+        super().__init__(master, **kwargs)
+        self.file_path = None
+        self.configure(
+            text="Перетащите файл сюда или нажмите для выбора",
+            relief="solid",
+            padx=20,
+            pady=20,
+            background="#f0f0f0"
+        )
+        self.setup_dnd()
+
+    def setup_dnd(self):
+        # Настройка обработчиков событий
+        self.bind("<Button-1>", self.select_file)
+        self.drop_target_register(DND_FILES)
+        self.dnd_bind('<<Drop>>', self.on_drop)
+
+    def select_file(self, event=None):
+        file_path = filedialog.askopenfilename()
+        if file_path:
+            self.set_file(file_path)
+
+    def on_drop(self, event):
+        # Обработка перетаскивания файла
+        file_path = event.data.strip()
+        if file_path.startswith('{') and file_path.endswith('}'):
+            file_path = file_path[1:-1]  # Удаляем фигурные скобки для Windows
+        if os.path.exists(file_path):
+            self.set_file(file_path)
+        else:
+            messagebox.showerror("Ошибка", "Файл не найден")
+
+    def set_file(self, file_path):
+        self.file_path = file_path
+        self.config(
+            text=f"Выбран файл:\n{os.path.basename(file_path)}",
+            background="#e0f0e0"
+        )
+
+    def get_file(self):
+        return self.file_path
+
+
+class SmetaApp(TkinterDnD.Tk):
+    def __init__(self):
+        super().__init__()
+        self.title("Обработчик строительных смет")
+        self.geometry("800x600")
+        self.current_estimate_id = None
+
+        # Инициализируем процессор
+        self.processor = SmetaProcessor()
+        self.setup_ui()
+
+    def setup_ui(self):
+        # Создаем вкладки
+        self.notebook = ttk.Notebook(self)
+        self.notebook.pack(fill=tk.BOTH, expand=True)
+
+        # Вкладка для объектных смет
+        self.object_tab = ttk.Frame(self.notebook)
+        self.notebook.add(self.object_tab, text="Объектные сметы")
+        self.setup_object_tab()
+
+        # Вкладка для локальных смет
+        self.local_tab = ttk.Frame(self.notebook)
+        self.notebook.add(self.local_tab, text="Локальные сметы")
+        self.setup_local_tab()
+
+    def setup_object_tab(self):
+        # Виджет для перетаскивания файлов
+        self.object_drop = DragDropWidget(self.object_tab)
+        self.object_drop.pack(fill=tk.BOTH, expand=True, padx=20, pady=20)
+
+        # Кнопка обработки
+        self.process_object_btn = ttk.Button(
+            self.object_tab,
+            text="Обработать объектную смету",
+            command=self.process_object_smeta
+        )
+        self.process_object_btn.pack(pady=10)
+
+        # Лог операций
+        self.object_log = tk.Text(self.object_tab, height=10, state="disabled")
+        self.object_log.pack(fill=tk.BOTH, expand=True, padx=20, pady=10)
+
+    def setup_local_tab(self):
+        # Виджет для перетаскивания файлов
+        self.local_drop = DragDropWidget(self.local_tab)
+        self.local_drop.pack(fill=tk.BOTH, expand=True, padx=20, pady=20)
+
+        # Кнопка обработки
+        self.process_local_btn = ttk.Button(
+            self.local_tab,
+            text="Обработать локальную смету",
+            command=self.process_local_smeta
+        )
+        self.process_local_btn.pack(pady=10)
+
+        # Список необработанных смет
+        self.local_listbox = tk.Listbox(self.local_tab, height=10)
+        self.local_listbox.pack(fill=tk.BOTH, expand=True, padx=20, pady=10)
+
+        # Лог операций
+        self.local_log = tk.Text(self.local_tab, height=10, state="disabled")
+        self.local_log.pack(fill=tk.BOTH, expand=True, padx=20, pady=10)
+
+        # Обновляем список смет
+        self.update_local_estimates_list()
+
+    def log_message(self, widget, message):
+        widget.config(state="normal")
+        widget.insert("end", message + "\n")
+        widget.see("end")
+        widget.config(state="disabled")
+
+    def process_object_smeta(self):
+        file_path = self.object_drop.get_file()
+        if not file_path:
+            messagebox.showerror("Ошибка", "Файл не выбран")
+            return
+
+        try:
+            self.log_message(self.object_log, f"Обработка файла: {file_path}")
+            with self.processor as p:
+                success = p.process_object_smeta(file_path)
+
+            if success:
+                self.log_message(self.object_log, "Объектная смета успешно обработана!")
+                self.update_local_estimates_list()
+                self.notebook.select(self.local_tab)
+            else:
+                self.log_message(self.object_log, "Ошибка обработки объектной сметы")
+
+        except Exception as e:
+            self.log_message(self.object_log, f"Ошибка: {str(e)}")
+            messagebox.showerror("Ошибка", str(e))
+
+    def process_local_smeta(self):
+        if not self.current_estimate_id:
+            messagebox.showerror("Ошибка", "Сначала выберите смету из списка")
+            return
+
+        file_path = self.local_drop.get_file()
+        if not file_path:
+            messagebox.showerror("Ошибка", "Файл не выбран")
+            return
+
+        try:
+            self.log_message(self.local_log, f"Обработка файла: {file_path}")
+            with self.processor as p:
+                success, total_cost = p.process_xml_estimate(file_path, self.current_estimate_id)
+
+            if success:
+                self.log_message(self.local_log,
+                                 f"Локальная смета успешно обработана! Стоимость: {total_cost:.2f} руб.")
+                with self.processor as p:
+                    p.update_estimate_price(self.current_estimate_id, total_cost)
+                self.update_local_estimates_list()
+            else:
+                self.log_message(self.local_log, "Ошибка обработки локальной сметы")
+
+        except Exception as e:
+            self.log_message(self.local_log, f"Ошибка: {str(e)}")
+            messagebox.showerror("Ошибка", str(e))
+
+    def update_local_estimates_list(self):
+        self.local_listbox.delete(0, tk.END)
+        try:
+            with self.processor as p:
+                estimates = p.get_unprocessed_local_estimates()
+
+            if not estimates:
+                self.local_listbox.insert(tk.END, "Нет необработанных локальных смет")
+                return
+
+            for idx, (id, name, _, _, _) in enumerate(estimates, 1):
+                self.local_listbox.insert(tk.END, f"{idx}. {name} (ID: {id})")
+
+            self.local_listbox.bind("<<ListboxSelect>>", self.on_estimate_select)
+        except Exception as e:
+            messagebox.showerror("Ошибка", f"Не удалось загрузить список смет: {str(e)}")
+
+    def on_estimate_select(self, event):
+        selection = event.widget.curselection()
+        if selection:
+            index = selection[0]
+            try:
+                with self.processor as p:
+                    estimates = p.get_unprocessed_local_estimates()
+                if estimates and index < len(estimates):
+                    self.current_estimate_id = estimates[index][0]
+                    self.log_message(self.local_log, f"Выбрана смета ID: {self.current_estimate_id}")
+            except Exception as e:
+                messagebox.showerror("Ошибка", f"Не удалось выбрать смету: {str(e)}")
 
 
 class SmetaProcessor:
@@ -26,19 +228,20 @@ class SmetaProcessor:
     def __exit__(self, exc_type, exc_val, exc_tb):
         if self.conn:
             self.conn.close()
+        if exc_val:
+            print(f"Ошибка в SmetaProcessor: {exc_val}")
 
     def get_db_connection(self):
         """Устанавливает соединение с PostgreSQL"""
         try:
             return psycopg2.connect(**DB_CONFIG)
         except psycopg2.Error as e:
-            print(f"Ошибка подключения к базе данных: {e}")
-            return None
+            raise Exception(f"Ошибка подключения к базе данных: {e}")
 
     def get_unprocessed_local_estimates(self):
         """Получаем список необработанных локальных смет (где price IS NULL)"""
         if not self.conn:
-            return []
+            raise Exception("Нет подключения к базе данных")
 
         try:
             with self.conn.cursor() as cursor:
@@ -58,13 +261,12 @@ class SmetaProcessor:
                 cursor.execute(query)
                 return cursor.fetchall()
         except psycopg2.Error as e:
-            print(f"Ошибка при получении списка смет: {e}")
-            return []
+            raise Exception(f"Ошибка при получении списка смет: {e}")
 
     def update_estimate_price(self, estimate_id, price):
         """Обновляем цену локальной сметы"""
         if not self.conn:
-            return False
+            raise Exception("Нет подключения к базе данных")
 
         try:
             with self.conn.cursor() as cursor:
@@ -75,27 +277,13 @@ class SmetaProcessor:
                 self.conn.commit()
                 return True
         except psycopg2.Error as e:
-            print(f"Ошибка при обновлении сметы: {e}")
             self.conn.rollback()
-            return False
-
-    def display_estimate_info(self, estimate_info):
-        """Выводим информацию о смете"""
-        estimate_id, local_name, object_estimate_name, object_name, _ = estimate_info
-        header = f" Локальная смета ID: {estimate_id} "
-        print("\n" + "=" * len(header))
-        print(header)
-        print("=" * len(header))
-        print(f"Объект: {object_name}")
-        print(f"Объектная смета: {object_estimate_name}")
-        print(f"Локальная смета: {local_name}")
-        print("=" * len(header))
+            raise Exception(f"Ошибка при обновлении сметы: {e}")
 
     def process_object_smeta(self, file_path):
         """Обрабатываем объектную смету"""
         if not file_path:
-            print("Объектная смета не указана, пропускаем...")
-            return False
+            raise Exception("Объектная смета не указана")
 
         file_type = identify_file_type(file_path)
         print(f"Тип файла объектной сметы: {file_type}")
@@ -106,147 +294,21 @@ class SmetaProcessor:
             print(f"Обработка формата {file_type} для объектной сметы пока в разработке")
             return False
         else:
-            print(f"Формат {file_type} не поддерживается для объектной сметы")
-            return False
+            raise Exception(f"Формат {file_type} не поддерживается для объектной сметы")
 
     def process_xml_estimate(self, xml_path, estimate_id):
         """Обработка XML сметы"""
         try:
-            print("\nЗагружаем и анализируем смету...")
-
             estimate_data = parse_xml_estimate(
                 xml_file_path=xml_path,
                 db_params=DB_CONFIG,
                 estimate_id=estimate_id
             )
-
-            # Выводим результаты
-            print("\n" + "=" * 50)
-            print("РЕЗУЛЬТАТЫ ОБРАБОТКИ".center(50))
-            print("=" * 50)
-
-            print_estimate_structure(estimate_data)
-            run_tests(estimate_data)
-
-            print("\n" + "=" * 50)
-            print(f"Локальная смета успешно обработана!".center(50))
-            print(f"Общая стоимость: {estimate_data['total_cost']:.2f} руб.".center(50))
-            print("=" * 50)
-
             return True, estimate_data['total_cost']
         except Exception as e:
-            print(f"\nОшибка обработки: {str(e)}")
-            return False, 0
-
-    def process_local_estimate(self, estimate_info):
-        """Обрабатываем одну локальную смету"""
-        estimate_id = estimate_info[0]
-
-        while True:
-            self.display_estimate_info(estimate_info)
-            file_path = input("\nВведите путь к файлу сметы (XML/XLS/XLSX/GGE) или 'q' для выхода: ").strip()
-
-            if file_path.lower() == 'q':
-                return False
-
-            if not file_path:
-                print("Ошибка: Путь к файлу не может быть пустым!")
-                continue
-
-            if not os.path.isfile(file_path):
-                print("Ошибка: Файл не найден")
-                continue
-
-            file_type = identify_file_type(file_path)
-            print(f"Определен тип файла: {file_type}")
-
-            try:
-                if file_type == "XML":
-                    success, total_cost = self.process_xml_estimate(file_path, estimate_id)
-                    if success:
-                        self.update_estimate_price(estimate_id, total_cost)
-                        return True
-                elif file_type in ["XLSX", "XLS", "GGE"]:
-                    print(f"\nОбработка {file_type} формата для локальных смет находится в разработке")
-                    print("Пожалуйста, используйте XML формат или дождитесь обновления")
-                else:
-                    print(f"\nФормат {file_type} не поддерживается для локальных смет")
-                    print("Поддерживаемые форматы: XML, XLSX, XLS, GGE")
-
-            except Exception as e:
-                print(f"\nОшибка обработки: {str(e)}")
-
-            choice = input("\nПопробовать другой файл? (y/n): ").lower()
-            if choice != 'y':
-                return False
-
-
-def process_object_smetas(processor):
-    """Обрабатываем объектные сметы, пока пользователь не введет 'нет'"""
-    print("\n" + "=" * 60)
-    print("ЗАГРУЗКА ОБЪЕКТНЫХ СМЕТ".center(60))
-    print("=" * 60)
-
-    while True:
-        obj_smeta_path = input("\nВведите путь к объектной смете (или 'нет' для завершения): ").strip()
-
-        if obj_smeta_path.lower() == 'нет':
-            break
-
-        if not obj_smeta_path:
-            print("Ошибка: Путь не может быть пустым!")
-            continue
-
-        if not os.path.isfile(obj_smeta_path):
-            print("Ошибка: Файл не найден!")
-            continue
-
-        if processor.process_object_smeta(obj_smeta_path):
-            print("\nОбъектная смета успешно обработана!")
-        else:
-            print("\nОшибка обработки объектной сметы")
-
-
-def process_local_smetas(processor):
-    """Обрабатываем локальные сметы"""
-    print("\n" + "=" * 60)
-    print("ОБРАБОТКА ЛОКАЛЬНЫХ СМЕТ".center(60))
-    print("=" * 60)
-
-    estimates = processor.get_unprocessed_local_estimates()
-    if not estimates:
-        print("\nВсе локальные сметы уже обработаны (нет записей с NULL в цене)")
-        return
-
-    print(f"\nНайдено {len(estimates)} необработанных локальных смет:")
-    for idx, (id, name, _, _, _) in enumerate(estimates, 1):
-        print(f"{idx}. {name} (ID: {id})")
-
-    for estimate in estimates:
-        if not processor.process_local_estimate(estimate):
-            break
-
-        choice = input("\nОбработать следующую смету? (y/n): ").lower()
-        if choice != 'y':
-            break
-
-
-def main():
-    print("\n" + "=" * 60)
-    print("КОМПЛЕКСНАЯ СИСТЕМА ОБРАБОТКИ СМЕТ".center(60))
-    print("=" * 60)
-
-    with SmetaProcessor() as processor:
-        # Этап 1: Загрузка объектных смет
-        process_object_smetas(processor)
-
-        # Этап 2: Обработка локальных смет
-        process_local_smetas(processor)
-
-    print("\n" + "=" * 60)
-    print("РАБОТА ПРОГРАММЫ ЗАВЕРШЕНА".center(60))
-    print("=" * 60)
+            raise Exception(f"Ошибка обработки XML: {str(e)}")
 
 
 if __name__ == "__main__":
-    main()
+    app = SmetaApp()
+    app.mainloop()
