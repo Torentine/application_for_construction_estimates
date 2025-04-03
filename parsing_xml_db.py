@@ -3,6 +3,11 @@ import psycopg2
 from typing import Dict, List
 from psycopg2 import sql
 
+import xml.etree.ElementTree as ET
+import psycopg2
+from typing import Dict, List
+from psycopg2 import sql
+
 
 class EstimateDBHandler:
     def __init__(self, db_params):
@@ -94,11 +99,22 @@ def parse_xml_estimate(xml_file_path: str, db_params: Dict, estimate_id: int) ->
                 position_data = {
                     'caption': elem.get('Caption'),
                     'units': elem.get('Units', ''),
-                    'code': elem.get('Code', '')
+                    'code': elem.get('Code', ''),
+                    'code_type': None  # Определяем тип кода, но не сохраняем в БД
                 }
 
-                # Обработка работ (ФЕР)
+                # Определяем тип кода (ФЕР/ТЕР/ФССЦ/ТССЦ) только для внутренней обработки
                 if position_data['code'].startswith('ФЕР'):
+                    position_data['code_type'] = 'ФЕР'
+                elif position_data['code'].startswith('ТЕР'):
+                    position_data['code_type'] = 'ТЕР'
+                elif position_data['code'].startswith('ФССЦ'):
+                    position_data['code_type'] = 'ФССЦ'
+                elif position_data['code'].startswith('ТССЦ'):
+                    position_data['code_type'] = 'ТССЦ'
+
+                # Обработка работ (ФЕР или ТЕР)
+                if position_data['code_type'] in ('ФЕР', 'ТЕР'):
                     price_base = elem.find('.//PriceBase')
                     if price_base is not None:
                         price = sum(
@@ -111,10 +127,17 @@ def parse_xml_estimate(xml_file_path: str, db_params: Dict, estimate_id: int) ->
                     if current_section and current_section_id:
                         position_data['materials'] = []
                         result[current_section].append(position_data)
-                        current_work_id = db_handler.save_work(current_section_id, position_data)
 
-                # Обработка материалов (ФССЦ)
-                elif position_data['code'].startswith('ФССЦ') and current_work_id:
+                        # Создаем копию данных для сохранения в БД без code_type
+                        work_db_data = {
+                            'caption': position_data['caption'],
+                            'price': position_data['price'],
+                            'units': position_data['units']
+                        }
+                        current_work_id = db_handler.save_work(current_section_id, work_db_data)
+
+                # Обработка материалов (ФССЦ или ТССЦ)
+                elif position_data['code_type'] in ('ФССЦ', 'ТССЦ') and current_work_id:
                     price_base = elem.find('.//PriceBase')
                     material_price = 0.0
                     if price_base is not None:
@@ -131,7 +154,7 @@ def parse_xml_estimate(xml_file_path: str, db_params: Dict, estimate_id: int) ->
                     if 'materials' in result[current_section][-1]:
                         result[current_section][-1]['materials'].append(material)
 
-                    # Сохраняем материал в БД
+                    # Сохраняем материал в БД (без code_type)
                     db_handler.save_material(current_work_id, material)
 
         # Обновляем общую стоимость
@@ -179,7 +202,9 @@ def run_tests(sections: Dict) -> None:
     if '_stats' not in sections:
         stats = {
             'total_fer': 0,
+            'total_ter': 0,
             'total_fssc': 0,
+            'total_tssc': 0,
             'total_chapters': 0,
             'unique_units': set(),
             'calculated_total_from_prices': 0.0
@@ -194,19 +219,26 @@ def run_tests(sections: Dict) -> None:
 
             for work in works:
                 if isinstance(work, dict):
-                    stats['total_fer'] += 1
+                    if work.get('code_type') == 'ФЕР':
+                        stats['total_fer'] += 1
+                    elif work.get('code_type') == 'ТЕР':
+                        stats['total_ter'] += 1
+
                     stats['calculated_total_from_prices'] += work.get('price', 0)
                     stats['unique_units'].add(work.get('units', '').strip().lower())
 
                     if 'materials' in work:
-                        stats['total_fssc'] += len(work['materials'])
                         for material in work['materials']:
+                            if material.get('code_type') == 'ФССЦ':
+                                stats['total_fssc'] += 1
+                            elif material.get('code_type') == 'ТССЦ':
+                                stats['total_tssc'] += 1
+
                             stats['calculated_total_from_prices'] += material.get('price', 0)
                             stats['unique_units'].add(material.get('units', '').strip().lower())
 
-        stats['total_positions'] = stats['total_fer'] + stats['total_fssc']
+        stats['total_positions'] = stats['total_fer'] + stats['total_ter'] + stats['total_fssc'] + stats['total_tssc']
         stats['unique_units_count'] = len(stats['unique_units'])
-        stats['total_fsem'] = 0  # Если нужно учитывать ФСЭМ, нужно добавить логику
 
         sections['_stats'] = stats
 
@@ -216,7 +248,8 @@ def run_tests(sections: Dict) -> None:
 
     # Тест 1: Проверка структуры данных
     print("\nТест 1: Проверка структуры данных")
-    required_keys = ['total_fer', 'total_fssc', 'total_chapters', 'calculated_total_from_prices']
+    required_keys = ['total_fer', 'total_ter', 'total_fssc', 'total_tssc', 'total_chapters',
+                     'calculated_total_from_prices']
     if all(key in stats for key in required_keys):
         print("✅ Успех: Структура данных корректна")
     else:
@@ -233,23 +266,27 @@ def run_tests(sections: Dict) -> None:
         print("❌ Ошибка: Количество разделов не совпадает")
 
     # Тест 3: Проверка количества работ
-    print(f"\nТест 3: Количество работ ФЕР: {stats['total_fer']}")
-    actual_fer = sum(len(works) for section, works in sections.items()
-                     if section not in ['total_cost', '_stats'])
-    print(f"Фактическое количество работ: {actual_fer}")
-    if stats['total_fer'] == actual_fer:
+    print(f"\nТест 3: Количество работ:")
+    print(f"  ФЕР: {stats['total_fer']}")
+    print(f"  ТЕР: {stats['total_ter']}")
+    actual_fer_ter = sum(len(works) for section, works in sections.items()
+                         if section not in ['total_cost', '_stats'])
+    print(f"Фактическое количество работ: {actual_fer_ter}")
+    if (stats['total_fer'] + stats['total_ter']) == actual_fer_ter:
         print("✅ Успех: Количество работ совпадает")
     else:
         print("❌ Ошибка: Количество работ не совпадает")
 
     # Тест 4: Проверка количества материалов
-    print(f"\nТест 4: Количество материалов ФССЦ: {stats['total_fssc']}")
-    actual_fssc = sum(len(work['materials'])
-                      for section, works in sections.items()
-                      if section not in ['total_cost', '_stats']
-                      for work in works if 'materials' in work)
-    print(f"Фактическое количество материалов: {actual_fssc}")
-    if stats['total_fssc'] == actual_fssc:
+    print(f"\nТест 4: Количество материалов:")
+    print(f"  ФССЦ: {stats['total_fssc']}")
+    print(f"  ТССЦ: {stats['total_tssc']}")
+    actual_fssc_tssc = sum(len(work['materials'])
+                           for section, works in sections.items()
+                           if section not in ['total_cost', '_stats']
+                           for work in works if 'materials' in work)
+    print(f"Фактическое количество материалов: {actual_fssc_tssc}")
+    if (stats['total_fssc'] + stats['total_tssc']) == actual_fssc_tssc:
         print("✅ Успех: Количество материалов совпадает")
     else:
         print("❌ Ошибка: Количество материалов не совпадает")
@@ -285,11 +322,14 @@ def print_estimate_structure(sections: Dict) -> None:
 
         print(f"\nРаздел: {section_name}")
         for i, work in enumerate(works, 1):
-            print(f"  {i}. {work['caption']} [{work['units']}] - {work['price']:.2f}")
+            code_type = work.get('code_type', '')
+            print(f"  {i}. {work['caption']} [{work['units']}] ({code_type}) - {work['price']:.2f}")
             if work['materials']:
                 print("    Материалы:")
                 for j, material in enumerate(work['materials'], 1):
-                    print(f"      {j}. {material['name']} [{material['units']}] - {material['price']:.2f}")
+                    mat_code_type = material.get('code_type', '')
+                    print(
+                        f"      {j}. {material['name']} [{material['units']}] ({mat_code_type}) - {material['price']:.2f}")
 
     print(f"\nОбщая стоимость сметы: {sections['total_cost']:.2f}")
 
@@ -301,11 +341,19 @@ if __name__ == "__main__":
     if len(sys.argv) > 1:
         xml_file_path = sys.argv[1]
         try:
-            sections = parse_xml_estimate(xml_file_path)
+            # Пример параметров подключения к БД
+            db_params = {
+                'dbname': 'your_db',
+                'user': 'your_user',
+                'password': 'your_password',
+                'host': 'localhost'
+            }
+            estimate_id = 1  # ID сметы в БД
+
+            sections = parse_xml_estimate(xml_file_path, db_params, estimate_id)
             print_estimate_structure(sections)
             run_tests(sections)
         except Exception as e:
             print(f"Ошибка: {e}")
     else:
         print("Пожалуйста, укажите путь к XML файлу сметы")
-

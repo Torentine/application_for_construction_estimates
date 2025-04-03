@@ -92,7 +92,7 @@ def extract_cost_info(df):
             except ValueError:
                 print("Не удалось преобразовать сметную стоимость в число.")
 
-    return cost_value_number
+    return cost_value_number * 1000
 
 
 def extract_local_estimates(df):

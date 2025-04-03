@@ -22,8 +22,8 @@ def extract_sections_works_units_prices_and_materials(xml_file: str) -> Dict:
     """
     Извлекает из XML-файла сметы:
     - названия разделов
-    - работы (с кодом ФЕР) с ценами
-    - материалы (с кодом ФССЦ) с ценами
+    - работы (с кодом ФЕР/ТЕР) с ценами
+    - материалы (с кодом ФССЦ/ТССЦ) с ценами
     - все цены
     - общую стоимость сметы
     """
@@ -38,7 +38,9 @@ def extract_sections_works_units_prices_and_materials(xml_file: str) -> Dict:
         # Счетчики для тестов
         total_positions = 0
         total_fer = 0
+        total_ter = 0
         total_fssc = 0
+        total_tssc = 0
         total_fsem = 0
         total_chapters = 0
         calculated_total_from_prices = 0.0
@@ -58,16 +60,33 @@ def extract_sections_works_units_prices_and_materials(xml_file: str) -> Dict:
                 position_data = {
                     'caption': elem.get('Caption'),
                     'units': units,
-                    'code': position_code
+                    'code': position_code,
+                    'code_type': None  # Будет определено ниже
                 }
+
+                # Определяем тип кода (ФЕР/ТЕР/ФССЦ/ТССЦ)
+                if position_code.startswith('ФЕР'):
+                    position_data['code_type'] = 'ФЕР'
+                elif position_code.startswith('ТЕР'):
+                    position_data['code_type'] = 'ТЕР'
+                elif position_code.startswith('ФССЦ'):
+                    position_data['code_type'] = 'ФССЦ'
+                elif position_code.startswith('ТССЦ'):
+                    position_data['code_type'] = 'ТССЦ'
+                elif position_code.startswith('ФСЭМ'):
+                    position_data['code_type'] = 'ФСЭМ'
 
                 # Для теста уникальных единиц измерения
                 if units:
                     unique_units.add(units.strip().lower())
 
-                # Обработка работ (ФЕР)
-                if position_code.startswith('ФЕР'):
-                    total_fer += 1
+                # Обработка работ (ФЕР или ТЕР)
+                if position_data['code_type'] in ('ФЕР', 'ТЕР'):
+                    if position_data['code_type'] == 'ФЕР':
+                        total_fer += 1
+                    else:
+                        total_ter += 1
+
                     if not position_code.startswith('ФСЭМ'):
                         total_positions += 1
 
@@ -85,9 +104,13 @@ def extract_sections_works_units_prices_and_materials(xml_file: str) -> Dict:
                         result[current_section].append(position_data)
                         last_work = position_data
 
-                # Обработка материалов (ФССЦ)
-                elif position_code.startswith('ФССЦ'):
-                    total_fssc += 1
+                # Обработка материалов (ФССЦ или ТССЦ)
+                elif position_data['code_type'] in ('ФССЦ', 'ТССЦ'):
+                    if position_data['code_type'] == 'ФССЦ':
+                        total_fssc += 1
+                    else:
+                        total_tssc += 1
+
                     if not position_code.startswith('ФСЭМ'):
                         total_positions += 1
 
@@ -101,7 +124,8 @@ def extract_sections_works_units_prices_and_materials(xml_file: str) -> Dict:
                         material = {
                             'name': position_data['caption'],
                             'units': position_data['units'],
-                            'price': material_price
+                            'price': material_price,
+                            'code_type': position_data['code_type']
                         }
                         last_work['materials'].append(material)
 
@@ -116,7 +140,9 @@ def extract_sections_works_units_prices_and_materials(xml_file: str) -> Dict:
         result['_stats'] = {
             'total_positions': total_positions,
             'total_fer': total_fer,
+            'total_ter': total_ter,
             'total_fssc': total_fssc,
+            'total_tssc': total_tssc,
             'total_fsem': total_fsem,
             'total_chapters': total_chapters,
             'calculated_total_from_prices': round(calculated_total_from_prices, 2),
@@ -144,14 +170,16 @@ def run_tests(sections: Dict) -> None:
 
     print("\n=== ТЕСТЫ ===")
 
-    # Тест 1: Количество Position (без ФСЭМ) = ФЕР + ФССЦ
-    print(
-        f"\nТест 1: Общее количество Position (без ФСЭМ) ({stats['total_positions']}) == ФЕР ({stats['total_fer']}) + ФССЦ ({stats['total_fssc']})")
+    # Тест 1: Количество Position (без ФСЭМ) = ФЕР + ТЕР + ФССЦ + ТССЦ
+    print(f"\nТест 1: Общее количество Position (без ФСЭМ) ({stats['total_positions']}) == "
+          f"ФЕР ({stats['total_fer']}) + ТЕР ({stats['total_ter']}) + "
+          f"ФССЦ ({stats['total_fssc']}) + ТССЦ ({stats['total_tssc']})")
     print(f"ФСЭМ не учитывается (найдено {stats['total_fsem']})")
-    if stats['total_positions'] == stats['total_fer'] + stats['total_fssc']:
-        print("✅ Успех: Количество Position (без ФСЭМ) совпадает с суммой ФЕР и ФССЦ")
+    if stats['total_positions'] == stats['total_fer'] + stats['total_ter'] + stats['total_fssc'] + stats['total_tssc']:
+        print("✅ Успех: Количество Position (без ФСЭМ) совпадает с суммой ФЕР, ТЕР, ФССЦ и ТССЦ")
     else:
-        print(f"❌ Ошибка: {stats['total_positions']} != {stats['total_fer']} + {stats['total_fssc']}")
+        print(f"❌ Ошибка: {stats['total_positions']} != {stats['total_fer']} + {stats['total_ter']} + "
+              f"{stats['total_fssc']} + {stats['total_tssc']}")
 
     # Тест 2: Количество разделов Chapter
     print(f"\nТест 2: Количество разделов Chapter: {stats['total_chapters']}")
@@ -162,31 +190,35 @@ def run_tests(sections: Dict) -> None:
     else:
         print("❌ Ошибка: Количество Chapter не совпадает с количеством разделов в данных")
 
-    # Тест 3: Проверка количества работ ФЕР
-    print(f"\nТест 3: Количество работ ФЕР: {stats['total_fer']}")
-    actual_fer = sum(len(works) for section, works in sections.items()
-                     if section not in ['total_cost', '_stats'])
-    print(f"Фактическое количество работ в данных: {actual_fer}")
-    if stats['total_fer'] == actual_fer:
-        print("✅ Успех: Количество работ ФЕР совпадает")
+    # Тест 3: Проверка количества работ
+    print(f"\nТест 3: Количество работ:")
+    print(f"  ФЕР: {stats['total_fer']}")
+    print(f"  ТЕР: {stats['total_ter']}")
+    actual_works = sum(len(works) for section, works in sections.items()
+                       if section not in ['total_cost', '_stats'])
+    print(f"Фактическое количество работ в данных: {actual_works}")
+    if (stats['total_fer'] + stats['total_ter']) == actual_works:
+        print("✅ Успех: Количество работ совпадает")
     else:
-        print("❌ Ошибка: Количество работ ФЕР не совпадает")
+        print("❌ Ошибка: Количество работ не совпадает")
 
-    # Тест 4: Проверка количества материалов ФССЦ
-    print(f"\nТест 4: Количество материалов ФССЦ: {stats['total_fssc']}")
-    actual_fssc = sum(len(work['materials'])
-                      for section, works in sections.items()
-                      if section not in ['total_cost', '_stats']
-                      for work in works)
-    print(f"Фактическое количество материалов в данных: {actual_fssc}")
-    if stats['total_fssc'] == actual_fssc:
-        print("✅ Успех: Количество материалов ФССЦ совпадает")
+    # Тест 4: Проверка количества материалов
+    print(f"\nТест 4: Количество материалов:")
+    print(f"  ФССЦ: {stats['total_fssc']}")
+    print(f"  ТССЦ: {stats['total_tssc']}")
+    actual_materials = sum(len(work['materials'])
+                           for section, works in sections.items()
+                           if section not in ['total_cost', '_stats']
+                           for work in works)
+    print(f"Фактическое количество материалов в данных: {actual_materials}")
+    if (stats['total_fssc'] + stats['total_tssc']) == actual_materials:
+        print("✅ Успех: Количество материалов совпадает")
     else:
-        print("❌ Ошибка: Количество материалов ФССЦ не совпадает")
+        print("❌ Ошибка: Количество материалов не совпадает")
 
     # Тест 5: Проверка общей стоимости сметы
     print(f"\nТест 5: Проверка общей стоимости сметы")
-    print(f"Сумма из PriceBase (ФЕР+ФССЦ): {stats['calculated_total_from_prices']:.2f}")
+    print(f"Сумма из PriceBase (ФЕР+ТЕР+ФССЦ+ТССЦ): {stats['calculated_total_from_prices']:.2f}")
     print(f"Общая стоимость из структуры: {sections['total_cost']:.2f}")
     if abs(stats['calculated_total_from_prices'] - sections['total_cost']) < 0.01:
         print("✅ Успех: Общая стоимость совпадает с суммой из PriceBase")
@@ -213,7 +245,7 @@ def run_tests(sections: Dict) -> None:
 
 
 if __name__ == "__main__":
-    xml_file_path = "02-01-01 КР_изм1 !.xml"
+    xml_file_path = "376-УКС_С Раздел ПД № 11 02-01-01 КР.xml"
     sections = extract_sections_works_units_prices_and_materials(xml_file_path)
 
     print("Полная структура сметы с ценами:")
@@ -223,11 +255,14 @@ if __name__ == "__main__":
 
         print(f"\nРаздел: {section_name}")
         for i, work in enumerate(works, 1):
-            print(f"  {i}. {work['caption']} [{work['units']}] - {work['price']:.2f}")
+            code_type = work.get('code_type', '')
+            print(f"  {i}. {work['caption']} [{work['units']}] ({code_type}) - {work['price']:.2f}")
             if work['materials']:
                 print("    Материалы:")
                 for j, material in enumerate(work['materials'], 1):
-                    print(f"      {j}. {material['name']} [{material['units']}] - {material['price']:.2f}")
+                    mat_code_type = material.get('code_type', '')
+                    print(
+                        f"      {j}. {material['name']} [{material['units']}] ({mat_code_type}) - {material['price']:.2f}")
 
     print(f"\nОбщая стоимость сметы: {sections['total_cost']:.2f}")
 
