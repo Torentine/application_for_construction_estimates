@@ -1,0 +1,2591 @@
+<?xml version="1.0" encoding="windows-1251"?>
+<Document ProgramVersion="11.0.3.32631" Generator="GrandSmeta" DocumentType="{2B0470FD-477C-4359-9F34-EEBE36B7D340}">
+  <Properties LocNum="02-01-01 изм." Constr="Строительство корпуса столовой муниципального автономного общеобразовательного учреждения средняя общеобразовательная школа № 106, расположенного по адресу: ул. Титова, д. 28" Description="Конструктивные решения"/>
+  <Variables>
+    <Variable Caption="индекс на материалы" Identifier="Кмр" Value="8,14"/>
+    <Variable Caption="индекс на оборудование" Identifier="Коб" Value="4,19"/>
+  </Variables>
+  <GsDocSignatures>
+    <Item Caption="Основание" ID="100" Value="376 УКС/С-КР1 изм.1"/>
+    <Item Caption="Заказчик" ID="230"/>
+    <Item Caption="Утверждаю" ID="200"/>
+    <Item Caption="Подрядчик" ID="240"/>
+    <Item Caption="Согласовано" ID="210"/>
+    <Item Caption="Дата составления сметы" ID="102" Value="1 кв. 2001 г."/>
+    <Item Caption="Составил" ID="300" Value="Лебедев В.В."/>
+    <Item Caption="Проверил" ID="310"/>
+  </GsDocSignatures>
+  <RegionalK Options="Percent Base"/>
+  <TerZoneK Caption="Территориальная поправка к базе 2001г" Options="Base PzAll EmAll"/>
+  <WinterCatalog Options="OzpTz" WinterMode="None" WinterLinkMode="Table">
+    <CommonWinterK/>
+  </WinterCatalog>
+  <RegionInfo RegionName="ГЭСН-2020, ФЕР-2020" RegionID="8000" Zone84Name="Базовый территориальный район" Zone84ID="1" Zone01Name="Базовый федеральный район" Zone01ID="1"/>
+  <Parameters Options="AddZatr SeparateFot TempRound ObsoleteRound" BasePrices="2001" BaseCalcVrs="Vr2001" TzDigits="2" BlockRoundMode="Smart" MultKPosCalcMode="UseForOne" TempZone="1" TsnTempZone="1" MatDigits="4" MatRoundMode="SignDigitsPreserveInt" PosKDigits="2" ItogOptions="SeparateVrs IgnoreZeroQty" FirstItogItem="K" ItogExpandTo="Default" PropsConfigName="1.7. Расчет с единым индексом до ЛЗ">
+    <CommonNK ActiveItems="Vk Ck Mk"/>
+    <CommonPK ActiveItems="Vk Ck Mk"/>
+    <MtsnNPZpm/>
+    <Numbering Mode="Sequential" Options="Auto"/>
+  </Parameters>
+  <Indexes IndexesMode="None" IndexesLinkMode="Default">
+    <CommonIndexA Caption="на III квартал 2020 года  (Объекты образования. Школы),  согласно письма Минстроя России от 19.08.2020 № 32582-ИФ/09" Formula="7,43" Options="Disabled"/>
+  </Indexes>
+  <AddZatrats>
+    <AddZatrGlava Glava="8"/>
+    <AddZatrGlava Glava="9"/>
+    <AddZatrGlava Glava="10"/>
+    <AddZatrGlava Glava="11"/>
+    <AddZatrGlava Glava="12"/>
+    <AddZatrGlava Glava="13"/>
+    <AddZatrGlava Glava="14">
+      <AddZatr Caption="Стоимость услуг за приём и размещение промышленных отходов (грунт)" Options="HideZero" Formula="4146*64" Level="1"/>
+    </AddZatrGlava>
+    <AddZatrGlava Glava="15"/>
+  </AddZatrats>
+  <OsInfo OSChapter="1" LinkType="LB">
+    <CCChapter Cons="2" Rec="2" Road="2"/>
+  </OsInfo>
+  <VidRab_Catalog Caption="Проектные работы">
+    <Vids_Rab Type="Виды работ 2001г" CatFile="ВР МДС 81-33.2004" NrspFile="НРСП МДС 81-33.2004">
+      <VidRab_Group Caption="Общестроительные работы" ID="0">
+        <Vid_Rab Caption="Земляные работы, выполняемые механизированным способом" ID="10001" Nacl="95" Plan="50" NaclCurr="95" PlanCurr="50" NaclMask="ФОТ" PlanMask="ФОТ"/>
+        <Vid_Rab Caption="Земляные работы, выполняемые ручным способом" ID="10002" Nacl="80" Plan="45" NaclCurr="80" PlanCurr="45" NaclMask="ФОТ" PlanMask="ФОТ"/>
+        <Vid_Rab Caption="Наружные сети водопровода, канализации, теплоснабжения, газопровода" ID="10028" Nacl="130" Plan="89" NaclCurr="130" PlanCurr="89" NaclMask="ФОТ" PlanMask="ФОТ"/>
+        <Vid_Rab Caption="Конструкции из кирпича и блоков" ID="10015" Nacl="122" Plan="80" NaclCurr="122" PlanCurr="80" NaclMask="ФОТ" PlanMask="ФОТ"/>
+        <Vid_Rab Caption="Бетонные и железобетонные монолитные конструкции в промышленном строительстве" ID="10011" Nacl="105" Plan="65" NaclCurr="105" PlanCurr="65" NaclMask="ФОТ" PlanMask="ФОТ"/>
+        <Vid_Rab Caption="Отделочные работы" ID="10025" Nacl="105" Plan="55" NaclCurr="105" PlanCurr="55" NaclMask="ФОТ" PlanMask="ФОТ"/>
+        <Vid_Rab Caption="Теплоизоляционные работы" ID="10030" Nacl="100" Plan="70" NaclCurr="100" PlanCurr="70" NaclMask="ФОТ" PlanMask="ФОТ"/>
+        <Vid_Rab Caption="Свайные работы" ID="10008" Nacl="130" Plan="80" NaclCurr="130" PlanCurr="80" NaclMask="ФОТ" PlanMask="ФОТ"/>
+        <Vid_Rab Caption="Защита строительных конструкций и оборудования от коррозии" ID="10020" Nacl="90" Plan="70" NaclCurr="90" PlanCurr="70" NaclMask="ФОТ" PlanMask="ФОТ"/>
+        <Vid_Rab Caption="Бетонные и железобетонные сборные конструкции в промышленном строительстве" ID="10013" Nacl="130" Plan="85" NaclCurr="130" PlanCurr="85" NaclMask="ФОТ" PlanMask="ФОТ"/>
+        <Vid_Rab Caption="Бетонные и железобетонные сборные конструкции в жилищно-гражданском строительстве" ID="10014" Nacl="155" Plan="100" NaclCurr="155" PlanCurr="100" NaclMask="ФОТ" PlanMask="ФОТ"/>
+        <Vid_Rab Caption="Бетонные и железобетонные монолитные конструкции в жилищно-гражданском строительстве" ID="10012" Nacl="120" Plan="77" NaclCurr="120" PlanCurr="77" NaclMask="ФОТ" PlanMask="ФОТ"/>
+        <Vid_Rab Caption="Полы" ID="10018" Nacl="123" Plan="75" NaclCurr="123" PlanCurr="75" NaclMask="ФОТ" PlanMask="ФОТ"/>
+        <Vid_Rab Caption="Кровли" ID="10019" Nacl="120" Plan="65" NaclCurr="120" PlanCurr="65" NaclMask="ФОТ" PlanMask="ФОТ"/>
+      </VidRab_Group>
+      <VidRab_Group Caption="Перевозка грузов" ID="1013">
+        <Vid_Rab Caption="Перевозка грузов автотранспортом" ID="10133" ResGroup="Transp" NaclMask="ФОТ" PlanMask="ФОТ"/>
+      </VidRab_Group>
+      <VidRab_Group Caption="Монтаж металлоконструкций" ID="1">
+        <Vid_Rab Caption="Строительные металлические конструкции" ID="10016" Nacl="90" Plan="85" NaclCurr="90" PlanCurr="85" NaclMask="ФОТ" PlanMask="ФОТ"/>
+      </VidRab_Group>
+      <VidRab_Group Caption="Изготовление в построечных условиях материалов, полуфабрикатов, заготовок" ID="15">
+        <Vid_Rab Caption="Изготовление в построечных условиях материалов и полуфабрикатов, металлических и трубопроводных заготовок (Норматив СП необходимо указать при составлении сметы)" ID="10139" OsColumn="М" Nacl="66" NaclCurr="66" NaclMask="ФОТ" PlanMask="ФОТ"/>
+      </VidRab_Group>
+    </Vids_Rab>
+    <Vids_Rab Type="Виды работ 1984г"/>
+  </VidRab_Catalog>
+  <Chapters>
+    <Chapter Caption="Земляные работы" SysID="1">
+      <Position Caption="Разработка грунта с погрузкой на автомобили-самосвалы экскаваторами с ковшом вместимостью: 0,65 (0,5-1) м3, группа грунтов 2" Number="1" Code="ФЕР01-01-013-08" Units="1000 м3" SysID="13" DBComment="Приказ Минстроя России от 26.12.2019 №876/пр" Quantity="ОКР((3823*0,96) / 1000; 2)" PriceLevel="2001" DBFlags="TechK" PzSync="Yes" Vr2001="10001">
+        <Quantity Fx="=3823*0,96" KUnit="1000" Precision="2" Result="3,67"/>
+        <PriceBase PZ="3111,64" OZ="76,75" EM="3030,55" ZM="385,16" MT="4,34"/>
+        <Resources>
+          <Tzr Caption="Затраты труда рабочих" Code="1-2-0" Units="чел.-ч" Quantity="9,84" WorkClass="2">
+            <PriceBase Value="7,8"/>
+          </Tzr>
+          <Tzm Caption="Затраты труда машинистов" Code="2" Units="чел.-ч" Quantity="28,53"/>
+          <Mch Caption="Бульдозеры, мощность 79 кВт (108 л.с.)" Code="91.01.01-035" Units="маш.час" Quantity="7,13">
+            <PriceBase Value="79,07" ZM="13,5"/>
+          </Mch>
+          <Mch Caption="Экскаваторы одноковшовые дизельные на гусеничном ходу, емкость ковша 0,65 м3" Code="91.01.05-086" Units="маш.час" Quantity="21,4">
+            <PriceBase Value="115,27" ZM="13,5"/>
+          </Mch>
+          <Mat Caption="Щебень М 800, фракция 20-40 мм, группа 2" Code="02.2.05.04-1777" Units="м3" Quantity="0,04">
+            <PriceBase Value="108,4"/>
+          </Mat>
+        </Resources>
+        <WorksList>
+          <Work Caption="Разработка грунта экскаваторами с погрузкой на автомобили-самосвалы."/>
+          <Work Caption="Планировка поверхности забоя и земляного полотна забойной дороги бульдозером."/>
+          <Work Caption="Содержание забойной дороги."/>
+          <Work Caption="Вспомогательные работы, выполняемые вручную, связанные с устройством водоотводных канав или ограждающих валиков, с переходом экскаватора с одного места работы на другое и из забоя в забой и т.д."/>
+        </WorksList>
+      </Position>
+      <Position Caption="Разработка грунта вручную в траншеях глубиной до 2 м без креплений с откосами, группа грунтов: 2" Identifier="Ф4" Number="2" Code="ФЕР01-02-057-02" Units="100 м3" SysID="3" DBComment="Приказ Минстроя России от 26.12.2019 №876/пр" Quantity="ОКР((3823*0,04) / 100; 2)" PriceLevel="2001" DBFlags="TechK" PzSync="Yes" Vr2001="10002">
+        <Quantity Fx="=3823*0,04" KUnit="100" Precision="2" Result="1,53"/>
+        <PriceBase PZ="1201,2" OZ="1201,2"/>
+        <Resources>
+          <Tzr Caption="Затраты труда рабочих" Code="1-2-0" Units="чел.-ч" Quantity="154" WorkClass="2">
+            <PriceBase Value="7,8"/>
+          </Tzr>
+        </Resources>
+        <Koefficients>
+          <K Caption="Доработка вручную, зачистка дна и стенок с выкидкой грунта в котлованах и траншеях, разработанных механизированным способом" Code="Прил.1.12 п.3.187" Options="Base Curr OzpTz" Value_OZ="1,2" Level="1"/>
+        </Koefficients>
+        <WorksList>
+          <Work Caption="Разработка грунта с выбрасыванием на бровку."/>
+          <Work Caption="Зачистка дна и поверхности стенок."/>
+          <Work Caption="Откидка грунта от бровки."/>
+        </WorksList>
+      </Position>
+      <Position Caption="Разработка грунта с погрузкой на автомобили-самосвалы экскаваторами с ковшом вместимостью: 1 (1-1,2) м3, группа грунтов 1 (погрузка от разработки вручную)" Number="3" Code="ФЕР01-01-013-01" ColorIndex="4" Units="1000 м3" SysID="248" DBComment="Приказ Минстроя России от 26.12.2019 №876/пр" Quantity="ОКР(Ф4/10; 3)" PriceLevel="2001" DBFlags="TechK" PzSync="Yes" Vr2001="10001">
+        <Quantity Fx="Ф4/10" KUnit="1000" Precision="3" Result="0,153"/>
+        <PriceBase PZ="1837,39" OZ="43,06" EM="1791,08" ZM="216" MT="3,25"/>
+        <Resources>
+          <Tzr Caption="Затраты труда рабочих" Code="1-2-0" Units="чел.-ч" Quantity="5,52" WorkClass="2">
+            <PriceBase Value="7,8"/>
+          </Tzr>
+          <Tzm Caption="Затраты труда машинистов" Code="2" Units="чел.-ч" Quantity="16"/>
+          <Mch Caption="Бульдозеры, мощность 79 кВт (108 л.с.)" Code="91.01.01-035" Units="маш.час" Quantity="4">
+            <PriceBase Value="79,07" ZM="13,5"/>
+          </Mch>
+          <Mch Caption="Экскаваторы одноковшовые дизельные на гусеничном ходу, емкость ковша 1,0 м3" Code="91.01.05-087" Units="маш.час" Quantity="12">
+            <PriceBase Value="122,9" ZM="13,5"/>
+          </Mch>
+          <Mat Caption="Щебень М 800, фракция 20-40 мм, группа 2" Code="02.2.05.04-1777" Units="м3" Quantity="0,03">
+            <PriceBase Value="108,4"/>
+          </Mat>
+        </Resources>
+        <WorksList>
+          <Work Caption="Разработка грунта экскаваторами с погрузкой на автомобили-самосвалы."/>
+          <Work Caption="Планировка поверхности забоя и земляного полотна забойной дороги бульдозером."/>
+          <Work Caption="Содержание забойной дороги."/>
+          <Work Caption="Вспомогательные работы, выполняемые вручную, связанные с устройством водоотводных канав или ограждающих валиков, с переходом экскаватора с одного места работы на другое и из забоя в забой и т.д."/>
+        </WorksList>
+      </Position>
+      <Position Caption="Перевозка грузов автомобилями-самосвалами грузоподъемностью 10 т работающих вне карьера на расстояние: I класс груза до 1 км (во временный отвал естественный грунт)" Identifier="Ф1" Number="4" Code="ФССЦпг-03-21-01-001" Units="1 т груза" SysID="245" DBComment="Приказ Минстроя России от 26.12.2019 №876/пр" Quantity="ОКР(1166,4*1,4; 4)" PriceLevel="2001" DBFlags="TechK" PzSync="Yes" Vr2001="10133">
+        <Quantity Fx="=1166,4*1,4" Precision="4" Result="1632,96"/>
+        <PriceBase PZ="2,91" EM="2,91"/>
+      </Position>
+      <Position Caption="Перевозка грузов автомобилями-самосвалами грузоподъемностью 10 т работающих вне карьера на расстояние: I класс груза до 21 км (насыпной замусоренный грунт)" Number="5" Code="ФССЦпг-03-21-01-021" Units="1 т груза" SysID="4" DBComment="Приказ Минстроя России от 26.12.2019 №876/пр" Quantity="ОКР((3823-1166,4)*1,2; 4)" PriceLevel="2001" DBFlags="TechK" PzSync="Yes" Vr2001="10133">
+        <Quantity Fx="=(3823-1166,4)*1,2" Precision="4" Result="3187,92"/>
+        <PriceBase PZ="15,75" EM="15,75"/>
+      </Position>
+      <Position Caption="Разработка грунта с погрузкой на автомобили-самосвалы экскаваторами с ковшом вместимостью: 1 (1-1,2) м3, группа грунтов 1 (из временного отвала)" Identifier="Ф12" Number="6" Code="ФЕР01-01-013-01" Units="1000 м3" SysID="8" DBComment="Приказ Минстроя России от 26.12.2019 №876/пр" Quantity="ОКР(1166,4 / 1000; 1)" PriceLevel="2001" Options="Inactive" DBFlags="TechK" PzSync="Yes" Vr2001="10001">
+        <Quantity Fx="=1166,4" KUnit="1000" Precision="1" Result="1,2"/>
+        <PriceBase PZ="1837,39" OZ="43,06" EM="1791,08" ZM="216" MT="3,25"/>
+        <Resources>
+          <Tzr Caption="Затраты труда рабочих" Code="1-2-0" Units="чел.-ч" Quantity="5,52" WorkClass="2">
+            <PriceBase Value="7,8"/>
+          </Tzr>
+          <Tzm Caption="Затраты труда машинистов" Code="2" Units="чел.-ч" Quantity="16"/>
+          <Mch Caption="Бульдозеры, мощность 79 кВт (108 л.с.)" Code="91.01.01-035" Units="маш.час" Quantity="4">
+            <PriceBase Value="79,07" ZM="13,5"/>
+          </Mch>
+          <Mch Caption="Экскаваторы одноковшовые дизельные на гусеничном ходу, емкость ковша 1,0 м3" Code="91.01.05-087" Units="маш.час" Quantity="12">
+            <PriceBase Value="122,9" ZM="13,5"/>
+          </Mch>
+          <Mat Caption="Щебень М 800, фракция 20-40 мм, группа 2" Code="02.2.05.04-1777" Units="м3" Quantity="0,03">
+            <PriceBase Value="108,4"/>
+          </Mat>
+        </Resources>
+        <WorksList>
+          <Work Caption="Разработка грунта экскаваторами с погрузкой на автомобили-самосвалы."/>
+          <Work Caption="Планировка поверхности забоя и земляного полотна забойной дороги бульдозером."/>
+          <Work Caption="Содержание забойной дороги."/>
+          <Work Caption="Вспомогательные работы, выполняемые вручную, связанные с устройством водоотводных канав или ограждающих валиков, с переходом экскаватора с одного места работы на другое и из забоя в забой и т.д."/>
+        </WorksList>
+      </Position>
+      <Position Caption="Перевозка грузов автомобилями-самосвалами грузоподъемностью 10 т работающих вне карьера на расстояние: I класс груза до 1 км (из временного отвала)" Number="7" Code="ФССЦпг-03-21-01-001" Units="1 т груза" SysID="9" DBComment="Приказ Минстроя России от 26.12.2019 №876/пр" Quantity="ОКР(Ф1; 4)" PriceLevel="2001" DBFlags="TechK" PzSync="Yes" Vr2001="10133">
+        <Quantity Fx="Ф1" Precision="4" Result="1632,96"/>
+        <PriceBase PZ="2,91" EM="2,91"/>
+      </Position>
+      <Position Caption="Засыпка вручную траншей, пазух котлованов и ям, группа грунтов: 1" Number="8" Code="ФЕР01-02-061-01" Units="100 м3" SysID="10" DBComment="Приказ Минстроя России от 26.12.2019 №876/пр" Quantity="ОКР(((1166,40)*0,05) / 100; 3)" PriceLevel="2001" DBFlags="TechK" PzSync="Yes" Vr2001="10002">
+        <Quantity Fx="=(1166,40)*0,05" KUnit="100" Precision="3" Result="0,583"/>
+        <PriceBase PZ="663,75" OZ="663,75"/>
+        <Resources>
+          <Tzr Caption="Затраты труда рабочих" Code="1-1-5" Units="чел.-ч" Quantity="88,5" WorkClass="1,5">
+            <PriceBase Value="7,5"/>
+          </Tzr>
+        </Resources>
+        <WorksList>
+          <Work Caption="Засыпка ранее выброшенным грунтом с разбивкой комьев и трамбованием."/>
+          <Work Caption="Поливка водой при необходимости."/>
+        </WorksList>
+      </Position>
+      <Position Caption="Разработка грунта с перемещением до 10 м бульдозерами мощностью: 132 кВт (180 л.с.), группа грунтов 1" Identifier="Ф30" Number="9" Code="ФЕР01-01-032-01" Units="1000 м3" SysID="11" DBComment="Приказ Минстроя России от 26.12.2019 №876/пр" Quantity="ОКР(((1166,4)*0,95) / 1000; 2)" PriceLevel="2001" DBFlags="TechK" PzSync="Yes" Vr2001="10001">
+        <Quantity Fx="=(1166,4)*0,95" KUnit="1000" Precision="2" Result="1,11"/>
+        <PriceBase PZ="391,73" EM="391,73" ZM="39,83"/>
+        <Resources>
+          <Tzm Caption="Затраты труда машинистов" Code="2" Units="чел.-ч" Quantity="2,95"/>
+          <Mch Caption="Бульдозеры, мощность 132 кВт (180 л.с.)" Code="91.01.01-039" Units="маш.час" Quantity="2,95">
+            <PriceBase Value="132,79" ZM="13,5"/>
+          </Mch>
+        </Resources>
+        <WorksList>
+          <Work Caption="Разработка грунта с перемещением."/>
+        </WorksList>
+      </Position>
+      <Position Caption="Уплотнение грунта пневматическими трамбовками, группа грунтов: 1-2" Number="10" Code="ФЕР01-02-005-01" Units="100 м3" SysID="12" DBComment="Приказ Минстроя России от 26.12.2019 №876/пр" Quantity="ОКР(Ф30*10; 2)" PriceLevel="2001" PzSync="Yes" Vr2001="10001">
+        <Quantity Fx="Ф30*10" KUnit="100" Precision="2" Result="11,1"/>
+        <PriceBase PZ="348,46" OZ="106,88" EM="241,58" ZM="26,36"/>
+        <Resources>
+          <Tzr Caption="Затраты труда рабочих" Code="1-3-0" Units="чел.-ч" Quantity="12,53" WorkClass="3">
+            <PriceBase Value="8,53"/>
+          </Tzr>
+          <Tzm Caption="Затраты труда машинистов" Code="2" Units="чел.-ч" Quantity="2,62"/>
+          <Mch Caption="Трамбовки пневматические при работе от передвижных компрессорных станций" Code="91.08.09-023" Units="маш.час" Quantity="10,5">
+            <PriceBase Value="0,55"/>
+          </Mch>
+          <Mch Caption="Компрессоры передвижные с двигателем внутреннего сгорания, давление до 686 кПа (7 ат), производительность до 5 м3/мин" Code="91.18.01-007" Units="маш.час" Quantity="2,62">
+            <PriceBase Value="90" ZM="10,06"/>
+          </Mch>
+        </Resources>
+        <WorksList>
+          <Work Caption="Уплотнение грунта."/>
+        </WorksList>
+      </Position>
+      <Position Caption="Устройство основания под фундаменты: песчаного" Identifier="Ф9" Number="11" Code="ФЕР08-01-002-01" Units="м3" SysID="249" DBComment="Приказ Минстроя России от 26.12.2019 №876/пр" Quantity="11,6/2" PriceLevel="2001" PzSync="Yes" Vr2001="10015">
+        <Quantity Fx="=11,6/2" Result="5,8"/>
+        <PriceBase PZ="14,66" OZ="6,19" EM="8,1" ZM="0,81" MT="0,37"/>
+        <Resources>
+          <Tzr Caption="Затраты труда рабочих" Code="1-2-2" Units="чел.-ч" Quantity="0,78" WorkClass="2,2">
+            <PriceBase Value="7,94"/>
+          </Tzr>
+          <Tzm Caption="Затраты труда машинистов" Code="2" Units="чел.-ч" Quantity="0,07"/>
+          <Mch Caption="Погрузчики одноковшовые универсальные фронтальные пневмоколесные, грузоподъемность 3 т" Code="91.06.05-057" Units="маш.час" Quantity="0,07">
+            <PriceBase Value="90,4" ZM="11,6"/>
+          </Mch>
+          <Mch Caption="Трамбовки пневматические при работе от стационарного компрессора" Code="91.08.09-024" Units="маш.час" Quantity="0,36">
+            <PriceBase Value="4,91"/>
+          </Mch>
+          <Mat Caption="Вода" Code="01.7.03.01-0001" Units="м3" Quantity="0,15">
+            <PriceBase Value="2,44"/>
+          </Mat>
+          <Mat Caption="Песок для строительных работ природный" Identifier="р1" Code="02.3.01.02" Units="м3" Quantity="1,1" Options="NotCount"/>
+        </Resources>
+        <WorksList>
+          <Work Caption="Разравнивание и трамбование основания."/>
+        </WorksList>
+      </Position>
+      <Position Caption="Песок природный для строительных: работ средний с крупностью зерен размером свыше 5 мм-до 5% по массе" Number="12" Code="ФССЦ-02.3.01.02-0016" Units="м3" SysID="252" DBComment="Приказ Минстроя России от 26.12.2019 №876/пр" Quantity="Ф9.р1" PriceLevel="2001" PzSync="Yes" Vr2001="10015">
+        <Quantity Fx="Ф9.р1" Result="6,38"/>
+        <PriceBase PZ="55,26" MT="55,26"/>
+      </Position>
+      <Position Caption="Устройство основания под фундаменты: щебеночного" Identifier="Ф3" Number="13" Code="ФЕР08-01-002-02" Units="м3" SysID="250" DBComment="Приказ Минстроя России от 26.12.2019 №876/пр" Quantity="11,6/2" PriceLevel="2001" PzSync="Yes" Vr2001="10015">
+        <Quantity Fx="=11,6/2" Result="5,8"/>
+        <PriceBase PZ="15,41" OZ="6,75" EM="8,29" ZM="0,81" MT="0,37"/>
+        <Resources>
+          <Tzr Caption="Затраты труда рабочих" Code="1-2-2" Units="чел.-ч" Quantity="0,85" WorkClass="2,2">
+            <PriceBase Value="7,94"/>
+          </Tzr>
+          <Tzm Caption="Затраты труда машинистов" Code="2" Units="чел.-ч" Quantity="0,07"/>
+          <Mch Caption="Погрузчики одноковшовые универсальные фронтальные пневмоколесные, грузоподъемность 3 т" Code="91.06.05-057" Units="маш.час" Quantity="0,07">
+            <PriceBase Value="90,4" ZM="11,6"/>
+          </Mch>
+          <Mch Caption="Трамбовки пневматические при работе от стационарного компрессора" Code="91.08.09-024" Units="маш.час" Quantity="0,4">
+            <PriceBase Value="4,91"/>
+          </Mch>
+          <Mat Caption="Вода" Code="01.7.03.01-0001" Units="м3" Quantity="0,15">
+            <PriceBase Value="2,44"/>
+          </Mat>
+          <Mat Caption="Щебень" Identifier="р1" Code="02.2.05.04" Units="м3" Quantity="1,15" Options="NotCount"/>
+        </Resources>
+        <WorksList>
+          <Work Caption="Разравнивание и трамбование основания."/>
+        </WorksList>
+      </Position>
+      <Position Caption="Щебень М 800, фракция 20-40 мм, группа 2" Number="14" Code="ФССЦ-02.2.05.04-1777" Units="м3" SysID="251" DBComment="Приказ Минстроя России от 26.12.2019 №876/пр" Quantity="Ф3.р1" PriceLevel="2001" PzSync="Yes" Vr2001="10015">
+        <Quantity Fx="Ф3.р1" Result="6,67"/>
+        <PriceBase PZ="108,4" MT="108,4"/>
+      </Position>
+    </Chapter>
+    <Chapter Caption="Фундаменты" SysID="2">
+      <Header Caption="ФП"/>
+      <Position Caption="Устройство бетонной подготовки" Identifier="Ф2" Number="15" Code="ФЕР06-01-001-01" Units="100 м3" SysID="16" DBComment="Приказ Минстроя России от 26.12.2019 №876/пр" Quantity="47 / 100" PriceLevel="2001" DBFlags="Comment TechK" PzSync="Yes" Vr2001="10011">
+        <Quantity Fx="=47" KUnit="100" Result="0,47"/>
+        <PriceBase PZ="3528,33" OZ="1053" EM="1566,06" ZM="244,39" MT="909,27"/>
+        <Resources>
+          <Tzr Caption="Затраты труда рабочих" Code="1-2-0" Units="чел.-ч" Quantity="135" WorkClass="2">
+            <PriceBase Value="7,8"/>
+          </Tzr>
+          <Tzm Caption="Затраты труда машинистов" Code="2" Units="чел.-ч" Quantity="18,12"/>
+          <Mch Caption="Краны башенные, грузоподъемность 8 т" Code="91.05.01-017" Units="маш.час" Quantity="18">
+            <PriceBase Value="86,4" ZM="13,5"/>
+          </Mch>
+          <Mch Caption="Вибраторы поверхностные" Code="91.07.04-002" Units="маш.час" Quantity="5,93">
+            <PriceBase Value="0,5"/>
+          </Mch>
+          <Mch Caption="Автомобили бортовые, грузоподъемность до 5 т" Code="91.14.02-001" Units="маш.час" Quantity="0,12">
+            <PriceBase Value="65,71" ZM="11,6"/>
+          </Mch>
+          <Mat Caption="Вода" Code="01.7.03.01-0001" Units="м3" Quantity="1,75">
+            <PriceBase Value="2,44"/>
+          </Mat>
+          <Mat Caption="Пленка полиэтиленовая, толщина 0,15 мм" Code="01.7.07.12-0024" Units="м2" Quantity="250">
+            <PriceBase Value="3,62"/>
+          </Mat>
+          <Mat Caption="Смеси бетонные тяжелого бетона" Identifier="р1" Code="04.1.02.05" Units="м3" Quantity="102" Options="NotCount"/>
+        </Resources>
+        <WorksList>
+          <Work Caption="Устройство бетонной подготовки."/>
+        </WorksList>
+      </Position>
+      <Position Caption="Смеси бетонные тяжелого бетона (БСТ), класс В7,5 (М100)" Number="16" Code="ФССЦ-04.1.02.05-0003" Units="м3" SysID="140" DBComment="Приказ Минстроя России от 26.12.2019 №876/пр" Quantity="Ф2.р1" PriceLevel="2001" PzSync="Yes" Vr2001="10011">
+        <Quantity Fx="Ф2.р1" Result="47,94"/>
+        <PriceBase PZ="560" MT="560"/>
+      </Position>
+      <Position Caption="Огрунтовка бетонных и оштукатуренных поверхностей: битумной грунтовкой, первый слой" Identifier="Ф71" Number="17" Code="ФЕР13-03-001-01" Units="100 м2" SysID="195" DBComment="Приказ Минстроя России от 26.12.2019 №876/пр" Quantity="ОКР(979,8 / 100; 2)" PriceLevel="2001" DBFlags="Comment TechK" PzSync="Yes" Vr2001="10020">
+        <Quantity Fx="=979,8" KUnit="100" Precision="2" Result="9,8"/>
+        <PriceBase PZ="205,69" OZ="78,02" EM="9,22" ZM="0,22" MT="118,45"/>
+        <Resources>
+          <Tzr Caption="Затраты труда рабочих" Code="1-4-6" Units="чел.-ч" Quantity="7,43" WorkClass="4,6">
+            <PriceBase Value="10,5"/>
+          </Tzr>
+          <Tzm Caption="Затраты труда машинистов" Code="2" Units="чел.-ч" Quantity="0,02"/>
+          <Mch Caption="Лебедки электрические тяговым усилием до 5,79 кН (0,59 т)" Code="91.06.03-060" Units="маш.час" Quantity="0,01">
+            <PriceBase Value="1,7"/>
+          </Mch>
+          <Mch Caption="Погрузчики, грузоподъемность 5 т" Code="91.06.05-011" Units="маш.час" Quantity="0,01">
+            <PriceBase Value="89,99" ZM="10,06"/>
+          </Mch>
+          <Mch Caption="Автомобили бортовые, грузоподъемность до 5 т" Code="91.14.02-001" Units="маш.час" Quantity="0,01">
+            <PriceBase Value="65,71" ZM="11,6"/>
+          </Mch>
+          <Mch Caption="Агрегаты окрасочные высокого давления для окраски поверхностей конструкций, мощность 1 кВт" Code="91.21.01-012" Units="маш.час" Quantity="1,12">
+            <PriceBase Value="6,82"/>
+          </Mch>
+          <Mat Caption="Битумы нефтяные строительные БН-70/30" Identifier="р1" Code="01.2.01.02-0052" Units="т" Quantity="0,0055">
+            <PriceBase Value="1525,5"/>
+          </Mat>
+          <Mat Caption="Уайт-спирит" Code="14.5.09.11-0102" Units="кг" Quantity="16,5">
+            <PriceBase Value="6,67"/>
+          </Mat>
+        </Resources>
+        <WorksList>
+          <Work Caption="Подготовка окрасочных агрегатов."/>
+          <Work Caption="Приготовление грунтовочных составов."/>
+          <Work Caption="Нанесение грунта."/>
+          <Work Caption="Промывка, очистка окрасочных агрегатов и шлангов."/>
+          <Work Caption="Контроль качества."/>
+        </WorksList>
+      </Position>
+      <Position Caption="Битумы нефтяные строительные БН-70/30" Number="18" Code="ФССЦ-01.2.01.02-0052" Units="т" SysID="196" DBComment="Приказ Минстроя России от 26.12.2019 №876/пр" Quantity="ОКР(-Ф71.р1; 2)" PriceLevel="2001" PzSync="Yes" Vr2001="10020">
+        <Quantity Fx="-Ф71.р1" Precision="2" Result="-0,05"/>
+        <PriceBase PZ="1525,5" MT="1525,5"/>
+      </Position>
+      <Position Caption="Праймер битумный ТЕХНОНИКОЛЬ №01" Number="19" Code="ФССЦ-01.2.03.05-0011" Units="л" SysID="197" DBComment="Приказ Минстроя России от 26.12.2019 №876/пр" Quantity="ОКР(979,8*0,35; 2)" PriceLevel="2001" PzSync="Yes" Vr2001="10015">
+        <Quantity Fx="979,8*0,35" Precision="2" Result="342,93"/>
+        <PriceBase PZ="8,44" MT="8,44"/>
+      </Position>
+      <Position Caption="Гидроизоляция боковая обмазочная битумная в 2 слоя по выровненной поверхности бутовой кладки, кирпичу, бетону" Identifier="Ф49" Number="20" Code="ФЕР08-01-003-07" Units="100 м2" SysID="198" DBComment="Приказ Минстроя России от 26.12.2019 №876/пр" Quantity="ОКР(Ф71; 2)" PriceLevel="2001" DBFlags="Comment" PzSync="Yes" Vr2001="10015">
+        <Quantity Fx="Ф71" KUnit="100" Precision="2" Result="9,8"/>
+        <PriceBase PZ="358,13" OZ="201,61" EM="71,64" ZM="2,32" MT="84,88"/>
+        <Resources>
+          <Tzr Caption="Затраты труда рабочих" Code="1-3-9" Units="чел.-ч" Quantity="21,2" WorkClass="3,9">
+            <PriceBase Value="9,51"/>
+          </Tzr>
+          <Tzm Caption="Затраты труда машинистов" Code="2" Units="чел.-ч" Quantity="0,2"/>
+          <Mch Caption="Котлы битумные передвижные 400 л" Code="91.08.04-021" Units="маш.час" Quantity="1,95">
+            <PriceBase Value="30"/>
+          </Mch>
+          <Mch Caption="Автомобили бортовые, грузоподъемность до 5 т" Code="91.14.02-001" Units="маш.час" Quantity="0,2">
+            <PriceBase Value="65,71" ZM="11,6"/>
+          </Mch>
+          <Mat Caption="Битумы нефтяные строительные БН-90/10" Code="01.2.01.02-0054" Units="т" Quantity="0,016">
+            <PriceBase Value="1383,1"/>
+          </Mat>
+          <Mat Caption="Мастика" Identifier="р1" Code="01.2.03.03" Units="т" Quantity="0,24" Options="NotCount"/>
+          <Mat Caption="Керосин для технических целей" Code="01.3.01.03-0002" Units="т" Quantity="0,024">
+            <PriceBase Value="2606,9"/>
+          </Mat>
+          <Mat Caption="Ветошь" Code="01.7.20.08-0051" Units="кг" Quantity="0,1">
+            <PriceBase Value="1,82"/>
+          </Mat>
+        </Resources>
+        <WorksList>
+          <Work Caption="Огрунтовка поверхности."/>
+          <Work Caption="Нанесение слоев битумной мастики с разогреванием ее."/>
+        </WorksList>
+      </Position>
+      <Position Caption="Мастика кровельная холодная ТЕХНОНИКОЛЬ №21 (Техномаст)" Number="21" Code="ФССЦ-01.2.03.03-0122" Units="кг" SysID="199" DBComment="Приказ Минстроя России от 26.12.2019 №876/пр" Quantity="ОКР(Ф49.р1*1000; 2)" PriceLevel="2001" PzSync="Yes" Vr2001="10015">
+        <Quantity Fx="Ф49.р1*1000" Precision="2" Result="2352"/>
+        <PriceBase PZ="13,91" MT="13,91"/>
+      </Position>
+      <Position Caption="Устройство железобетонных фундаментов общего назначения под колонны объемом: до 3 м3 (дно приямка)" Identifier="Ф53" Number="22" Code="ФЕР06-01-001-05" Units="100 м3" SysID="226" DBComment="Приказ Минстроя России от 26.12.2019 №876/пр" Quantity="5,2 / 100" PriceLevel="2001" Options="Inactive" DBFlags="Comment TechK" PzSync="Yes" Vr2001="10011">
+        <Quantity Fx="=5,2" KUnit="100" Result="0,052"/>
+        <PriceBase PZ="12384,43" OZ="5408,02" EM="2828,36" ZM="431,06" MT="4148,05"/>
+        <Resources>
+          <Tzr Caption="Затраты труда рабочих" Code="1-3-0" Units="чел.-ч" Quantity="634" WorkClass="3">
+            <PriceBase Value="8,53"/>
+          </Tzr>
+          <Tzm Caption="Затраты труда машинистов" Code="2" Units="чел.-ч" Quantity="32,12"/>
+          <Mch Caption="Краны башенные, грузоподъемность 8 т" Code="91.05.01-017" Units="маш.час" Quantity="30,35">
+            <PriceBase Value="86,4" ZM="13,5"/>
+          </Mch>
+          <Mch Caption="Краны на автомобильном ходу, грузоподъемность 16 т" Code="91.05.05-015" Units="маш.час" Quantity="0,62">
+            <PriceBase Value="115,4" ZM="13,5"/>
+          </Mch>
+          <Mch Caption="Погрузчики, грузоподъемность 5 т" Code="91.06.05-011" Units="маш.час" Quantity="0,25">
+            <PriceBase Value="89,99" ZM="10,06"/>
+          </Mch>
+          <Mch Caption="Вибраторы глубинные" Code="91.07.04-001" Units="маш.час" Quantity="27,86">
+            <PriceBase Value="1,9"/>
+          </Mch>
+          <Mch Caption="Автомобили бортовые, грузоподъемность до 5 т" Code="91.14.02-001" Units="маш.час" Quantity="0,9">
+            <PriceBase Value="65,71" ZM="11,6"/>
+          </Mch>
+          <Mat Caption="Вода" Code="01.7.03.01-0001" Units="м3" Quantity="0,441">
+            <PriceBase Value="2,44"/>
+          </Mat>
+          <Mat Caption="Пленка полиэтиленовая, толщина 0,15 мм" Code="01.7.07.12-0024" Units="м2" Quantity="153">
+            <PriceBase Value="3,62"/>
+          </Mat>
+          <Mat Caption="Гвозди строительные" Code="01.7.15.06-0111" Units="т" Quantity="0,0238">
+            <PriceBase Value="11978"/>
+          </Mat>
+          <Mat Caption="Известь строительная негашеная комовая, сорт I" Code="03.1.02.03-0011" Units="т" Quantity="0,027">
+            <PriceBase Value="734,5"/>
+          </Mat>
+          <Mat Caption="Смеси бетонные тяжелого бетона" Identifier="р1" Code="04.1.02.05" Units="м3" Quantity="101,5" Options="NotCount"/>
+          <Mat Caption="Проволока светлая, диаметр 1,1 мм" Code="08.3.03.04-0012" Units="т" Quantity="0,0061">
+            <PriceBase Value="10200"/>
+          </Mat>
+          <Mat Caption="Проволока горячекатаная в мотках, диаметр 6,3-6,5 мм" Code="08.3.03.06-0002" Units="т" Quantity="0,0375">
+            <PriceBase Value="4455,2"/>
+          </Mat>
+          <Mat Caption="Арматура" Code="08.4.03.03" Units="т" Quantity="4,5" Options="NotCount"/>
+          <Mat Caption="Доска обрезная, хвойных пород, ширина 75-150 мм, толщина 44 мм и более, длина 4-6,5 м, сорт III" Code="11.1.03.06-0095" Units="м3" Quantity="0,74">
+            <PriceBase Value="1056"/>
+          </Mat>
+          <Mat Caption="Щиты из досок, толщина 25 мм" Code="11.2.13.04-0011" Units="м2" Quantity="64,1">
+            <PriceBase Value="35,53"/>
+          </Mat>
+        </Resources>
+        <WorksList>
+          <Work Caption="Раскрой и установка досок."/>
+          <Work Caption="Установка щитов опалубки."/>
+          <Work Caption="Крепление элементов опалубки проволокой и гвоздями строительными."/>
+          <Work Caption="Установка арматуры."/>
+          <Work Caption="Укладка бетонной смеси."/>
+        </WorksList>
+      </Position>
+      <Position Caption="Смеси бетонные тяжелого бетона (БСТ), класс В25 (М350)" Number="23" Code="ФССЦ-04.1.02.05-0009" Units="м3" SysID="227" DBComment="Приказ Минстроя России от 26.12.2019 №876/пр" Quantity="Ф53.р1" PriceLevel="2001" Options="Inactive" PzSync="Yes" Vr2001="10011">
+        <Quantity Fx="Ф53.р1" Result="5,278"/>
+        <PriceBase PZ="725,69" MT="725,69"/>
+      </Position>
+      <Position Caption="Устройство ленточных фундаментов: железобетонных при ширине по верху до 1000 мм" Identifier="Ф7" Number="24" Code="ФЕР06-01-001-22" Units="100 м3" SysID="28" DBComment="Приказ Минстроя России от 26.12.2019 №876/пр" Quantity="134,3 / 100" PriceLevel="2001" DBFlags="Comment TechK" PzSync="Yes" Vr2001="10011">
+        <Quantity Fx="=134,3" KUnit="100" Result="1,343"/>
+        <PriceBase PZ="10701,91" OZ="3189,6" EM="3499,23" ZM="405,88" MT="4013,08"/>
+        <Resources>
+          <Tzr Caption="Затраты труда рабочих" Code="1-3-3" Units="чел.-ч" Quantity="360" WorkClass="3,3">
+            <PriceBase Value="8,86"/>
+          </Tzr>
+          <Tzm Caption="Затраты труда машинистов" Code="2" Units="чел.-ч" Quantity="30,37"/>
+          <Mch Caption="Краны башенные, грузоподъемность 8 т" Code="91.05.01-017" Units="маш.час" Quantity="27,25">
+            <PriceBase Value="86,4" ZM="13,5"/>
+          </Mch>
+          <Mch Caption="Краны на автомобильном ходу, грузоподъемность 16 т" Code="91.05.05-015" Units="маш.час" Quantity="1,15">
+            <PriceBase Value="115,4" ZM="13,5"/>
+          </Mch>
+          <Mch Caption="Погрузчики, грузоподъемность 5 т" Code="91.06.05-011" Units="маш.час" Quantity="0,25">
+            <PriceBase Value="89,99" ZM="10,06"/>
+          </Mch>
+          <Mch Caption="Вибраторы глубинные" Code="91.07.04-001" Units="маш.час" Quantity="18">
+            <PriceBase Value="1,9"/>
+          </Mch>
+          <Mch Caption="Автомобили бортовые, грузоподъемность до 5 т" Code="91.14.02-001" Units="маш.час" Quantity="1,72">
+            <PriceBase Value="65,71" ZM="11,6"/>
+          </Mch>
+          <Mch Caption="Установки для сварки ручной дуговой (постоянного тока)" Code="91.17.04-233" Units="маш.час" Quantity="104">
+            <PriceBase Value="8,1"/>
+          </Mch>
+          <Mat Caption="Вода" Code="01.7.03.01-0001" Units="м3" Quantity="0,283">
+            <PriceBase Value="2,44"/>
+          </Mat>
+          <Mat Caption="Пленка полиэтиленовая, толщина 0,15 мм" Code="01.7.07.12-0024" Units="м2" Quantity="88,2">
+            <PriceBase Value="3,62"/>
+          </Mat>
+          <Mat Caption="Электроды сварочные Э42, диаметр 4 мм" Code="01.7.11.07-0032" Units="т" Quantity="0,13">
+            <PriceBase Value="10315,01"/>
+          </Mat>
+          <Mat Caption="Гвозди строительные" Code="01.7.15.06-0111" Units="т" Quantity="0,013">
+            <PriceBase Value="11978"/>
+          </Mat>
+          <Mat Caption="Известь строительная негашеная комовая, сорт I" Code="03.1.02.03-0011" Units="т" Quantity="0,025">
+            <PriceBase Value="734,5"/>
+          </Mat>
+          <Mat Caption="Смеси бетонные тяжелого бетона" Identifier="р1" Code="04.1.02.05" Units="м3" Quantity="101,5" Options="NotCount"/>
+          <Mat Caption="Проволока горячекатаная в мотках, диаметр 6,3-6,5 мм" Code="08.3.03.06-0002" Units="т" Quantity="0,0303">
+            <PriceBase Value="4455,2"/>
+          </Mat>
+          <Mat Caption="Арматура" Code="08.4.03.03" Units="т" Quantity="6,6" Options="NotCount"/>
+          <Mat Caption="Доска обрезная, хвойных пород, ширина 75-150 мм, толщина 25 мм, длина 4-6,5 м, сорт III" Code="11.1.03.06-0087" Units="м3" Quantity="0,14">
+            <PriceBase Value="1100"/>
+          </Mat>
+          <Mat Caption="Доска обрезная, хвойных пород, ширина 75-150 мм, толщина 44 мм и более, длина 4-6,5 м, сорт III" Code="11.1.03.06-0095" Units="м3" Quantity="0,47">
+            <PriceBase Value="1056"/>
+          </Mat>
+          <Mat Caption="Щиты из досок, толщина 25 мм" Code="11.2.13.04-0011" Units="м2" Quantity="39,2">
+            <PriceBase Value="35,53"/>
+          </Mat>
+        </Resources>
+        <WorksList>
+          <Work Caption="Раскрой и установка досок."/>
+          <Work Caption="Установка щитов опалубки."/>
+          <Work Caption="Крепление элементов опалубки проволокой и гвоздями строительными."/>
+          <Work Caption="Установка арматуры."/>
+          <Work Caption="Укладка бетонной смеси."/>
+        </WorksList>
+      </Position>
+      <Position Caption="Смеси бетонные тяжелого бетона (БСТ), класс В25 (М350)" Number="25" Code="ФССЦ-04.1.02.05-0009" Units="м3" SysID="143" DBComment="Приказ Минстроя России от 26.12.2019 №876/пр" Quantity="Ф7.р1" PriceLevel="2001" PzSync="Yes" Vr2001="10011">
+        <Quantity Fx="Ф7.р1" Result="136,3"/>
+        <PriceBase PZ="725,69" MT="725,69"/>
+      </Position>
+      <Position Caption="Горячекатаная арматурная сталь периодического профиля класса: А-III, диаметром 8 мм" Number="26" Code="ФССЦ-08.4.03.03-0030" Units="т" SysID="31" DBComment="Приказ Минстроя России от 26.12.2019 №876/пр" Quantity="0,8218" PriceLevel="2001" PzSync="Yes" Vr2001="10011">
+        <Quantity Fx="0,8218" Result="0,8218"/>
+        <PriceBase PZ="8102,64" MT="8102,64"/>
+      </Position>
+      <Position Caption="Горячекатаная арматурная сталь периодического профиля класса: А-III, диаметром 10 мм" Number="27" Code="ФССЦ-08.4.03.03-0031" Units="т" SysID="32" DBComment="Приказ Минстроя России от 26.12.2019 №876/пр" Quantity="0,7294" PriceLevel="2001" PzSync="Yes" Vr2001="10011">
+        <Quantity Fx="0,7294" Result="0,7294"/>
+        <PriceBase PZ="8014,15" MT="8014,15"/>
+      </Position>
+      <Position Caption="Горячекатаная арматурная сталь периодического профиля класса: А-III, диаметром 12 мм" Number="28" Code="ФССЦ-08.4.03.03-0032" Units="т" SysID="33" DBComment="Приказ Минстроя России от 26.12.2019 №876/пр" Quantity="7,2077" PriceLevel="2001" PzSync="Yes" Vr2001="10011">
+        <Quantity Fx="7,2077" Result="7,2077"/>
+        <PriceBase PZ="7997,23" MT="7997,23"/>
+      </Position>
+      <Position Caption="Горячекатаная арматурная сталь периодического профиля класса: А-III, диаметром 25-28 мм" Number="29" Code="ФССЦ-08.4.03.03-0036" Units="т" SysID="39" DBComment="Приказ Минстроя России от 26.12.2019 №876/пр" Quantity="6,9825" PriceLevel="2001" PzSync="Yes" Vr2001="10011">
+        <Quantity Fx="6,9825" Result="6,9825"/>
+        <PriceBase PZ="7792,12" MT="7792,12"/>
+      </Position>
+      <Header Caption="ФПп"/>
+      <Position Caption="Устройство бетонной подготовки" Identifier="Ф5" Number="30" Code="ФЕР06-01-001-01" Units="100 м3" SysID="23" DBComment="Приказ Минстроя России от 26.12.2019 №876/пр" Quantity="4,6 / 100" PriceLevel="2001" DBFlags="Comment TechK" PzSync="Yes" Vr2001="10011">
+        <Quantity Fx="=4,6" KUnit="100" Result="0,046"/>
+        <PriceBase PZ="3528,33" OZ="1053" EM="1566,06" ZM="244,39" MT="909,27"/>
+        <Resources>
+          <Tzr Caption="Затраты труда рабочих" Code="1-2-0" Units="чел.-ч" Quantity="135" WorkClass="2">
+            <PriceBase Value="7,8"/>
+          </Tzr>
+          <Tzm Caption="Затраты труда машинистов" Code="2" Units="чел.-ч" Quantity="18,12"/>
+          <Mch Caption="Краны башенные, грузоподъемность 8 т" Code="91.05.01-017" Units="маш.час" Quantity="18">
+            <PriceBase Value="86,4" ZM="13,5"/>
+          </Mch>
+          <Mch Caption="Вибраторы поверхностные" Code="91.07.04-002" Units="маш.час" Quantity="5,93">
+            <PriceBase Value="0,5"/>
+          </Mch>
+          <Mch Caption="Автомобили бортовые, грузоподъемность до 5 т" Code="91.14.02-001" Units="маш.час" Quantity="0,12">
+            <PriceBase Value="65,71" ZM="11,6"/>
+          </Mch>
+          <Mat Caption="Вода" Code="01.7.03.01-0001" Units="м3" Quantity="1,75">
+            <PriceBase Value="2,44"/>
+          </Mat>
+          <Mat Caption="Пленка полиэтиленовая, толщина 0,15 мм" Code="01.7.07.12-0024" Units="м2" Quantity="250">
+            <PriceBase Value="3,62"/>
+          </Mat>
+          <Mat Caption="Смеси бетонные тяжелого бетона" Code="04.1.02.05" Units="м3" Quantity="102" Options="NotCount"/>
+        </Resources>
+        <WorksList>
+          <Work Caption="Устройство бетонной подготовки."/>
+        </WorksList>
+      </Position>
+      <Position Caption="Бетон тяжелый, класс: В7,5 (М100)" Number="31" Code="ФССЦ-04.1.02.05-0003" Units="м3" SysID="24" DBComment="Приказ Минстроя России от 26.12.2019 №876/пр" Quantity="Ф5" PriceLevel="2001" PzSync="Yes" Vr2001="10011">
+        <Quantity Fx="Ф5" Result="0,046"/>
+        <PriceBase PZ="560" MT="560"/>
+      </Position>
+      <Position Caption="Устройство ленточных фундаментов: железобетонных при ширине по верху до 1000 мм" Identifier="Ф6" Number="32" Code="ФЕР06-01-001-22" Units="100 м3" SysID="25" DBComment="Приказ Минстроя России от 26.12.2019 №876/пр" Quantity="11,4 / 100" PriceLevel="2001" DBFlags="Comment TechK" PzSync="Yes" Vr2001="10011">
+        <Quantity Fx="=11,4" KUnit="100" Result="0,114"/>
+        <PriceBase PZ="10701,91" OZ="3189,6" EM="3499,23" ZM="405,88" MT="4013,08"/>
+        <Resources>
+          <Tzr Caption="Затраты труда рабочих" Code="1-3-3" Units="чел.-ч" Quantity="360" WorkClass="3,3">
+            <PriceBase Value="8,86"/>
+          </Tzr>
+          <Tzm Caption="Затраты труда машинистов" Code="2" Units="чел.-ч" Quantity="30,37"/>
+          <Mch Caption="Краны башенные, грузоподъемность 8 т" Code="91.05.01-017" Units="маш.час" Quantity="27,25">
+            <PriceBase Value="86,4" ZM="13,5"/>
+          </Mch>
+          <Mch Caption="Краны на автомобильном ходу, грузоподъемность 16 т" Code="91.05.05-015" Units="маш.час" Quantity="1,15">
+            <PriceBase Value="115,4" ZM="13,5"/>
+          </Mch>
+          <Mch Caption="Погрузчики, грузоподъемность 5 т" Code="91.06.05-011" Units="маш.час" Quantity="0,25">
+            <PriceBase Value="89,99" ZM="10,06"/>
+          </Mch>
+          <Mch Caption="Вибраторы глубинные" Code="91.07.04-001" Units="маш.час" Quantity="18">
+            <PriceBase Value="1,9"/>
+          </Mch>
+          <Mch Caption="Автомобили бортовые, грузоподъемность до 5 т" Code="91.14.02-001" Units="маш.час" Quantity="1,72">
+            <PriceBase Value="65,71" ZM="11,6"/>
+          </Mch>
+          <Mch Caption="Установки для сварки ручной дуговой (постоянного тока)" Code="91.17.04-233" Units="маш.час" Quantity="104">
+            <PriceBase Value="8,1"/>
+          </Mch>
+          <Mat Caption="Вода" Code="01.7.03.01-0001" Units="м3" Quantity="0,283">
+            <PriceBase Value="2,44"/>
+          </Mat>
+          <Mat Caption="Пленка полиэтиленовая, толщина 0,15 мм" Code="01.7.07.12-0024" Units="м2" Quantity="88,2">
+            <PriceBase Value="3,62"/>
+          </Mat>
+          <Mat Caption="Электроды сварочные Э42, диаметр 4 мм" Code="01.7.11.07-0032" Units="т" Quantity="0,13">
+            <PriceBase Value="10315,01"/>
+          </Mat>
+          <Mat Caption="Гвозди строительные" Code="01.7.15.06-0111" Units="т" Quantity="0,013">
+            <PriceBase Value="11978"/>
+          </Mat>
+          <Mat Caption="Известь строительная негашеная комовая, сорт I" Code="03.1.02.03-0011" Units="т" Quantity="0,025">
+            <PriceBase Value="734,5"/>
+          </Mat>
+          <Mat Caption="Смеси бетонные тяжелого бетона" Identifier="р1" Code="04.1.02.05" Units="м3" Quantity="101,5" Options="NotCount"/>
+          <Mat Caption="Проволока горячекатаная в мотках, диаметр 6,3-6,5 мм" Code="08.3.03.06-0002" Units="т" Quantity="0,0303">
+            <PriceBase Value="4455,2"/>
+          </Mat>
+          <Mat Caption="Арматура" Code="08.4.03.03" Units="т" Quantity="6,6" Options="NotCount"/>
+          <Mat Caption="Доска обрезная, хвойных пород, ширина 75-150 мм, толщина 25 мм, длина 4-6,5 м, сорт III" Code="11.1.03.06-0087" Units="м3" Quantity="0,14">
+            <PriceBase Value="1100"/>
+          </Mat>
+          <Mat Caption="Доска обрезная, хвойных пород, ширина 75-150 мм, толщина 44 мм и более, длина 4-6,5 м, сорт III" Code="11.1.03.06-0095" Units="м3" Quantity="0,47">
+            <PriceBase Value="1056"/>
+          </Mat>
+          <Mat Caption="Щиты из досок, толщина 25 мм" Code="11.2.13.04-0011" Units="м2" Quantity="39,2">
+            <PriceBase Value="35,53"/>
+          </Mat>
+        </Resources>
+        <WorksList>
+          <Work Caption="Раскрой и установка досок."/>
+          <Work Caption="Установка щитов опалубки."/>
+          <Work Caption="Крепление элементов опалубки проволокой и гвоздями строительными."/>
+          <Work Caption="Установка арматуры."/>
+          <Work Caption="Укладка бетонной смеси."/>
+        </WorksList>
+      </Position>
+      <Position Caption="Смеси бетонные тяжелого бетона (БСТ), класс В25 (М350)" Number="33" Code="ФССЦ-04.1.02.05-0009" Units="м3" SysID="144" DBComment="Приказ Минстроя России от 26.12.2019 №876/пр" Quantity="Ф6.р1" PriceLevel="2001" PzSync="Yes" Vr2001="10011">
+        <Quantity Fx="Ф6.р1" Result="11,57"/>
+        <PriceBase PZ="725,69" MT="725,69"/>
+      </Position>
+      <Position Caption="Горячекатаная арматурная сталь периодического профиля класса: А-III, диаметром 12 мм" Number="34" Code="ФССЦ-08.4.03.03-0032" Units="т" SysID="38" DBComment="Приказ Минстроя России от 26.12.2019 №876/пр" Quantity="0,8304" PriceLevel="2001" PzSync="Yes" Vr2001="10011">
+        <Quantity Fx="0,8304" Result="0,8304"/>
+        <PriceBase PZ="7997,23" MT="7997,23"/>
+      </Position>
+    </Chapter>
+    <Chapter Caption="Стены подземной части" SysID="3">
+      <Header Caption="СТ0"/>
+      <Position Caption="Огрунтовка бетонных и оштукатуренных поверхностей: битумной грунтовкой, первый слой" Identifier="Ф33" Number="35" Code="ФЕР13-03-001-01" Units="100 м2" SysID="200" DBComment="Приказ Минстроя России от 26.12.2019 №876/пр" Quantity="ОКР(811,1 / 100; 2)" PriceLevel="2001" DBFlags="Comment TechK" PzSync="Yes" Vr2001="10020">
+        <Quantity Fx="=811,1" KUnit="100" Precision="2" Result="8,11"/>
+        <PriceBase PZ="205,69" OZ="78,02" EM="9,22" ZM="0,22" MT="118,45"/>
+        <Resources>
+          <Tzr Caption="Затраты труда рабочих" Code="1-4-6" Units="чел.-ч" Quantity="7,43" WorkClass="4,6">
+            <PriceBase Value="10,5"/>
+          </Tzr>
+          <Tzm Caption="Затраты труда машинистов" Code="2" Units="чел.-ч" Quantity="0,02"/>
+          <Mch Caption="Лебедки электрические тяговым усилием до 5,79 кН (0,59 т)" Code="91.06.03-060" Units="маш.час" Quantity="0,01">
+            <PriceBase Value="1,7"/>
+          </Mch>
+          <Mch Caption="Погрузчики, грузоподъемность 5 т" Code="91.06.05-011" Units="маш.час" Quantity="0,01">
+            <PriceBase Value="89,99" ZM="10,06"/>
+          </Mch>
+          <Mch Caption="Автомобили бортовые, грузоподъемность до 5 т" Code="91.14.02-001" Units="маш.час" Quantity="0,01">
+            <PriceBase Value="65,71" ZM="11,6"/>
+          </Mch>
+          <Mch Caption="Агрегаты окрасочные высокого давления для окраски поверхностей конструкций, мощность 1 кВт" Code="91.21.01-012" Units="маш.час" Quantity="1,12">
+            <PriceBase Value="6,82"/>
+          </Mch>
+          <Mat Caption="Битумы нефтяные строительные БН-70/30" Identifier="р1" Code="01.2.01.02-0052" Units="т" Quantity="0,0055">
+            <PriceBase Value="1525,5"/>
+          </Mat>
+          <Mat Caption="Уайт-спирит" Code="14.5.09.11-0102" Units="кг" Quantity="16,5">
+            <PriceBase Value="6,67"/>
+          </Mat>
+        </Resources>
+        <WorksList>
+          <Work Caption="Подготовка окрасочных агрегатов."/>
+          <Work Caption="Приготовление грунтовочных составов."/>
+          <Work Caption="Нанесение грунта."/>
+          <Work Caption="Промывка, очистка окрасочных агрегатов и шлангов."/>
+          <Work Caption="Контроль качества."/>
+        </WorksList>
+      </Position>
+      <Position Caption="Битумы нефтяные строительные БН-70/30" Number="36" Code="ФССЦ-01.2.01.02-0052" Units="т" SysID="201" DBComment="Приказ Минстроя России от 26.12.2019 №876/пр" Quantity="ОКР(-Ф33.р1; 2)" PriceLevel="2001" PzSync="Yes" Vr2001="10020">
+        <Quantity Fx="-Ф33.р1" Precision="2" Result="-0,04"/>
+        <PriceBase PZ="1525,5" MT="1525,5"/>
+      </Position>
+      <Position Caption="Праймер битумный ТЕХНОНИКОЛЬ №01" Number="37" Code="ФССЦ-01.2.03.05-0011" Units="л" SysID="202" DBComment="Приказ Минстроя России от 26.12.2019 №876/пр" Quantity="ОКР(811,1*0,35; 2)" PriceLevel="2001" PzSync="Yes" Vr2001="10015">
+        <Quantity Fx="811,1*0,35" Precision="2" Result="283,89"/>
+        <PriceBase PZ="8,44" MT="8,44"/>
+      </Position>
+      <Position Caption="Гидроизоляция боковая обмазочная битумная в 2 слоя по выровненной поверхности бутовой кладки, кирпичу, бетону" Identifier="Ф32" Number="38" Code="ФЕР08-01-003-07" Units="100 м2" SysID="203" DBComment="Приказ Минстроя России от 26.12.2019 №876/пр" Quantity="ОКР(Ф33; 2)" PriceLevel="2001" DBFlags="Comment" PzSync="Yes" Vr2001="10015">
+        <Quantity Fx="Ф33" KUnit="100" Precision="2" Result="8,11"/>
+        <PriceBase PZ="358,13" OZ="201,61" EM="71,64" ZM="2,32" MT="84,88"/>
+        <Resources>
+          <Tzr Caption="Затраты труда рабочих" Code="1-3-9" Units="чел.-ч" Quantity="21,2" WorkClass="3,9">
+            <PriceBase Value="9,51"/>
+          </Tzr>
+          <Tzm Caption="Затраты труда машинистов" Code="2" Units="чел.-ч" Quantity="0,2"/>
+          <Mch Caption="Котлы битумные передвижные 400 л" Code="91.08.04-021" Units="маш.час" Quantity="1,95">
+            <PriceBase Value="30"/>
+          </Mch>
+          <Mch Caption="Автомобили бортовые, грузоподъемность до 5 т" Code="91.14.02-001" Units="маш.час" Quantity="0,2">
+            <PriceBase Value="65,71" ZM="11,6"/>
+          </Mch>
+          <Mat Caption="Битумы нефтяные строительные БН-90/10" Code="01.2.01.02-0054" Units="т" Quantity="0,016">
+            <PriceBase Value="1383,1"/>
+          </Mat>
+          <Mat Caption="Мастика" Identifier="р1" Code="01.2.03.03" Units="т" Quantity="0,24" Options="NotCount"/>
+          <Mat Caption="Керосин для технических целей" Code="01.3.01.03-0002" Units="т" Quantity="0,024">
+            <PriceBase Value="2606,9"/>
+          </Mat>
+          <Mat Caption="Ветошь" Code="01.7.20.08-0051" Units="кг" Quantity="0,1">
+            <PriceBase Value="1,82"/>
+          </Mat>
+        </Resources>
+        <WorksList>
+          <Work Caption="Огрунтовка поверхности."/>
+          <Work Caption="Нанесение слоев битумной мастики с разогреванием ее."/>
+        </WorksList>
+      </Position>
+      <Position Caption="Мастика кровельная холодная ТЕХНОНИКОЛЬ №21 (Техномаст)" Number="39" Code="ФССЦ-01.2.03.03-0122" Units="кг" SysID="204" DBComment="Приказ Минстроя России от 26.12.2019 №876/пр" Quantity="ОКР(Ф32.р1*1000; 2)" PriceLevel="2001" PzSync="Yes" Vr2001="10015">
+        <Quantity Fx="Ф32.р1*1000" Precision="2" Result="1946"/>
+        <PriceBase PZ="13,91" MT="13,91"/>
+      </Position>
+      <Position Caption="Устройство железобетонных лестничных маршей в инвентарной опалубке (подача бетона в бадьях): прямоугольных" Identifier="Ф29" Number="40" Code="ФЕР06-19-005-01" Units="100 м3" SysID="183" DBComment="Приказ Минстроя России от 26.12.2019 №876/пр" Quantity="2,7 / 100" PriceLevel="2001" DBFlags="TechK" PzSync="Yes" Vr2001="10012">
+        <Quantity Fx="=2,7" KUnit="100" Result="0,027"/>
+        <PriceBase PZ="29682,6" OZ="20844,86" EM="5415,58" ZM="796,18" MT="3422,16"/>
+        <Resources>
+          <Tzr Caption="Затраты труда рабочих" Code="1-3-1" Units="чел.-ч" Quantity="2412,6" WorkClass="3,1">
+            <PriceBase Value="8,64"/>
+          </Tzr>
+          <Tzm Caption="Затраты труда машинистов" Code="2" Units="чел.-ч" Quantity="60,12"/>
+          <Mch Caption="Краны башенные, грузоподъемность 8 т" Code="91.05.01-017" Units="маш.час" Quantity="51,7">
+            <PriceBase Value="86,4" ZM="13,5"/>
+          </Mch>
+          <Mch Caption="Краны на автомобильном ходу, грузоподъемность 16 т" Code="91.05.05-015" Units="маш.час" Quantity="2,35">
+            <PriceBase Value="115,4" ZM="13,5"/>
+          </Mch>
+          <Mch Caption="Погрузчики, грузоподъемность 5 т" Code="91.06.05-011" Units="маш.час" Quantity="2,54">
+            <PriceBase Value="89,99" ZM="10,06"/>
+          </Mch>
+          <Mch Caption="Вибраторы поверхностные" Code="91.07.04-002" Units="маш.час" Quantity="78">
+            <PriceBase Value="0,5"/>
+          </Mch>
+          <Mch Caption="Автомобили бортовые, грузоподъемность до 8 т" Code="91.14.02-002" Units="маш.час" Quantity="3,53">
+            <PriceBase Value="85,84" ZM="11,6"/>
+          </Mch>
+          <Mch Caption="Установки для сварки ручной дуговой (постоянного тока)" Code="91.17.04-233" Units="маш.час" Quantity="13,2">
+            <PriceBase Value="8,1"/>
+          </Mch>
+          <Mat Caption="Масло антраценовое" Code="01.3.04.08-0012" Units="т" Quantity="0,173">
+            <PriceBase Value="1696,01"/>
+          </Mat>
+          <Mat Caption="Вода" Code="01.7.03.01-0001" Units="м3" Quantity="0,2066">
+            <PriceBase Value="2,44"/>
+          </Mat>
+          <Mat Caption="Пленка полиэтиленовая, толщина 0,15 мм" Code="01.7.07.12-0024" Units="м2" Quantity="42,9">
+            <PriceBase Value="3,62"/>
+          </Mat>
+          <Mat Caption="Электроды сварочные Э42, диаметр 4 мм" Code="01.7.11.07-0032" Units="т" Quantity="0,013">
+            <PriceBase Value="10315,01"/>
+          </Mat>
+          <Mat Caption="Гвозди строительные" Code="01.7.15.06-0111" Units="т" Quantity="0,015">
+            <PriceBase Value="11978"/>
+          </Mat>
+          <Mat Caption="Палуба опалубки из бакелизированной фанеры" Identifier="р1" Code="01.7.16.03" Units="м2" Quantity="29,2" Options="NotCount"/>
+          <Mat Caption="Конструкции металлические опалубки инвентарной (амортизация)" Code="01.7.16.04" Units="компл" Options="Project NotCount"/>
+          <Mat Caption="Смеси бетонные тяжелого бетона" Identifier="р2" Code="04.1.02.05" Units="м3" Quantity="101,5" Options="NotCount"/>
+          <Mat Caption="Проволока светлая, диаметр 1,1 мм" Code="08.3.03.04-0012" Units="т" Quantity="0,0236">
+            <PriceBase Value="10200"/>
+          </Mat>
+          <Mat Caption="Арматура" Code="08.4.03.03" Units="т" Quantity="15,7" Options="NotCount"/>
+          <Mat Caption="Бруски обрезные, хвойных пород, длина 4-6,5 м, ширина 75-150 мм, толщина 40-75 мм, сорт III" Code="11.1.03.01-0079" Units="м3" Quantity="0,82">
+            <PriceBase Value="1287"/>
+          </Mat>
+          <Mat Caption="Доска обрезная, хвойных пород, ширина 75-150 мм, толщина 25 мм, длина 4-6,5 м, сорт III" Code="11.1.03.06-0087" Units="м3" Quantity="0,26">
+            <PriceBase Value="1100"/>
+          </Mat>
+          <Mat Caption="Доска обрезная, хвойных пород, ширина 75-150 мм, толщина 44 мм и более, длина 4-6,5 м, сорт III" Code="11.1.03.06-0095" Units="м3" Quantity="1,02">
+            <PriceBase Value="1056"/>
+          </Mat>
+        </Resources>
+        <WorksList>
+          <Work Caption="Устройство и разборка инвентарных элементов опалубки (стоек, прогонов, опалубочных балок и вспомогательных деталей)."/>
+          <Work Caption="Раскрой и крепление щитов из бакелизированной фанеры."/>
+          <Work Caption="Установка арматуры."/>
+          <Work Caption="Укладка бетона."/>
+          <Work Caption="Уход за бетоном."/>
+        </WorksList>
+      </Position>
+      <Position Caption="Палуба опалубки из бакелизированной фанеры" Number="41" Code="ФССЦ-01.7.16.03-0001" Units="м2" SysID="184" DBComment="Приказ Минстроя России от 26.12.2019 №876/пр" Quantity="Ф29.р1" PriceLevel="2001" PzSync="Yes" Vr2001="10012">
+        <Quantity Fx="Ф29.р1" Result="0,7884"/>
+        <PriceBase PZ="145" MT="145"/>
+      </Position>
+      <Position Caption="Смеси бетонные тяжелого бетона (БСТ), класс В25 (М350)" Number="42" Code="ФССЦ-04.1.02.05-0009" Units="м3" SysID="185" DBComment="Приказ Минстроя России от 26.12.2019 №876/пр" Quantity="Ф29.р2" PriceLevel="2001" PzSync="Yes" Vr2001="10011">
+        <Quantity Fx="Ф29.р2" Result="2,741"/>
+        <PriceBase PZ="725,69" MT="725,69"/>
+      </Position>
+      <Position Caption="Горячекатаная арматурная сталь периодического профиля класса: А-III, диаметром 8 мм" Number="43" Code="ФССЦ-08.4.03.03-0030" Units="т" SysID="186" DBComment="Приказ Минстроя России от 26.12.2019 №876/пр" Quantity="0,09" PriceLevel="2001" PzSync="Yes" Vr2001="10011">
+        <Quantity Fx="0,09" Result="0,09"/>
+        <PriceBase PZ="8102,64" MT="8102,64"/>
+      </Position>
+      <Position Caption="Горячекатаная арматурная сталь периодического профиля класса: А-III, диаметром 16-18 мм" Number="44" Code="ФССЦ-08.4.03.03-0034" Units="т" SysID="233" DBComment="Приказ Минстроя России от 26.12.2019 №876/пр" Quantity="0,42" PriceLevel="2001" PzSync="Yes" Vr2001="10011">
+        <Quantity Fx="0,42" Result="0,42"/>
+        <PriceBase PZ="7956,21" MT="7956,21"/>
+      </Position>
+      <Position Caption="Каркасы и сетки арматурные плоские, собранные и сваренные (связанные) в арматурные изделия, класс ВР-I, диаметр 4 мм" Number="45" Code="ФССЦ-08.4.02.03-0021" Units="т" SysID="188" DBComment="Приказ Минстроя России от 26.12.2019 №876/пр" Quantity="0,048" PriceLevel="2001" PzSync="Yes" Vr2001="10011">
+        <Quantity Fx="0,048" Result="0,048"/>
+        <PriceBase PZ="8817,17" MT="8817,17"/>
+      </Position>
+      <Position Caption="Уголок горячекатаный, марка стали 18пс, ширина полок 110-250 мм" Number="46" Code="ФССЦ-08.3.08.02-0046" Units="т" SysID="189" DBComment="Приказ Минстроя России от 26.12.2019 №876/пр" Quantity="0,05" PriceLevel="2001" PzSync="Yes" Vr2001="10011">
+        <Quantity Fx="=0,05" Result="0,05"/>
+        <PriceBase PZ="5121,53" MT="5121,53"/>
+      </Position>
+      <Position Caption="Устройство стен подвалов и подпорных стен железобетонных высотой: до 3 м, толщиной до 300 мм (пилон)" Identifier="Ф35" Number="47" Code="ФЕР06-04-001-03" Units="100 м3" SysID="206" DBComment="Приказ Минстроя России от 26.12.2019 №876/пр" Quantity="2,9 / 100" PriceLevel="2001" DBFlags="Comment TechK" PzSync="Yes" Vr2001="10011">
+        <Quantity Fx="=2,9" KUnit="100" Result="0,029"/>
+        <PriceBase PZ="21483,4" OZ="7857,26" EM="4197,52" ZM="546,69" MT="9428,62"/>
+        <Resources>
+          <Tzr Caption="Затраты труда рабочих" Code="1-3-2" Units="чел.-ч" Quantity="899" WorkClass="3,2">
+            <PriceBase Value="8,74"/>
+          </Tzr>
+          <Tzm Caption="Затраты труда машинистов" Code="2" Units="чел.-ч" Quantity="41,04"/>
+          <Mch Caption="Краны башенные, грузоподъемность 8 т" Code="91.05.01-017" Units="маш.час" Quantity="34,99">
+            <PriceBase Value="86,4" ZM="13,5"/>
+          </Mch>
+          <Mch Caption="Краны на автомобильном ходу, грузоподъемность 16 т" Code="91.05.05-015" Units="маш.час" Quantity="2,38">
+            <PriceBase Value="115,4" ZM="13,5"/>
+          </Mch>
+          <Mch Caption="Погрузчики, грузоподъемность 5 т" Code="91.06.05-011" Units="маш.час" Quantity="0,25">
+            <PriceBase Value="89,99" ZM="10,06"/>
+          </Mch>
+          <Mch Caption="Вибраторы глубинные" Code="91.07.04-001" Units="маш.час" Quantity="45">
+            <PriceBase Value="1,9"/>
+          </Mch>
+          <Mch Caption="Автомобили бортовые, грузоподъемность до 5 т" Code="91.14.02-001" Units="маш.час" Quantity="3,42">
+            <PriceBase Value="65,71" ZM="11,6"/>
+          </Mch>
+          <Mch Caption="Установки для сварки ручной дуговой (постоянного тока)" Code="91.17.04-233" Units="маш.час" Quantity="70">
+            <PriceBase Value="8,1"/>
+          </Mch>
+          <Mat Caption="Вода" Code="01.7.03.01-0001" Units="м3" Quantity="0,223">
+            <PriceBase Value="2,44"/>
+          </Mat>
+          <Mat Caption="Электроды сварочные Э42, диаметр 4 мм" Code="01.7.11.07-0032" Units="т" Quantity="0,1">
+            <PriceBase Value="10315,01"/>
+          </Mat>
+          <Mat Caption="Болты с гайками и шайбами строительные" Code="01.7.15.03-0042" Units="кг" Quantity="120">
+            <PriceBase Value="9,04"/>
+          </Mat>
+          <Mat Caption="Гвозди строительные" Code="01.7.15.06-0111" Units="т" Quantity="0,086">
+            <PriceBase Value="11978"/>
+          </Mat>
+          <Mat Caption="Известь строительная негашеная комовая, сорт I" Code="03.1.02.03-0011" Units="т" Quantity="0,074">
+            <PriceBase Value="734,5"/>
+          </Mat>
+          <Mat Caption="Смеси бетонные тяжелого бетона" Identifier="р1" Code="04.1.02.05" Units="м3" Quantity="101,5" Options="NotCount"/>
+          <Mat Caption="Арматура" Code="08.4.03.03" Units="т" Quantity="10,12" Options="NotCount"/>
+          <Mat Caption="Бруски обрезные, хвойных пород, длина 4-6,5 м, ширина 75-150 мм, толщина 40-75 мм, сорт III" Code="11.1.03.01-0079" Units="м3" Quantity="0,19">
+            <PriceBase Value="1287"/>
+          </Mat>
+          <Mat Caption="Доска обрезная, хвойных пород, ширина 75-150 мм, толщина 44 мм и более, длина 4-6,5 м, сорт III" Code="11.1.03.06-0095" Units="м3" Quantity="2,2">
+            <PriceBase Value="1056"/>
+          </Mat>
+          <Mat Caption="Щиты из досок, толщина 25 мм" Code="11.2.13.04-0011" Units="м2" Quantity="103">
+            <PriceBase Value="35,53"/>
+          </Mat>
+        </Resources>
+        <WorksList>
+          <Work Caption="Раскрой и установка брусков и досок."/>
+          <Work Caption="Установка щитов опалубки."/>
+          <Work Caption="Крепление элементов опалубки гвоздями и болтами строительными."/>
+          <Work Caption="Установка арматуры."/>
+          <Work Caption="Укладка бетонной смеси."/>
+        </WorksList>
+      </Position>
+      <Position Caption="Смеси бетонные тяжелого бетона (БСТ), класс В25 (М350)" Number="48" Code="ФССЦ-04.1.02.05-0009" Units="м3" SysID="146" DBComment="Приказ Минстроя России от 26.12.2019 №876/пр" Quantity="Ф35.р1" PriceLevel="2001" PzSync="Yes" Vr2001="10011">
+        <Quantity Fx="Ф35.р1" Result="2,944"/>
+        <PriceBase PZ="725,69" MT="725,69"/>
+      </Position>
+      <Position Caption="Горячекатаная арматурная сталь периодического профиля класса: А-III, диаметром 12 мм" Number="49" Code="ФССЦ-08.4.03.03-0032" Units="т" SysID="62" DBComment="Приказ Минстроя России от 26.12.2019 №876/пр" Quantity="0,2993" PriceLevel="2001" PzSync="Yes" Vr2001="10011">
+        <Quantity Fx="0,2993" Result="0,2993"/>
+        <PriceBase PZ="7997,23" MT="7997,23"/>
+      </Position>
+      <Position Caption="Горячекатаная арматурная сталь гладкая класса А-I, диаметром: 8 мм" Number="50" Code="ФССЦ-08.4.03.02-0002" Units="т" SysID="232" DBComment="Приказ Минстроя России от 26.12.2019 №876/пр" Quantity="0,08" PriceLevel="2001" PzSync="Yes" Vr2001="10011">
+        <Quantity Fx="0,08" Result="0,08"/>
+        <PriceBase PZ="6780" MT="6780"/>
+      </Position>
+      <Position Caption="Устройство железобетонных колонн в деревянной опалубке высотой: до 4 м, периметром до 2 м" Identifier="Ф36" Number="51" Code="ФЕР06-05-001-04" Units="100 м3" SysID="207" DBComment="Приказ Минстроя России от 26.12.2019 №876/пр" Quantity="7,1 / 100" PriceLevel="2001" DBFlags="Comment TechK" PzSync="Yes" Vr2001="10011">
+        <Quantity Fx="=7,1" KUnit="100" Result="0,071"/>
+        <PriceBase PZ="27363,56" OZ="9089,6" EM="9600,75" ZM="1342,78" MT="8673,21"/>
+        <Resources>
+          <Tzr Caption="Затраты труда рабочих" Code="1-3-2" Units="чел.-ч" Quantity="1040" WorkClass="3,2">
+            <PriceBase Value="8,74"/>
+          </Tzr>
+          <Tzm Caption="Затраты труда машинистов" Code="2" Units="чел.-ч" Quantity="100,08"/>
+          <Mch Caption="Краны башенные, грузоподъемность 8 т" Code="91.05.01-017" Units="маш.час" Quantity="93,3">
+            <PriceBase Value="86,4" ZM="13,5"/>
+          </Mch>
+          <Mch Caption="Краны на автомобильном ходу, грузоподъемность 16 т" Code="91.05.05-015" Units="маш.час" Quantity="2,61">
+            <PriceBase Value="115,4" ZM="13,5"/>
+          </Mch>
+          <Mch Caption="Погрузчики, грузоподъемность 5 т" Code="91.06.05-011" Units="маш.час" Quantity="0,25">
+            <PriceBase Value="89,99" ZM="10,06"/>
+          </Mch>
+          <Mch Caption="Вибраторы глубинные" Code="91.07.04-001" Units="маш.час" Quantity="56,77">
+            <PriceBase Value="1,9"/>
+          </Mch>
+          <Mch Caption="Автомобили бортовые, грузоподъемность до 5 т" Code="91.14.02-001" Units="маш.час" Quantity="3,92">
+            <PriceBase Value="65,71" ZM="11,6"/>
+          </Mch>
+          <Mch Caption="Установки для сварки ручной дуговой (постоянного тока)" Code="91.17.04-233" Units="маш.час" Quantity="105">
+            <PriceBase Value="8,1"/>
+          </Mch>
+          <Mat Caption="Вода" Code="01.7.03.01-0001" Units="м3" Quantity="0,25">
+            <PriceBase Value="2,44"/>
+          </Mat>
+          <Mat Caption="Электроды сварочные Э42, диаметр 4 мм" Code="01.7.11.07-0032" Units="т" Quantity="0,15">
+            <PriceBase Value="10315,01"/>
+          </Mat>
+          <Mat Caption="Гвозди строительные" Code="01.7.15.06-0111" Units="т" Quantity="0,045">
+            <PriceBase Value="11978"/>
+          </Mat>
+          <Mat Caption="Известь строительная негашеная комовая, сорт I" Code="03.1.02.03-0011" Units="т" Quantity="0,084">
+            <PriceBase Value="734,5"/>
+          </Mat>
+          <Mat Caption="Смеси бетонные тяжелого бетона" Identifier="р1" Code="04.1.02.05" Units="м3" Quantity="101,5" Options="NotCount"/>
+          <Mat Caption="Арматура" Code="08.4.03.03" Units="т" Quantity="8,01" Options="NotCount"/>
+          <Mat Caption="Бруски обрезные, хвойных пород, длина 2-6,5 м, толщина 40-60 мм, сорт II" Code="11.1.03.01-0075" Units="м3" Quantity="0,25">
+            <PriceBase Value="1250"/>
+          </Mat>
+          <Mat Caption="Доска необрезная, хвойных пород, длина 4-6,5 м, все ширины, толщина 44 мм и более, сорт II" Code="11.1.03.05-0084" Units="м3" Quantity="1,7">
+            <PriceBase Value="832,7"/>
+          </Mat>
+          <Mat Caption="Щиты из досок, толщина 25 мм" Code="11.2.13.04-0011" Units="м2" Quantity="135">
+            <PriceBase Value="35,53"/>
+          </Mat>
+        </Resources>
+        <WorksList>
+          <Work Caption="Установка досок и щитов опалубки."/>
+          <Work Caption="Установка хомутов."/>
+          <Work Caption="Крепление элементов опалубки гвоздями строительными и проволокой."/>
+          <Work Caption="Установка и сварка арматуры."/>
+          <Work Caption="Укладка бетонной смеси."/>
+        </WorksList>
+      </Position>
+      <Position Caption="Смеси бетонные тяжелого бетона (БСТ), класс В25 (М350)" Number="52" Code="ФССЦ-04.1.02.05-0009" Units="м3" SysID="147" DBComment="Приказ Минстроя России от 26.12.2019 №876/пр" Quantity="Ф36.р1" PriceLevel="2001" PzSync="Yes" Vr2001="10011">
+        <Quantity Fx="Ф36.р1" Result="7,207"/>
+        <PriceBase PZ="725,69" MT="725,69"/>
+      </Position>
+      <Position Caption="Горячекатаная арматурная сталь периодического профиля класса: А-III, диаметром 16-18 мм" Number="53" Code="ФССЦ-08.4.03.03-0034" Units="т" SysID="187" DBComment="Приказ Минстроя России от 26.12.2019 №876/пр" Quantity="0,6384" PriceLevel="2001" PzSync="Yes" Vr2001="10011">
+        <Quantity Fx="0,6384" Result="0,6384"/>
+        <PriceBase PZ="7956,21" MT="7956,21"/>
+      </Position>
+      <Position Caption="Горячекатаная арматурная сталь гладкая класса А-I, диаметром: 8 мм" Number="54" Code="ФССЦ-08.4.03.02-0002" Units="т" SysID="96" DBComment="Приказ Минстроя России от 26.12.2019 №876/пр" Quantity="0,134" PriceLevel="2001" PzSync="Yes" Vr2001="10011">
+        <Quantity Fx="0,134" Result="0,134"/>
+        <PriceBase PZ="6780" MT="6780"/>
+      </Position>
+      <Position Caption="Устройство стен подвалов и подпорных стен железобетонных высотой: до 3 м, толщиной до 300 мм" Identifier="Ф37" Number="55" Code="ФЕР06-04-001-03" Units="100 м3" SysID="208" DBComment="Приказ Минстроя России от 26.12.2019 №876/пр" Quantity="(0,4+8,5+92,9) / 100" PriceLevel="2001" DBFlags="Comment TechK" PzSync="Yes" Vr2001="10011">
+        <Quantity Fx="=0,4+8,5+92,9" KUnit="100" Result="1,018"/>
+        <PriceBase PZ="21483,4" OZ="7857,26" EM="4197,52" ZM="546,69" MT="9428,62"/>
+        <Resources>
+          <Tzr Caption="Затраты труда рабочих" Code="1-3-2" Units="чел.-ч" Quantity="899" WorkClass="3,2">
+            <PriceBase Value="8,74"/>
+          </Tzr>
+          <Tzm Caption="Затраты труда машинистов" Code="2" Units="чел.-ч" Quantity="41,04"/>
+          <Mch Caption="Краны башенные, грузоподъемность 8 т" Code="91.05.01-017" Units="маш.час" Quantity="34,99">
+            <PriceBase Value="86,4" ZM="13,5"/>
+          </Mch>
+          <Mch Caption="Краны на автомобильном ходу, грузоподъемность 16 т" Code="91.05.05-015" Units="маш.час" Quantity="2,38">
+            <PriceBase Value="115,4" ZM="13,5"/>
+          </Mch>
+          <Mch Caption="Погрузчики, грузоподъемность 5 т" Code="91.06.05-011" Units="маш.час" Quantity="0,25">
+            <PriceBase Value="89,99" ZM="10,06"/>
+          </Mch>
+          <Mch Caption="Вибраторы глубинные" Code="91.07.04-001" Units="маш.час" Quantity="45">
+            <PriceBase Value="1,9"/>
+          </Mch>
+          <Mch Caption="Автомобили бортовые, грузоподъемность до 5 т" Code="91.14.02-001" Units="маш.час" Quantity="3,42">
+            <PriceBase Value="65,71" ZM="11,6"/>
+          </Mch>
+          <Mch Caption="Установки для сварки ручной дуговой (постоянного тока)" Code="91.17.04-233" Units="маш.час" Quantity="70">
+            <PriceBase Value="8,1"/>
+          </Mch>
+          <Mat Caption="Вода" Code="01.7.03.01-0001" Units="м3" Quantity="0,223">
+            <PriceBase Value="2,44"/>
+          </Mat>
+          <Mat Caption="Электроды сварочные Э42, диаметр 4 мм" Code="01.7.11.07-0032" Units="т" Quantity="0,1">
+            <PriceBase Value="10315,01"/>
+          </Mat>
+          <Mat Caption="Болты с гайками и шайбами строительные" Code="01.7.15.03-0042" Units="кг" Quantity="120">
+            <PriceBase Value="9,04"/>
+          </Mat>
+          <Mat Caption="Гвозди строительные" Code="01.7.15.06-0111" Units="т" Quantity="0,086">
+            <PriceBase Value="11978"/>
+          </Mat>
+          <Mat Caption="Известь строительная негашеная комовая, сорт I" Code="03.1.02.03-0011" Units="т" Quantity="0,074">
+            <PriceBase Value="734,5"/>
+          </Mat>
+          <Mat Caption="Смеси бетонные тяжелого бетона" Identifier="р1" Code="04.1.02.05" Units="м3" Quantity="101,5" Options="NotCount"/>
+          <Mat Caption="Арматура" Code="08.4.03.03" Units="т" Quantity="10,12" Options="NotCount"/>
+          <Mat Caption="Бруски обрезные, хвойных пород, длина 4-6,5 м, ширина 75-150 мм, толщина 40-75 мм, сорт III" Code="11.1.03.01-0079" Units="м3" Quantity="0,19">
+            <PriceBase Value="1287"/>
+          </Mat>
+          <Mat Caption="Доска обрезная, хвойных пород, ширина 75-150 мм, толщина 44 мм и более, длина 4-6,5 м, сорт III" Code="11.1.03.06-0095" Units="м3" Quantity="2,2">
+            <PriceBase Value="1056"/>
+          </Mat>
+          <Mat Caption="Щиты из досок, толщина 25 мм" Code="11.2.13.04-0011" Units="м2" Quantity="103">
+            <PriceBase Value="35,53"/>
+          </Mat>
+        </Resources>
+        <WorksList>
+          <Work Caption="Раскрой и установка брусков и досок."/>
+          <Work Caption="Установка щитов опалубки."/>
+          <Work Caption="Крепление элементов опалубки гвоздями и болтами строительными."/>
+          <Work Caption="Установка арматуры."/>
+          <Work Caption="Укладка бетонной смеси."/>
+        </WorksList>
+      </Position>
+      <Position Caption="Смеси бетонные тяжелого бетона (БСТ), класс В25 (М350)" Number="56" Code="ФССЦ-04.1.02.05-0009" Units="м3" SysID="145" DBComment="Приказ Минстроя России от 26.12.2019 №876/пр" Quantity="Ф37.р1" PriceLevel="2001" PzSync="Yes" Vr2001="10011">
+        <Quantity Fx="Ф37.р1" Result="103,3"/>
+        <PriceBase PZ="725,69" MT="725,69"/>
+      </Position>
+      <Position Caption="Горячекатаная арматурная сталь периодического профиля класса: А-III, диаметром 8 мм" Number="57" Code="ФССЦ-08.4.03.03-0030" Units="т" SysID="40" DBComment="Приказ Минстроя России от 26.12.2019 №876/пр" Quantity="2,1334" PriceLevel="2001" PzSync="Yes" Vr2001="10011">
+        <Quantity Fx="2,1334" Result="2,1334"/>
+        <PriceBase PZ="8102,64" MT="8102,64"/>
+      </Position>
+      <Position Caption="Горячекатаная арматурная сталь периодического профиля класса: А-III, диаметром 12 мм" Number="58" Code="ФССЦ-08.4.03.03-0032" Units="т" SysID="42" DBComment="Приказ Минстроя России от 26.12.2019 №876/пр" Quantity="4,3267" PriceLevel="2001" PzSync="Yes" Vr2001="10011">
+        <Quantity Fx="4,3267" Result="4,3267"/>
+        <PriceBase PZ="7997,23" MT="7997,23"/>
+      </Position>
+      <Position Caption="Горячекатаная арматурная сталь периодического профиля класса: А-III, диаметром 16-18 мм" Number="59" Code="ФССЦ-08.4.03.03-0034" Units="т" SysID="44" DBComment="Приказ Минстроя России от 26.12.2019 №876/пр" Quantity="0,0292" PriceLevel="2001" PzSync="Yes" Vr2001="10011">
+        <Quantity Fx="0,0292" Result="0,0292"/>
+        <PriceBase PZ="7956,21" MT="7956,21"/>
+      </Position>
+      <Position Caption="Устройство засыпки фундаментных балок: песком" Identifier="Ф34" Number="60" Code="ФЕР06-07-003-01" Units="100 м3" SysID="209" DBComment="Приказ Минстроя России от 26.12.2019 №876/пр" Quantity="14,8 / 100" PriceLevel="2001" DBFlags="TechK" PzSync="Yes" Vr2001="10011">
+        <Quantity Fx="=14,8" KUnit="100" Result="0,148"/>
+        <PriceBase PZ="4248,09" OZ="1587,69" EM="2652,84" ZM="368,86" MT="7,56"/>
+        <Resources>
+          <Tzr Caption="Затраты труда рабочих" Code="1-3-4" Units="чел.-ч" Quantity="177" WorkClass="3,4">
+            <PriceBase Value="8,97"/>
+          </Tzr>
+          <Tzm Caption="Затраты труда машинистов" Code="2" Units="чел.-ч" Quantity="34,4"/>
+          <Mch Caption="Бульдозеры, мощность 59 кВт (80 л.с.)" Code="91.01.01-034" Units="маш.час" Quantity="14,8">
+            <PriceBase Value="59,47" ZM="11,6"/>
+          </Mch>
+          <Mch Caption="Погрузчики, грузоподъемность 5 т" Code="91.06.05-011" Units="маш.час" Quantity="11,6">
+            <PriceBase Value="89,99" ZM="10,06"/>
+          </Mch>
+          <Mch Caption="Трамбовки пневматические при работе от передвижных компрессорных станций" Code="91.08.09-023" Units="маш.час" Quantity="16">
+            <PriceBase Value="0,55"/>
+          </Mch>
+          <Mch Caption="Компрессоры передвижные с двигателем внутреннего сгорания, давление до 686 кПа (7 ат), производительность до 5 м3/мин" Code="91.18.01-007" Units="маш.час" Quantity="8">
+            <PriceBase Value="90" ZM="10,06"/>
+          </Mch>
+          <Mat Caption="Вода" Code="01.7.03.01-0001" Units="м3" Quantity="3,1">
+            <PriceBase Value="2,44"/>
+          </Mat>
+          <Mat Caption="Песок для строительных работ природный" Identifier="р1" Code="02.3.01.02" Units="м3" Quantity="105" Options="NotCount"/>
+        </Resources>
+        <WorksList>
+          <Work Caption="Засыпка фундаментных балок песком."/>
+        </WorksList>
+      </Position>
+      <Position Caption="Песок природный для строительных: работ средний" Number="61" Code="ФССЦ-02.3.01.02-0015" Units="м3" SysID="58" DBComment="Приказ Минстроя России от 26.12.2019 №876/пр" Quantity="Ф34.р1" PriceLevel="2001" PzSync="Yes" Vr2001="10015">
+        <Quantity Fx="Ф34.р1" Result="15,54"/>
+        <PriceBase PZ="55,26" MT="55,26"/>
+      </Position>
+      <Header Caption="СТ0п"/>
+      <Position Caption="Устройство стен подвалов и подпорных стен железобетонных высотой: до 3 м, толщиной до 300 мм" Identifier="Ф38" Number="62" Code="ФЕР06-04-001-03" Units="100 м3" SysID="210" DBComment="Приказ Минстроя России от 26.12.2019 №876/пр" Quantity="24,6 / 100" PriceLevel="2001" DBFlags="Comment TechK" PzSync="Yes" Vr2001="10011">
+        <Quantity Fx="=24,6" KUnit="100" Result="0,246"/>
+        <PriceBase PZ="21483,4" OZ="7857,26" EM="4197,52" ZM="546,69" MT="9428,62"/>
+        <Resources>
+          <Tzr Caption="Затраты труда рабочих" Code="1-3-2" Units="чел.-ч" Quantity="899" WorkClass="3,2">
+            <PriceBase Value="8,74"/>
+          </Tzr>
+          <Tzm Caption="Затраты труда машинистов" Code="2" Units="чел.-ч" Quantity="41,04"/>
+          <Mch Caption="Краны башенные, грузоподъемность 8 т" Code="91.05.01-017" Units="маш.час" Quantity="34,99">
+            <PriceBase Value="86,4" ZM="13,5"/>
+          </Mch>
+          <Mch Caption="Краны на автомобильном ходу, грузоподъемность 16 т" Code="91.05.05-015" Units="маш.час" Quantity="2,38">
+            <PriceBase Value="115,4" ZM="13,5"/>
+          </Mch>
+          <Mch Caption="Погрузчики, грузоподъемность 5 т" Code="91.06.05-011" Units="маш.час" Quantity="0,25">
+            <PriceBase Value="89,99" ZM="10,06"/>
+          </Mch>
+          <Mch Caption="Вибраторы глубинные" Code="91.07.04-001" Units="маш.час" Quantity="45">
+            <PriceBase Value="1,9"/>
+          </Mch>
+          <Mch Caption="Автомобили бортовые, грузоподъемность до 5 т" Code="91.14.02-001" Units="маш.час" Quantity="3,42">
+            <PriceBase Value="65,71" ZM="11,6"/>
+          </Mch>
+          <Mch Caption="Установки для сварки ручной дуговой (постоянного тока)" Code="91.17.04-233" Units="маш.час" Quantity="70">
+            <PriceBase Value="8,1"/>
+          </Mch>
+          <Mat Caption="Вода" Code="01.7.03.01-0001" Units="м3" Quantity="0,223">
+            <PriceBase Value="2,44"/>
+          </Mat>
+          <Mat Caption="Электроды сварочные Э42, диаметр 4 мм" Code="01.7.11.07-0032" Units="т" Quantity="0,1">
+            <PriceBase Value="10315,01"/>
+          </Mat>
+          <Mat Caption="Болты с гайками и шайбами строительные" Code="01.7.15.03-0042" Units="кг" Quantity="120">
+            <PriceBase Value="9,04"/>
+          </Mat>
+          <Mat Caption="Гвозди строительные" Code="01.7.15.06-0111" Units="т" Quantity="0,086">
+            <PriceBase Value="11978"/>
+          </Mat>
+          <Mat Caption="Известь строительная негашеная комовая, сорт I" Code="03.1.02.03-0011" Units="т" Quantity="0,074">
+            <PriceBase Value="734,5"/>
+          </Mat>
+          <Mat Caption="Смеси бетонные тяжелого бетона" Identifier="р1" Code="04.1.02.05" Units="м3" Quantity="101,5" Options="NotCount"/>
+          <Mat Caption="Арматура" Code="08.4.03.03" Units="т" Quantity="10,12" Options="NotCount"/>
+          <Mat Caption="Бруски обрезные, хвойных пород, длина 4-6,5 м, ширина 75-150 мм, толщина 40-75 мм, сорт III" Code="11.1.03.01-0079" Units="м3" Quantity="0,19">
+            <PriceBase Value="1287"/>
+          </Mat>
+          <Mat Caption="Доска обрезная, хвойных пород, ширина 75-150 мм, толщина 44 мм и более, длина 4-6,5 м, сорт III" Code="11.1.03.06-0095" Units="м3" Quantity="2,2">
+            <PriceBase Value="1056"/>
+          </Mat>
+          <Mat Caption="Щиты из досок, толщина 25 мм" Code="11.2.13.04-0011" Units="м2" Quantity="103">
+            <PriceBase Value="35,53"/>
+          </Mat>
+        </Resources>
+        <WorksList>
+          <Work Caption="Раскрой и установка брусков и досок."/>
+          <Work Caption="Установка щитов опалубки."/>
+          <Work Caption="Крепление элементов опалубки гвоздями и болтами строительными."/>
+          <Work Caption="Установка арматуры."/>
+          <Work Caption="Укладка бетонной смеси."/>
+        </WorksList>
+      </Position>
+      <Position Caption="Смеси бетонные тяжелого бетона (БСТ), класс В25 (М350)" Number="63" Code="ФССЦ-04.1.02.05-0009" Units="м3" SysID="148" DBComment="Приказ Минстроя России от 26.12.2019 №876/пр" Quantity="Ф38.р1" PriceLevel="2001" PzSync="Yes" Vr2001="10011">
+        <Quantity Fx="Ф38.р1" Result="24,97"/>
+        <PriceBase PZ="725,69" MT="725,69"/>
+      </Position>
+      <Position Caption="Горячекатаная арматурная сталь периодического профиля класса: А-III, диаметром 8 мм" Number="64" Code="ФССЦ-08.4.03.03-0030" Units="т" SysID="50" DBComment="Приказ Минстроя России от 26.12.2019 №876/пр" Quantity="0,5308" PriceLevel="2001" PzSync="Yes" Vr2001="10011">
+        <Quantity Fx="0,5308" Result="0,5308"/>
+        <PriceBase PZ="8102,64" MT="8102,64"/>
+      </Position>
+      <Position Caption="Горячекатаная арматурная сталь периодического профиля класса: А-III, диаметром 12 мм" Number="65" Code="ФССЦ-08.4.03.03-0032" Units="т" SysID="52" DBComment="Приказ Минстроя России от 26.12.2019 №876/пр" Quantity="1,0696" PriceLevel="2001" PzSync="Yes" Vr2001="10011">
+        <Quantity Fx="1,0696" Result="1,0696"/>
+        <PriceBase PZ="7997,23" MT="7997,23"/>
+      </Position>
+    </Chapter>
+    <Chapter Caption="Перекрытие на отм. -0,2" SysID="4">
+      <Header Caption="ПЛ1"/>
+      <Position Caption="Устройство перекрытий безбалочных толщиной: до 200 мм на высоте от опорной площади до 6 м" Identifier="Ф39" Number="66" Code="ФЕР06-08-001-01" Units="100 м3" SysID="211" DBComment="Приказ Минстроя России от 26.12.2019 №876/пр" Quantity="234,5 / 100" PriceLevel="2001" DBFlags="Comment TechK" PzSync="Yes" Vr2001="10011">
+        <Quantity Fx="=234,5" KUnit="100" Result="2,345"/>
+        <PriceBase PZ="30515,25" OZ="6963,84" EM="2693,58" ZM="414,54" MT="20857,83"/>
+        <Resources>
+          <Tzr Caption="Затраты труда рабочих" Code="1-3-1" Units="чел.-ч" Quantity="806" WorkClass="3,1">
+            <PriceBase Value="8,64"/>
+          </Tzr>
+          <Tzm Caption="Затраты труда машинистов" Code="2" Units="чел.-ч" Quantity="30,95"/>
+          <Mch Caption="Краны башенные, грузоподъемность 8 т" Code="91.05.01-017" Units="маш.час" Quantity="28,56">
+            <PriceBase Value="86,4" ZM="13,5"/>
+          </Mch>
+          <Mch Caption="Краны на автомобильном ходу, грузоподъемность 16 т" Code="91.05.05-015" Units="маш.час" Quantity="0,86">
+            <PriceBase Value="115,4" ZM="13,5"/>
+          </Mch>
+          <Mch Caption="Погрузчики, грузоподъемность 5 т" Code="91.06.05-011" Units="маш.час" Quantity="0,25">
+            <PriceBase Value="89,99" ZM="10,06"/>
+          </Mch>
+          <Mch Caption="Вибраторы поверхностные" Code="91.07.04-002" Units="маш.час" Quantity="40,3">
+            <PriceBase Value="0,5"/>
+          </Mch>
+          <Mch Caption="Автомобили бортовые, грузоподъемность до 5 т" Code="91.14.02-001" Units="маш.час" Quantity="1,28">
+            <PriceBase Value="65,71" ZM="11,6"/>
+          </Mch>
+          <Mat Caption="Вода" Code="01.7.03.01-0001" Units="м3" Quantity="0,257">
+            <PriceBase Value="2,44"/>
+          </Mat>
+          <Mat Caption="Гвозди строительные" Code="01.7.15.06-0111" Units="т" Quantity="0,079">
+            <PriceBase Value="11978"/>
+          </Mat>
+          <Mat Caption="Стойки деревометаллические раздвижные инвентарные" Code="01.7.16.03-0011" Units="шт" Quantity="2,8">
+            <PriceBase Value="1010"/>
+          </Mat>
+          <Mat Caption="Ткань мешочная" Code="01.7.20.08-0162" Units="10 м2" Quantity="4,29">
+            <PriceBase Value="84,75"/>
+          </Mat>
+          <Mat Caption="Известь строительная негашеная комовая, сорт I" Code="03.1.02.03-0011" Units="т" Quantity="0,086">
+            <PriceBase Value="734,5"/>
+          </Mat>
+          <Mat Caption="Смеси бетонные тяжелого бетона" Identifier="р1" Code="04.1.02.05" Units="м3" Quantity="101,5" Options="NotCount"/>
+          <Mat Caption="Конструкции стальные" Code="07.3.02.11" Units="т" Quantity="0,5" Options="NotCount"/>
+          <Mat Caption="Проволока светлая, диаметр 1,1 мм" Code="08.3.03.04-0012" Units="т" Quantity="0,0116">
+            <PriceBase Value="10200"/>
+          </Mat>
+          <Mat Caption="Арматура" Code="08.4.03.03" Units="т" Quantity="7,66" Options="NotCount"/>
+          <Mat Caption="Бруски обрезные, хвойных пород, длина 4-6,5 м, ширина 75-150 мм, толщина 40-75 мм, сорт III" Code="11.1.03.01-0079" Units="м3" Quantity="6,22">
+            <PriceBase Value="1287"/>
+          </Mat>
+          <Mat Caption="Бруски обрезные, хвойных пород, длина 4-6,5 м, ширина 75-150 мм, толщина 150 мм и более, сорт II" Code="11.1.03.01-0086" Units="м3" Quantity="0,99">
+            <PriceBase Value="2156"/>
+          </Mat>
+          <Mat Caption="Доска обрезная, хвойных пород, ширина 75-150 мм, толщина 25 мм, длина 4-6,5 м, сорт III" Code="11.1.03.06-0087" Units="м3" Quantity="0,53">
+            <PriceBase Value="1100"/>
+          </Mat>
+          <Mat Caption="Доска обрезная, хвойных пород, ширина 75-150 мм, толщина 44 мм и более, длина 4-6,5 м, сорт III" Code="11.1.03.06-0095" Units="м3" Quantity="2,61">
+            <PriceBase Value="1056"/>
+          </Mat>
+          <Mat Caption="Щиты из досок, толщина 25 мм" Code="11.2.13.04-0011" Units="м2" Quantity="86,1">
+            <PriceBase Value="35,53"/>
+          </Mat>
+        </Resources>
+        <WorksList>
+          <Work Caption="Раскрой и установка брусьев, брусков и досок."/>
+          <Work Caption="Установка щитов опалубки."/>
+          <Work Caption="Крепление элементов опалубки проволокой и гвоздями строительными."/>
+          <Work Caption="Установка и сварка арматуры."/>
+          <Work Caption="Укладка бетонной смеси."/>
+        </WorksList>
+      </Position>
+      <Position Caption="Смеси бетонные тяжелого бетона (БСТ), класс В25 (М350)" Number="67" Code="ФССЦ-04.1.02.05-0009" Units="м3" SysID="149" DBComment="Приказ Минстроя России от 26.12.2019 №876/пр" Quantity="Ф39.р1" PriceLevel="2001" PzSync="Yes" Vr2001="10011">
+        <Quantity Fx="Ф39.р1" Result="238"/>
+        <PriceBase PZ="725,69" MT="725,69"/>
+      </Position>
+      <Position Caption="Горячекатаная арматурная сталь периодического профиля класса: А-III, диаметром 12 мм" Number="68" Code="ФССЦ-08.4.03.03-0032" Units="т" SysID="71" DBComment="Приказ Минстроя России от 26.12.2019 №876/пр" Quantity="27,2508" PriceLevel="2001" PzSync="Yes" Vr2001="10011">
+        <Quantity Fx="27,2508" Result="27,2508"/>
+        <PriceBase PZ="7997,23" MT="7997,23"/>
+      </Position>
+      <Position Caption="Горячекатаная арматурная сталь периодического профиля класса: А-III, диаметром 16-18 мм" Number="69" Code="ФССЦ-08.4.03.03-0034" Units="т" SysID="73" DBComment="Приказ Минстроя России от 26.12.2019 №876/пр" Quantity="1,0388" PriceLevel="2001" PzSync="Yes" Vr2001="10011">
+        <Quantity Fx="1,0388" Result="1,0388"/>
+        <PriceBase PZ="7956,21" MT="7956,21"/>
+      </Position>
+      <Position Caption="Горячекатаная арматурная сталь периодического профиля класса: А-III, диаметром 20-22 мм" Number="70" Code="ФССЦ-08.4.03.03-0035" Units="т" SysID="74" DBComment="Приказ Минстроя России от 26.12.2019 №876/пр" Quantity="1,3888" PriceLevel="2001" PzSync="Yes" Vr2001="10011">
+        <Quantity Fx="1,3888" Result="1,3888"/>
+        <PriceBase PZ="7917" MT="7917"/>
+      </Position>
+      <Header Caption="ПЛ1п"/>
+      <Position Caption="Устройство бетонной подготовки" Identifier="Ф15" Number="71" Code="ФЕР06-01-001-01" Units="100 м3" SysID="253" DBComment="Приказ Минстроя России от 26.12.2019 №876/пр" Quantity="6,7 / 100" PriceLevel="2001" DBFlags="Comment TechK" PzSync="Yes" Vr2001="10011">
+        <Quantity Fx="=6,7" KUnit="100" Result="0,067"/>
+        <PriceBase PZ="3528,33" OZ="1053" EM="1566,06" ZM="244,39" MT="909,27"/>
+        <Resources>
+          <Tzr Caption="Затраты труда рабочих" Code="1-2-0" Units="чел.-ч" Quantity="135" WorkClass="2">
+            <PriceBase Value="7,8"/>
+          </Tzr>
+          <Tzm Caption="Затраты труда машинистов" Code="2" Units="чел.-ч" Quantity="18,12"/>
+          <Mch Caption="Краны башенные, грузоподъемность 8 т" Code="91.05.01-017" Units="маш.час" Quantity="18">
+            <PriceBase Value="86,4" ZM="13,5"/>
+          </Mch>
+          <Mch Caption="Вибраторы поверхностные" Code="91.07.04-002" Units="маш.час" Quantity="5,93">
+            <PriceBase Value="0,5"/>
+          </Mch>
+          <Mch Caption="Автомобили бортовые, грузоподъемность до 5 т" Code="91.14.02-001" Units="маш.час" Quantity="0,12">
+            <PriceBase Value="65,71" ZM="11,6"/>
+          </Mch>
+          <Mat Caption="Вода" Code="01.7.03.01-0001" Units="м3" Quantity="1,75">
+            <PriceBase Value="2,44"/>
+          </Mat>
+          <Mat Caption="Пленка полиэтиленовая, толщина 0,15 мм" Code="01.7.07.12-0024" Units="м2" Quantity="250">
+            <PriceBase Value="3,62"/>
+          </Mat>
+          <Mat Caption="Смеси бетонные тяжелого бетона" Identifier="р1" Code="04.1.02.05" Units="м3" Quantity="102" Options="NotCount"/>
+        </Resources>
+        <WorksList>
+          <Work Caption="Устройство бетонной подготовки."/>
+        </WorksList>
+      </Position>
+      <Position Caption="Бетон тяжелый, класс: В7,5 (М100)" Number="72" Code="ФССЦ-04.1.02.05-0003" Units="м3" SysID="254" DBComment="Приказ Минстроя России от 26.12.2019 №876/пр" Quantity="Ф15.р1" PriceLevel="2001" PzSync="Yes" Vr2001="10011">
+        <Quantity Fx="Ф15.р1" Result="6,834"/>
+        <PriceBase PZ="560" MT="560"/>
+      </Position>
+      <Position Caption="Устройство перекрытий безбалочных толщиной: до 200 мм на высоте от опорной площади до 6 м" Identifier="Ф40" Number="73" Code="ФЕР06-08-001-01" Units="100 м3" SysID="212" DBComment="Приказ Минстроя России от 26.12.2019 №876/пр" Quantity="15,6 / 100" PriceLevel="2001" DBFlags="Comment TechK" PzSync="Yes" Vr2001="10011">
+        <Quantity Fx="=15,6" KUnit="100" Result="0,156"/>
+        <PriceBase PZ="30515,25" OZ="6963,84" EM="2693,58" ZM="414,54" MT="20857,83"/>
+        <Resources>
+          <Tzr Caption="Затраты труда рабочих" Code="1-3-1" Units="чел.-ч" Quantity="806" WorkClass="3,1">
+            <PriceBase Value="8,64"/>
+          </Tzr>
+          <Tzm Caption="Затраты труда машинистов" Code="2" Units="чел.-ч" Quantity="30,95"/>
+          <Mch Caption="Краны башенные, грузоподъемность 8 т" Code="91.05.01-017" Units="маш.час" Quantity="28,56">
+            <PriceBase Value="86,4" ZM="13,5"/>
+          </Mch>
+          <Mch Caption="Краны на автомобильном ходу, грузоподъемность 16 т" Code="91.05.05-015" Units="маш.час" Quantity="0,86">
+            <PriceBase Value="115,4" ZM="13,5"/>
+          </Mch>
+          <Mch Caption="Погрузчики, грузоподъемность 5 т" Code="91.06.05-011" Units="маш.час" Quantity="0,25">
+            <PriceBase Value="89,99" ZM="10,06"/>
+          </Mch>
+          <Mch Caption="Вибраторы поверхностные" Code="91.07.04-002" Units="маш.час" Quantity="40,3">
+            <PriceBase Value="0,5"/>
+          </Mch>
+          <Mch Caption="Автомобили бортовые, грузоподъемность до 5 т" Code="91.14.02-001" Units="маш.час" Quantity="1,28">
+            <PriceBase Value="65,71" ZM="11,6"/>
+          </Mch>
+          <Mat Caption="Вода" Code="01.7.03.01-0001" Units="м3" Quantity="0,257">
+            <PriceBase Value="2,44"/>
+          </Mat>
+          <Mat Caption="Гвозди строительные" Code="01.7.15.06-0111" Units="т" Quantity="0,079">
+            <PriceBase Value="11978"/>
+          </Mat>
+          <Mat Caption="Стойки деревометаллические раздвижные инвентарные" Code="01.7.16.03-0011" Units="шт" Quantity="2,8">
+            <PriceBase Value="1010"/>
+          </Mat>
+          <Mat Caption="Ткань мешочная" Code="01.7.20.08-0162" Units="10 м2" Quantity="4,29">
+            <PriceBase Value="84,75"/>
+          </Mat>
+          <Mat Caption="Известь строительная негашеная комовая, сорт I" Code="03.1.02.03-0011" Units="т" Quantity="0,086">
+            <PriceBase Value="734,5"/>
+          </Mat>
+          <Mat Caption="Смеси бетонные тяжелого бетона" Identifier="р1" Code="04.1.02.05" Units="м3" Quantity="101,5" Options="NotCount"/>
+          <Mat Caption="Конструкции стальные" Code="07.3.02.11" Units="т" Quantity="0,5" Options="NotCount"/>
+          <Mat Caption="Проволока светлая, диаметр 1,1 мм" Code="08.3.03.04-0012" Units="т" Quantity="0,0116">
+            <PriceBase Value="10200"/>
+          </Mat>
+          <Mat Caption="Арматура" Code="08.4.03.03" Units="т" Quantity="7,66" Options="NotCount"/>
+          <Mat Caption="Бруски обрезные, хвойных пород, длина 4-6,5 м, ширина 75-150 мм, толщина 40-75 мм, сорт III" Code="11.1.03.01-0079" Units="м3" Quantity="6,22">
+            <PriceBase Value="1287"/>
+          </Mat>
+          <Mat Caption="Бруски обрезные, хвойных пород, длина 4-6,5 м, ширина 75-150 мм, толщина 150 мм и более, сорт II" Code="11.1.03.01-0086" Units="м3" Quantity="0,99">
+            <PriceBase Value="2156"/>
+          </Mat>
+          <Mat Caption="Доска обрезная, хвойных пород, ширина 75-150 мм, толщина 25 мм, длина 4-6,5 м, сорт III" Code="11.1.03.06-0087" Units="м3" Quantity="0,53">
+            <PriceBase Value="1100"/>
+          </Mat>
+          <Mat Caption="Доска обрезная, хвойных пород, ширина 75-150 мм, толщина 44 мм и более, длина 4-6,5 м, сорт III" Code="11.1.03.06-0095" Units="м3" Quantity="2,61">
+            <PriceBase Value="1056"/>
+          </Mat>
+          <Mat Caption="Щиты из досок, толщина 25 мм" Code="11.2.13.04-0011" Units="м2" Quantity="86,1">
+            <PriceBase Value="35,53"/>
+          </Mat>
+        </Resources>
+        <WorksList>
+          <Work Caption="Раскрой и установка брусьев, брусков и досок."/>
+          <Work Caption="Установка щитов опалубки."/>
+          <Work Caption="Крепление элементов опалубки проволокой и гвоздями строительными."/>
+          <Work Caption="Установка и сварка арматуры."/>
+          <Work Caption="Укладка бетонной смеси."/>
+        </WorksList>
+      </Position>
+      <Position Caption="Смеси бетонные тяжелого бетона (БСТ), класс В25 (М350)" Number="74" Code="ФССЦ-04.1.02.05-0009" Units="м3" SysID="150" DBComment="Приказ Минстроя России от 26.12.2019 №876/пр" Quantity="Ф40.р1" PriceLevel="2001" PzSync="Yes" Vr2001="10011">
+        <Quantity Fx="Ф40.р1" Result="15,83"/>
+        <PriceBase PZ="725,69" MT="725,69"/>
+      </Position>
+      <Position Caption="Горячекатаная арматурная сталь периодического профиля класса: А-III, диаметром 10 мм" Number="75" Code="ФССЦ-08.4.03.03-0031" Units="т" SysID="78" DBComment="Приказ Минстроя России от 26.12.2019 №876/пр" Quantity="0,2656" PriceLevel="2001" PzSync="Yes" Vr2001="10011">
+        <Quantity Fx="0,2656" Result="0,2656"/>
+        <PriceBase PZ="8014,15" MT="8014,15"/>
+      </Position>
+      <Position Caption="Горячекатаная арматурная сталь периодического профиля класса: А-III, диаметром 12 мм" Number="76" Code="ФССЦ-08.4.03.03-0032" Units="т" SysID="79" DBComment="Приказ Минстроя России от 26.12.2019 №876/пр" Quantity="1,2105" PriceLevel="2001" PzSync="Yes" Vr2001="10011">
+        <Quantity Fx="1,2105" Result="1,2105"/>
+        <PriceBase PZ="7997,23" MT="7997,23"/>
+      </Position>
+      <Position Caption="Устройство засыпки фундаментных балок: песком" Identifier="Ф16" Number="77" Code="ФЕР06-07-003-01" Units="100 м3" SysID="255" DBComment="Приказ Минстроя России от 26.12.2019 №876/пр" Quantity="18,4 / 100" PriceLevel="2001" DBFlags="TechK" PzSync="Yes" Vr2001="10011">
+        <Quantity Fx="=18,4" KUnit="100" Result="0,184"/>
+        <PriceBase PZ="4248,09" OZ="1587,69" EM="2652,84" ZM="368,86" MT="7,56"/>
+        <Resources>
+          <Tzr Caption="Затраты труда рабочих" Code="1-3-4" Units="чел.-ч" Quantity="177" WorkClass="3,4">
+            <PriceBase Value="8,97"/>
+          </Tzr>
+          <Tzm Caption="Затраты труда машинистов" Code="2" Units="чел.-ч" Quantity="34,4"/>
+          <Mch Caption="Бульдозеры, мощность 59 кВт (80 л.с.)" Code="91.01.01-034" Units="маш.час" Quantity="14,8">
+            <PriceBase Value="59,47" ZM="11,6"/>
+          </Mch>
+          <Mch Caption="Погрузчики, грузоподъемность 5 т" Code="91.06.05-011" Units="маш.час" Quantity="11,6">
+            <PriceBase Value="89,99" ZM="10,06"/>
+          </Mch>
+          <Mch Caption="Трамбовки пневматические при работе от передвижных компрессорных станций" Code="91.08.09-023" Units="маш.час" Quantity="16">
+            <PriceBase Value="0,55"/>
+          </Mch>
+          <Mch Caption="Компрессоры передвижные с двигателем внутреннего сгорания, давление до 686 кПа (7 ат), производительность до 5 м3/мин" Code="91.18.01-007" Units="маш.час" Quantity="8">
+            <PriceBase Value="90" ZM="10,06"/>
+          </Mch>
+          <Mat Caption="Вода" Code="01.7.03.01-0001" Units="м3" Quantity="3,1">
+            <PriceBase Value="2,44"/>
+          </Mat>
+          <Mat Caption="Песок для строительных работ природный" Identifier="р1" Code="02.3.01.02" Units="м3" Quantity="105" Options="NotCount"/>
+        </Resources>
+        <WorksList>
+          <Work Caption="Засыпка фундаментных балок песком."/>
+        </WorksList>
+      </Position>
+      <Position Caption="Песок природный для строительных: работ средний" Number="78" Code="ФССЦ-02.3.01.02-0015" Units="м3" SysID="256" DBComment="Приказ Минстроя России от 26.12.2019 №876/пр" Quantity="Ф16.р1" PriceLevel="2001" PzSync="Yes" Vr2001="10015">
+        <Quantity Fx="Ф16.р1" Result="19,32"/>
+        <PriceBase PZ="55,26" MT="55,26"/>
+      </Position>
+      <Position Caption="Устройство тепло- и звукоизоляции сплошной из плит: или матов минераловатных или стекловолокнистых" Identifier="Ф93" Number="79" Code="ФЕР11-01-009-01" Units="100 м2" SysID="257" DBComment="Приказ Минстроя России от 26.12.2019 №876/пр" Quantity="ОКР((1,7/0,1) / 100; 2)" PriceLevel="2001" DBFlags="TechK" PzSync="Yes" Vr2001="10018">
+        <Quantity Fx="=1,7/0,1" KUnit="100" Precision="2" Result="0,17"/>
+        <PriceBase PZ="296,2" OZ="231,43" EM="64,77" ZM="12,87"/>
+        <Resources>
+          <Tzr Caption="Затраты труда рабочих" Code="1-3-4" Units="чел.-ч" Quantity="25,8" WorkClass="3,4">
+            <PriceBase Value="8,97"/>
+          </Tzr>
+          <Tzm Caption="Затраты труда машинистов" Code="2" Units="чел.-ч" Quantity="1,08"/>
+          <Mch Caption="Подъемники одномачтовые, грузоподъемность до 500 кг, высота подъема 45 м" Code="91.06.06-048" Units="маш.час" Quantity="0,18">
+            <PriceBase Value="31,26" ZM="13,5"/>
+          </Mch>
+          <Mch Caption="Автомобили бортовые, грузоподъемность до 5 т" Code="91.14.02-001" Units="маш.час" Quantity="0,9">
+            <PriceBase Value="65,71" ZM="11,6"/>
+          </Mch>
+          <Mat Caption="Плиты или маты минераловатные или стекловолокнистые" Identifier="р1" Code="12.2.04.04" Units="м2" Quantity="103" Options="NotCount"/>
+        </Resources>
+        <WorksList>
+          <Work Caption="Укладка плит или матов в один слой насухо."/>
+        </WorksList>
+      </Position>
+      <Position Caption="Пенополистирол экструдированный ТЕХНОНИКОЛЬ XPS CARBON 35-300" Number="80" Code="ФССЦ-12.2.05.09-0009" Units="м3" SysID="258" DBComment="Приказ Минстроя России от 26.12.2019 №876/пр" Quantity="Ф93.р1*0,1" PriceLevel="2001" PzSync="Yes" Vr2001="10018">
+        <Quantity Fx="Ф93.р1*0,1" Result="1,751"/>
+        <PriceBase PZ="1634,71" MT="1634,71"/>
+      </Position>
+    </Chapter>
+    <Chapter Caption="Стены. Надземная часть." SysID="5">
+      <Header Caption="СТ1"/>
+      <Position Caption="Устройство железобетонных стен и перегородок высотой: до 3 м, толщиной 300 мм" Identifier="Ф41" Number="81" Code="ФЕР06-06-002-04" Units="100 м3" SysID="213" DBComment="Приказ Минстроя России от 26.12.2019 №876/пр" Quantity="66 / 100" PriceLevel="2001" DBFlags="Comment TechK" PzSync="Yes" Vr2001="10011">
+        <Quantity Fx="=66" KUnit="100" Result="0,66"/>
+        <PriceBase PZ="27997,83" OZ="8565,2" EM="8539,73" ZM="1077,32" MT="10892,9"/>
+        <Resources>
+          <Tzr Caption="Затраты труда рабочих" Code="1-3-2" Units="чел.-ч" Quantity="980" WorkClass="3,2">
+            <PriceBase Value="8,74"/>
+          </Tzr>
+          <Tzm Caption="Затраты труда машинистов" Code="2" Units="чел.-ч" Quantity="80,05"/>
+          <Mch Caption="Краны башенные, грузоподъемность 8 т" Code="91.05.01-017" Units="маш.час" Quantity="77,59">
+            <PriceBase Value="86,4" ZM="13,5"/>
+          </Mch>
+          <Mch Caption="Краны на автомобильном ходу, грузоподъемность 16 т" Code="91.05.05-015" Units="маш.час" Quantity="0,89">
+            <PriceBase Value="115,4" ZM="13,5"/>
+          </Mch>
+          <Mch Caption="Погрузчики, грузоподъемность 5 т" Code="91.06.05-011" Units="маш.час" Quantity="0,25">
+            <PriceBase Value="89,99" ZM="10,06"/>
+          </Mch>
+          <Mch Caption="Вибраторы глубинные" Code="91.07.04-001" Units="маш.час" Quantity="49">
+            <PriceBase Value="1,9"/>
+          </Mch>
+          <Mch Caption="Автомобили бортовые, грузоподъемность до 5 т" Code="91.14.02-001" Units="маш.час" Quantity="1,32">
+            <PriceBase Value="65,71" ZM="11,6"/>
+          </Mch>
+          <Mch Caption="Установки для сварки ручной дуговой (постоянного тока)" Code="91.17.04-233" Units="маш.час" Quantity="189">
+            <PriceBase Value="8,1"/>
+          </Mch>
+          <Mat Caption="Вода" Code="01.7.03.01-0001" Units="м3" Quantity="0,206">
+            <PriceBase Value="2,44"/>
+          </Mat>
+          <Mat Caption="Электроды сварочные Э42, диаметр 4 мм" Code="01.7.11.07-0032" Units="т" Quantity="0,27">
+            <PriceBase Value="10315,01"/>
+          </Mat>
+          <Mat Caption="Болты с гайками и шайбами строительные" Code="01.7.15.03-0042" Units="кг" Quantity="120">
+            <PriceBase Value="9,04"/>
+          </Mat>
+          <Mat Caption="Гвозди строительные" Code="01.7.15.06-0111" Units="т" Quantity="0,086">
+            <PriceBase Value="11978"/>
+          </Mat>
+          <Mat Caption="Известь строительная негашеная комовая, сорт I" Code="03.1.02.03-0011" Units="т" Quantity="0,069">
+            <PriceBase Value="734,5"/>
+          </Mat>
+          <Mat Caption="Смеси бетонные тяжелого бетона" Identifier="р1" Code="04.1.02.05" Units="м3" Quantity="101,5" Options="NotCount"/>
+          <Mat Caption="Арматура" Code="08.4.03.03" Units="т" Quantity="13,6" Options="NotCount"/>
+          <Mat Caption="Бруски обрезные, хвойных пород, длина 4-6,5 м, ширина 75-150 мм, толщина 40-75 мм, сорт III" Code="11.1.03.01-0079" Units="м3" Quantity="0,18">
+            <PriceBase Value="1287"/>
+          </Mat>
+          <Mat Caption="Доска обрезная, хвойных пород, ширина 75-150 мм, толщина 44 мм и более, длина 4-6,5 м, сорт III" Code="11.1.03.06-0095" Units="м3" Quantity="2,11">
+            <PriceBase Value="1056"/>
+          </Mat>
+          <Mat Caption="Щиты из досок, толщина 25 мм" Code="11.2.13.04-0011" Units="м2" Quantity="98">
+            <PriceBase Value="35,53"/>
+          </Mat>
+        </Resources>
+        <WorksList>
+          <Work Caption="Раскрой и установка брусков и досок."/>
+          <Work Caption="Установка щитов опалубки."/>
+          <Work Caption="Крепление элементов опалубки болтами и гвоздями строительными."/>
+          <Work Caption="Установка и сварка арматуры."/>
+          <Work Caption="Укладка бетонной смеси."/>
+        </WorksList>
+      </Position>
+      <Position Caption="Смеси бетонные тяжелого бетона (БСТ), класс В25 (М350)" Number="82" Code="ФССЦ-04.1.02.05-0009" Units="м3" SysID="151" DBComment="Приказ Минстроя России от 26.12.2019 №876/пр" Quantity="Ф41.р1" PriceLevel="2001" PzSync="Yes" Vr2001="10011">
+        <Quantity Fx="Ф41.р1" Result="66,99"/>
+        <PriceBase PZ="725,69" MT="725,69"/>
+      </Position>
+      <Position Caption="Горячекатаная арматурная сталь периодического профиля класса: А-III, диаметром 8 мм" Number="83" Code="ФССЦ-08.4.03.03-0030" Units="т" SysID="84" DBComment="Приказ Минстроя России от 26.12.2019 №876/пр" Quantity="1,2208" PriceLevel="2001" PzSync="Yes" Vr2001="10011">
+        <Quantity Fx="1,2208" Result="1,2208"/>
+        <PriceBase PZ="8102,64" MT="8102,64"/>
+      </Position>
+      <Position Caption="Горячекатаная арматурная сталь периодического профиля класса: А-III, диаметром 12 мм" Number="84" Code="ФССЦ-08.4.03.03-0032" Units="т" SysID="83" DBComment="Приказ Минстроя России от 26.12.2019 №876/пр" Quantity="2,6522" PriceLevel="2001" PzSync="Yes" Vr2001="10011">
+        <Quantity Fx="=2,6522" Result="2,6522"/>
+        <PriceBase PZ="7997,23" MT="7997,23"/>
+      </Position>
+      <Position Caption="Устройство железобетонных колонн в деревянной опалубке высотой: до 4 м, периметром до 2 м" Identifier="Ф43" Number="85" Code="ФЕР06-05-001-04" Units="100 м3" SysID="215" DBComment="Приказ Минстроя России от 26.12.2019 №876/пр" Quantity="(10,5+3,6) / 100" PriceLevel="2001" DBFlags="Comment TechK" PzSync="Yes" Vr2001="10011">
+        <Quantity Fx="=10,5+3,6" KUnit="100" Result="0,141"/>
+        <PriceBase PZ="27363,56" OZ="9089,6" EM="9600,75" ZM="1342,78" MT="8673,21"/>
+        <Resources>
+          <Tzr Caption="Затраты труда рабочих" Code="1-3-2" Units="чел.-ч" Quantity="1040" WorkClass="3,2">
+            <PriceBase Value="8,74"/>
+          </Tzr>
+          <Tzm Caption="Затраты труда машинистов" Code="2" Units="чел.-ч" Quantity="100,08"/>
+          <Mch Caption="Краны башенные, грузоподъемность 8 т" Code="91.05.01-017" Units="маш.час" Quantity="93,3">
+            <PriceBase Value="86,4" ZM="13,5"/>
+          </Mch>
+          <Mch Caption="Краны на автомобильном ходу, грузоподъемность 16 т" Code="91.05.05-015" Units="маш.час" Quantity="2,61">
+            <PriceBase Value="115,4" ZM="13,5"/>
+          </Mch>
+          <Mch Caption="Погрузчики, грузоподъемность 5 т" Code="91.06.05-011" Units="маш.час" Quantity="0,25">
+            <PriceBase Value="89,99" ZM="10,06"/>
+          </Mch>
+          <Mch Caption="Вибраторы глубинные" Code="91.07.04-001" Units="маш.час" Quantity="56,77">
+            <PriceBase Value="1,9"/>
+          </Mch>
+          <Mch Caption="Автомобили бортовые, грузоподъемность до 5 т" Code="91.14.02-001" Units="маш.час" Quantity="3,92">
+            <PriceBase Value="65,71" ZM="11,6"/>
+          </Mch>
+          <Mch Caption="Установки для сварки ручной дуговой (постоянного тока)" Code="91.17.04-233" Units="маш.час" Quantity="105">
+            <PriceBase Value="8,1"/>
+          </Mch>
+          <Mat Caption="Вода" Code="01.7.03.01-0001" Units="м3" Quantity="0,25">
+            <PriceBase Value="2,44"/>
+          </Mat>
+          <Mat Caption="Электроды сварочные Э42, диаметр 4 мм" Code="01.7.11.07-0032" Units="т" Quantity="0,15">
+            <PriceBase Value="10315,01"/>
+          </Mat>
+          <Mat Caption="Гвозди строительные" Code="01.7.15.06-0111" Units="т" Quantity="0,045">
+            <PriceBase Value="11978"/>
+          </Mat>
+          <Mat Caption="Известь строительная негашеная комовая, сорт I" Code="03.1.02.03-0011" Units="т" Quantity="0,084">
+            <PriceBase Value="734,5"/>
+          </Mat>
+          <Mat Caption="Смеси бетонные тяжелого бетона" Identifier="р1" Code="04.1.02.05" Units="м3" Quantity="101,5" Options="NotCount"/>
+          <Mat Caption="Арматура" Code="08.4.03.03" Units="т" Quantity="8,01" Options="NotCount"/>
+          <Mat Caption="Бруски обрезные, хвойных пород, длина 2-6,5 м, толщина 40-60 мм, сорт II" Code="11.1.03.01-0075" Units="м3" Quantity="0,25">
+            <PriceBase Value="1250"/>
+          </Mat>
+          <Mat Caption="Доска необрезная, хвойных пород, длина 4-6,5 м, все ширины, толщина 44 мм и более, сорт II" Code="11.1.03.05-0084" Units="м3" Quantity="1,7">
+            <PriceBase Value="832,7"/>
+          </Mat>
+          <Mat Caption="Щиты из досок, толщина 25 мм" Code="11.2.13.04-0011" Units="м2" Quantity="135">
+            <PriceBase Value="35,53"/>
+          </Mat>
+        </Resources>
+        <WorksList>
+          <Work Caption="Установка досок и щитов опалубки."/>
+          <Work Caption="Установка хомутов."/>
+          <Work Caption="Крепление элементов опалубки гвоздями строительными и проволокой."/>
+          <Work Caption="Установка и сварка арматуры."/>
+          <Work Caption="Укладка бетонной смеси."/>
+        </WorksList>
+      </Position>
+      <Position Caption="Смеси бетонные тяжелого бетона (БСТ), класс В25 (М350)" Number="86" Code="ФССЦ-04.1.02.05-0009" Units="м3" SysID="153" DBComment="Приказ Минстроя России от 26.12.2019 №876/пр" Quantity="Ф43.р1" PriceLevel="2001" PzSync="Yes" Vr2001="10011">
+        <Quantity Fx="Ф43.р1" Result="14,31"/>
+        <PriceBase PZ="725,69" MT="725,69"/>
+      </Position>
+      <Position Caption="Горячекатаная арматурная сталь гладкая класса А-I, диаметром: 8 мм" Number="87" Code="ФССЦ-08.4.03.02-0002" Units="т" SysID="93" DBComment="Приказ Минстроя России от 26.12.2019 №876/пр" Quantity="0,1075" PriceLevel="2001" PzSync="Yes" Vr2001="10011">
+        <Quantity Fx="0,1075" Result="0,1075"/>
+        <PriceBase PZ="6780" MT="6780"/>
+      </Position>
+      <Position Caption="Горячекатаная арматурная сталь периодического профиля класса: А-III, диаметром 16-18 мм" Number="88" Code="ФССЦ-08.4.03.03-0034" Units="т" SysID="92" DBComment="Приказ Минстроя России от 26.12.2019 №876/пр" Quantity="0,793" PriceLevel="2001" PzSync="Yes" Vr2001="10011">
+        <Quantity Fx="=0,793" Result="0,793"/>
+        <PriceBase PZ="7956,21" MT="7956,21"/>
+      </Position>
+      <Position Caption="Устройство железобетонных стен и перегородок высотой: до 3 м, толщиной 300 мм (пилоны)" Identifier="Ф42" Number="89" Code="ФЕР06-06-002-04" Units="100 м3" SysID="214" DBComment="Приказ Минстроя России от 26.12.2019 №876/пр" Quantity="16,8 / 100" PriceLevel="2001" DBFlags="Comment TechK" PzSync="Yes" Vr2001="10011">
+        <Quantity Fx="=16,8" KUnit="100" Result="0,168"/>
+        <PriceBase PZ="27997,83" OZ="8565,2" EM="8539,73" ZM="1077,32" MT="10892,9"/>
+        <Resources>
+          <Tzr Caption="Затраты труда рабочих" Code="1-3-2" Units="чел.-ч" Quantity="980" WorkClass="3,2">
+            <PriceBase Value="8,74"/>
+          </Tzr>
+          <Tzm Caption="Затраты труда машинистов" Code="2" Units="чел.-ч" Quantity="80,05"/>
+          <Mch Caption="Краны башенные, грузоподъемность 8 т" Code="91.05.01-017" Units="маш.час" Quantity="77,59">
+            <PriceBase Value="86,4" ZM="13,5"/>
+          </Mch>
+          <Mch Caption="Краны на автомобильном ходу, грузоподъемность 16 т" Code="91.05.05-015" Units="маш.час" Quantity="0,89">
+            <PriceBase Value="115,4" ZM="13,5"/>
+          </Mch>
+          <Mch Caption="Погрузчики, грузоподъемность 5 т" Code="91.06.05-011" Units="маш.час" Quantity="0,25">
+            <PriceBase Value="89,99" ZM="10,06"/>
+          </Mch>
+          <Mch Caption="Вибраторы глубинные" Code="91.07.04-001" Units="маш.час" Quantity="49">
+            <PriceBase Value="1,9"/>
+          </Mch>
+          <Mch Caption="Автомобили бортовые, грузоподъемность до 5 т" Code="91.14.02-001" Units="маш.час" Quantity="1,32">
+            <PriceBase Value="65,71" ZM="11,6"/>
+          </Mch>
+          <Mch Caption="Установки для сварки ручной дуговой (постоянного тока)" Code="91.17.04-233" Units="маш.час" Quantity="189">
+            <PriceBase Value="8,1"/>
+          </Mch>
+          <Mat Caption="Вода" Code="01.7.03.01-0001" Units="м3" Quantity="0,206">
+            <PriceBase Value="2,44"/>
+          </Mat>
+          <Mat Caption="Электроды сварочные Э42, диаметр 4 мм" Code="01.7.11.07-0032" Units="т" Quantity="0,27">
+            <PriceBase Value="10315,01"/>
+          </Mat>
+          <Mat Caption="Болты с гайками и шайбами строительные" Code="01.7.15.03-0042" Units="кг" Quantity="120">
+            <PriceBase Value="9,04"/>
+          </Mat>
+          <Mat Caption="Гвозди строительные" Code="01.7.15.06-0111" Units="т" Quantity="0,086">
+            <PriceBase Value="11978"/>
+          </Mat>
+          <Mat Caption="Известь строительная негашеная комовая, сорт I" Code="03.1.02.03-0011" Units="т" Quantity="0,069">
+            <PriceBase Value="734,5"/>
+          </Mat>
+          <Mat Caption="Смеси бетонные тяжелого бетона" Identifier="р1" Code="04.1.02.05" Units="м3" Quantity="101,5" Options="NotCount"/>
+          <Mat Caption="Арматура" Code="08.4.03.03" Units="т" Quantity="13,6" Options="NotCount"/>
+          <Mat Caption="Бруски обрезные, хвойных пород, длина 4-6,5 м, ширина 75-150 мм, толщина 40-75 мм, сорт III" Code="11.1.03.01-0079" Units="м3" Quantity="0,18">
+            <PriceBase Value="1287"/>
+          </Mat>
+          <Mat Caption="Доска обрезная, хвойных пород, ширина 75-150 мм, толщина 44 мм и более, длина 4-6,5 м, сорт III" Code="11.1.03.06-0095" Units="м3" Quantity="2,11">
+            <PriceBase Value="1056"/>
+          </Mat>
+          <Mat Caption="Щиты из досок, толщина 25 мм" Code="11.2.13.04-0011" Units="м2" Quantity="98">
+            <PriceBase Value="35,53"/>
+          </Mat>
+        </Resources>
+        <WorksList>
+          <Work Caption="Раскрой и установка брусков и досок."/>
+          <Work Caption="Установка щитов опалубки."/>
+          <Work Caption="Крепление элементов опалубки болтами и гвоздями строительными."/>
+          <Work Caption="Установка и сварка арматуры."/>
+          <Work Caption="Укладка бетонной смеси."/>
+        </WorksList>
+      </Position>
+      <Position Caption="Смеси бетонные тяжелого бетона (БСТ), класс В25 (М350)" Number="90" Code="ФССЦ-04.1.02.05-0009" Units="м3" SysID="152" DBComment="Приказ Минстроя России от 26.12.2019 №876/пр" Quantity="Ф42.р1" PriceLevel="2001" PzSync="Yes" Vr2001="10011">
+        <Quantity Fx="Ф42.р1" Result="17,05"/>
+        <PriceBase PZ="725,69" MT="725,69"/>
+      </Position>
+      <Position Caption="Горячекатаная арматурная сталь гладкая класса А-I, диаметром: 8 мм" Number="91" Code="ФССЦ-08.4.03.02-0002" Units="т" SysID="94" DBComment="Приказ Минстроя России от 26.12.2019 №876/пр" Quantity="0,576" PriceLevel="2001" PzSync="Yes" Vr2001="10011">
+        <Quantity Fx="0,576" Result="0,576"/>
+        <PriceBase PZ="6780" MT="6780"/>
+      </Position>
+      <Position Caption="Горячекатаная арматурная сталь периодического профиля класса: А-III, диаметром 12 мм" Number="92" Code="ФССЦ-08.4.03.03-0032" Units="т" SysID="88" DBComment="Приказ Минстроя России от 26.12.2019 №876/пр" Quantity="1,3381" PriceLevel="2001" PzSync="Yes" Vr2001="10011">
+        <Quantity Fx="=1,3381" Result="1,3381"/>
+        <PriceBase PZ="7997,23" MT="7997,23"/>
+      </Position>
+      <Header Caption="СТ1п"/>
+      <Position Caption="Устройство железобетонных стен и перегородок высотой: до 3 м, толщиной 300 мм" Identifier="Ф44" Number="93" Code="ФЕР06-06-002-04" Units="100 м3" SysID="216" DBComment="Приказ Минстроя России от 26.12.2019 №876/пр" Quantity="9,4 / 100" PriceLevel="2001" DBFlags="Comment TechK" PzSync="Yes" Vr2001="10011">
+        <Quantity Fx="=9,4" KUnit="100" Result="0,094"/>
+        <PriceBase PZ="27997,83" OZ="8565,2" EM="8539,73" ZM="1077,32" MT="10892,9"/>
+        <Resources>
+          <Tzr Caption="Затраты труда рабочих" Code="1-3-2" Units="чел.-ч" Quantity="980" WorkClass="3,2">
+            <PriceBase Value="8,74"/>
+          </Tzr>
+          <Tzm Caption="Затраты труда машинистов" Code="2" Units="чел.-ч" Quantity="80,05"/>
+          <Mch Caption="Краны башенные, грузоподъемность 8 т" Code="91.05.01-017" Units="маш.час" Quantity="77,59">
+            <PriceBase Value="86,4" ZM="13,5"/>
+          </Mch>
+          <Mch Caption="Краны на автомобильном ходу, грузоподъемность 16 т" Code="91.05.05-015" Units="маш.час" Quantity="0,89">
+            <PriceBase Value="115,4" ZM="13,5"/>
+          </Mch>
+          <Mch Caption="Погрузчики, грузоподъемность 5 т" Code="91.06.05-011" Units="маш.час" Quantity="0,25">
+            <PriceBase Value="89,99" ZM="10,06"/>
+          </Mch>
+          <Mch Caption="Вибраторы глубинные" Code="91.07.04-001" Units="маш.час" Quantity="49">
+            <PriceBase Value="1,9"/>
+          </Mch>
+          <Mch Caption="Автомобили бортовые, грузоподъемность до 5 т" Code="91.14.02-001" Units="маш.час" Quantity="1,32">
+            <PriceBase Value="65,71" ZM="11,6"/>
+          </Mch>
+          <Mch Caption="Установки для сварки ручной дуговой (постоянного тока)" Code="91.17.04-233" Units="маш.час" Quantity="189">
+            <PriceBase Value="8,1"/>
+          </Mch>
+          <Mat Caption="Вода" Code="01.7.03.01-0001" Units="м3" Quantity="0,206">
+            <PriceBase Value="2,44"/>
+          </Mat>
+          <Mat Caption="Электроды сварочные Э42, диаметр 4 мм" Code="01.7.11.07-0032" Units="т" Quantity="0,27">
+            <PriceBase Value="10315,01"/>
+          </Mat>
+          <Mat Caption="Болты с гайками и шайбами строительные" Code="01.7.15.03-0042" Units="кг" Quantity="120">
+            <PriceBase Value="9,04"/>
+          </Mat>
+          <Mat Caption="Гвозди строительные" Code="01.7.15.06-0111" Units="т" Quantity="0,086">
+            <PriceBase Value="11978"/>
+          </Mat>
+          <Mat Caption="Известь строительная негашеная комовая, сорт I" Code="03.1.02.03-0011" Units="т" Quantity="0,069">
+            <PriceBase Value="734,5"/>
+          </Mat>
+          <Mat Caption="Смеси бетонные тяжелого бетона" Identifier="р1" Code="04.1.02.05" Units="м3" Quantity="101,5" Options="NotCount"/>
+          <Mat Caption="Арматура" Code="08.4.03.03" Units="т" Quantity="13,6" Options="NotCount"/>
+          <Mat Caption="Бруски обрезные, хвойных пород, длина 4-6,5 м, ширина 75-150 мм, толщина 40-75 мм, сорт III" Code="11.1.03.01-0079" Units="м3" Quantity="0,18">
+            <PriceBase Value="1287"/>
+          </Mat>
+          <Mat Caption="Доска обрезная, хвойных пород, ширина 75-150 мм, толщина 44 мм и более, длина 4-6,5 м, сорт III" Code="11.1.03.06-0095" Units="м3" Quantity="2,11">
+            <PriceBase Value="1056"/>
+          </Mat>
+          <Mat Caption="Щиты из досок, толщина 25 мм" Code="11.2.13.04-0011" Units="м2" Quantity="98">
+            <PriceBase Value="35,53"/>
+          </Mat>
+        </Resources>
+        <WorksList>
+          <Work Caption="Раскрой и установка брусков и досок."/>
+          <Work Caption="Установка щитов опалубки."/>
+          <Work Caption="Крепление элементов опалубки болтами и гвоздями строительными."/>
+          <Work Caption="Установка и сварка арматуры."/>
+          <Work Caption="Укладка бетонной смеси."/>
+        </WorksList>
+      </Position>
+      <Position Caption="Смеси бетонные тяжелого бетона (БСТ), класс В25 (М350)" Number="94" Code="ФССЦ-04.1.02.05-0009" Units="м3" SysID="154" DBComment="Приказ Минстроя России от 26.12.2019 №876/пр" Quantity="Ф44.р1" PriceLevel="2001" PzSync="Yes" Vr2001="10011">
+        <Quantity Fx="Ф44.р1" Result="9,541"/>
+        <PriceBase PZ="725,69" MT="725,69"/>
+      </Position>
+      <Position Caption="Горячекатаная арматурная сталь периодического профиля класса: А-III, диаметром 8 мм" Number="95" Code="ФССЦ-08.4.03.03-0030" Units="т" SysID="99" DBComment="Приказ Минстроя России от 26.12.2019 №876/пр" Quantity="0,172" PriceLevel="2001" PzSync="Yes" Vr2001="10011">
+        <Quantity Fx="0,172" Result="0,172"/>
+        <PriceBase PZ="8102,64" MT="8102,64"/>
+      </Position>
+      <Position Caption="Горячекатаная арматурная сталь периодического профиля класса: А-III, диаметром 12 мм" Number="96" Code="ФССЦ-08.4.03.03-0032" Units="т" SysID="100" DBComment="Приказ Минстроя России от 26.12.2019 №876/пр" Quantity="0,3988" PriceLevel="2001" PzSync="Yes" Vr2001="10011">
+        <Quantity Fx="0,3988" Result="0,3988"/>
+        <PriceBase PZ="7997,23" MT="7997,23"/>
+      </Position>
+      <Position Caption="Устройство железобетонных стен и перегородок высотой: до 3 м, толщиной 300 мм (пилоны)" Identifier="Ф45" Number="97" Code="ФЕР06-06-002-04" Units="100 м3" SysID="217" DBComment="Приказ Минстроя России от 26.12.2019 №876/пр" Quantity="4 / 100" PriceLevel="2001" DBFlags="Comment TechK" PzSync="Yes" Vr2001="10011">
+        <Quantity Fx="=4" KUnit="100" Result="0,04"/>
+        <PriceBase PZ="27997,83" OZ="8565,2" EM="8539,73" ZM="1077,32" MT="10892,9"/>
+        <Resources>
+          <Tzr Caption="Затраты труда рабочих" Code="1-3-2" Units="чел.-ч" Quantity="980" WorkClass="3,2">
+            <PriceBase Value="8,74"/>
+          </Tzr>
+          <Tzm Caption="Затраты труда машинистов" Code="2" Units="чел.-ч" Quantity="80,05"/>
+          <Mch Caption="Краны башенные, грузоподъемность 8 т" Code="91.05.01-017" Units="маш.час" Quantity="77,59">
+            <PriceBase Value="86,4" ZM="13,5"/>
+          </Mch>
+          <Mch Caption="Краны на автомобильном ходу, грузоподъемность 16 т" Code="91.05.05-015" Units="маш.час" Quantity="0,89">
+            <PriceBase Value="115,4" ZM="13,5"/>
+          </Mch>
+          <Mch Caption="Погрузчики, грузоподъемность 5 т" Code="91.06.05-011" Units="маш.час" Quantity="0,25">
+            <PriceBase Value="89,99" ZM="10,06"/>
+          </Mch>
+          <Mch Caption="Вибраторы глубинные" Code="91.07.04-001" Units="маш.час" Quantity="49">
+            <PriceBase Value="1,9"/>
+          </Mch>
+          <Mch Caption="Автомобили бортовые, грузоподъемность до 5 т" Code="91.14.02-001" Units="маш.час" Quantity="1,32">
+            <PriceBase Value="65,71" ZM="11,6"/>
+          </Mch>
+          <Mch Caption="Установки для сварки ручной дуговой (постоянного тока)" Code="91.17.04-233" Units="маш.час" Quantity="189">
+            <PriceBase Value="8,1"/>
+          </Mch>
+          <Mat Caption="Вода" Code="01.7.03.01-0001" Units="м3" Quantity="0,206">
+            <PriceBase Value="2,44"/>
+          </Mat>
+          <Mat Caption="Электроды сварочные Э42, диаметр 4 мм" Code="01.7.11.07-0032" Units="т" Quantity="0,27">
+            <PriceBase Value="10315,01"/>
+          </Mat>
+          <Mat Caption="Болты с гайками и шайбами строительные" Code="01.7.15.03-0042" Units="кг" Quantity="120">
+            <PriceBase Value="9,04"/>
+          </Mat>
+          <Mat Caption="Гвозди строительные" Code="01.7.15.06-0111" Units="т" Quantity="0,086">
+            <PriceBase Value="11978"/>
+          </Mat>
+          <Mat Caption="Известь строительная негашеная комовая, сорт I" Code="03.1.02.03-0011" Units="т" Quantity="0,069">
+            <PriceBase Value="734,5"/>
+          </Mat>
+          <Mat Caption="Смеси бетонные тяжелого бетона" Identifier="р1" Code="04.1.02.05" Units="м3" Quantity="101,5" Options="NotCount"/>
+          <Mat Caption="Арматура" Code="08.4.03.03" Units="т" Quantity="13,6" Options="NotCount"/>
+          <Mat Caption="Бруски обрезные, хвойных пород, длина 4-6,5 м, ширина 75-150 мм, толщина 40-75 мм, сорт III" Code="11.1.03.01-0079" Units="м3" Quantity="0,18">
+            <PriceBase Value="1287"/>
+          </Mat>
+          <Mat Caption="Доска обрезная, хвойных пород, ширина 75-150 мм, толщина 44 мм и более, длина 4-6,5 м, сорт III" Code="11.1.03.06-0095" Units="м3" Quantity="2,11">
+            <PriceBase Value="1056"/>
+          </Mat>
+          <Mat Caption="Щиты из досок, толщина 25 мм" Code="11.2.13.04-0011" Units="м2" Quantity="98">
+            <PriceBase Value="35,53"/>
+          </Mat>
+        </Resources>
+        <WorksList>
+          <Work Caption="Раскрой и установка брусков и досок."/>
+          <Work Caption="Установка щитов опалубки."/>
+          <Work Caption="Крепление элементов опалубки болтами и гвоздями строительными."/>
+          <Work Caption="Установка и сварка арматуры."/>
+          <Work Caption="Укладка бетонной смеси."/>
+        </WorksList>
+      </Position>
+      <Position Caption="Смеси бетонные тяжелого бетона (БСТ), класс В25 (М350)" Number="98" Code="ФССЦ-04.1.02.05-0009" Units="м3" SysID="155" DBComment="Приказ Минстроя России от 26.12.2019 №876/пр" Quantity="Ф45.р1" PriceLevel="2001" PzSync="Yes" Vr2001="10011">
+        <Quantity Fx="Ф45.р1" Result="4,06"/>
+        <PriceBase PZ="725,69" MT="725,69"/>
+      </Position>
+      <Position Caption="Горячекатаная арматурная сталь гладкая класса А-I, диаметром: 8 мм" Number="99" Code="ФССЦ-08.4.03.02-0002" Units="т" SysID="103" DBComment="Приказ Минстроя России от 26.12.2019 №876/пр" Quantity="0,128" PriceLevel="2001" PzSync="Yes" Vr2001="10011">
+        <Quantity Fx="0,128" Result="0,128"/>
+        <PriceBase PZ="6780" MT="6780"/>
+      </Position>
+      <Position Caption="Горячекатаная арматурная сталь периодического профиля класса: А-III, диаметром 12 мм" Number="100" Code="ФССЦ-08.4.03.03-0032" Units="т" SysID="104" DBComment="Приказ Минстроя России от 26.12.2019 №876/пр" Quantity="0,2974" PriceLevel="2001" PzSync="Yes" Vr2001="10011">
+        <Quantity Fx="0,2974" Result="0,2974"/>
+        <PriceBase PZ="7997,23" MT="7997,23"/>
+      </Position>
+    </Chapter>
+    <Chapter Caption="Плиты покрытий" SysID="6">
+      <Header Caption="ПЛ2"/>
+      <Position Caption="Устройство перекрытий безбалочных толщиной: до 200 мм на высоте от опорной площади до 6 м" Identifier="Ф46" Number="101" Code="ФЕР06-08-001-01" Units="100 м3" SysID="218" DBComment="Приказ Минстроя России от 26.12.2019 №876/пр" Quantity="253,4 / 100" PriceLevel="2001" DBFlags="Comment TechK" PzSync="Yes" Vr2001="10011">
+        <Quantity Fx="=253,4" KUnit="100" Result="2,534"/>
+        <PriceBase PZ="30515,25" OZ="6963,84" EM="2693,58" ZM="414,54" MT="20857,83"/>
+        <Resources>
+          <Tzr Caption="Затраты труда рабочих" Code="1-3-1" Units="чел.-ч" Quantity="806" WorkClass="3,1">
+            <PriceBase Value="8,64"/>
+          </Tzr>
+          <Tzm Caption="Затраты труда машинистов" Code="2" Units="чел.-ч" Quantity="30,95"/>
+          <Mch Caption="Краны башенные, грузоподъемность 8 т" Code="91.05.01-017" Units="маш.час" Quantity="28,56">
+            <PriceBase Value="86,4" ZM="13,5"/>
+          </Mch>
+          <Mch Caption="Краны на автомобильном ходу, грузоподъемность 16 т" Code="91.05.05-015" Units="маш.час" Quantity="0,86">
+            <PriceBase Value="115,4" ZM="13,5"/>
+          </Mch>
+          <Mch Caption="Погрузчики, грузоподъемность 5 т" Code="91.06.05-011" Units="маш.час" Quantity="0,25">
+            <PriceBase Value="89,99" ZM="10,06"/>
+          </Mch>
+          <Mch Caption="Вибраторы поверхностные" Code="91.07.04-002" Units="маш.час" Quantity="40,3">
+            <PriceBase Value="0,5"/>
+          </Mch>
+          <Mch Caption="Автомобили бортовые, грузоподъемность до 5 т" Code="91.14.02-001" Units="маш.час" Quantity="1,28">
+            <PriceBase Value="65,71" ZM="11,6"/>
+          </Mch>
+          <Mat Caption="Вода" Code="01.7.03.01-0001" Units="м3" Quantity="0,257">
+            <PriceBase Value="2,44"/>
+          </Mat>
+          <Mat Caption="Гвозди строительные" Code="01.7.15.06-0111" Units="т" Quantity="0,079">
+            <PriceBase Value="11978"/>
+          </Mat>
+          <Mat Caption="Стойки деревометаллические раздвижные инвентарные" Code="01.7.16.03-0011" Units="шт" Quantity="2,8">
+            <PriceBase Value="1010"/>
+          </Mat>
+          <Mat Caption="Ткань мешочная" Code="01.7.20.08-0162" Units="10 м2" Quantity="4,29">
+            <PriceBase Value="84,75"/>
+          </Mat>
+          <Mat Caption="Известь строительная негашеная комовая, сорт I" Code="03.1.02.03-0011" Units="т" Quantity="0,086">
+            <PriceBase Value="734,5"/>
+          </Mat>
+          <Mat Caption="Смеси бетонные тяжелого бетона" Identifier="р1" Code="04.1.02.05" Units="м3" Quantity="101,5" Options="NotCount"/>
+          <Mat Caption="Конструкции стальные" Code="07.3.02.11" Units="т" Quantity="0,5" Options="NotCount"/>
+          <Mat Caption="Проволока светлая, диаметр 1,1 мм" Code="08.3.03.04-0012" Units="т" Quantity="0,0116">
+            <PriceBase Value="10200"/>
+          </Mat>
+          <Mat Caption="Арматура" Code="08.4.03.03" Units="т" Quantity="7,66" Options="NotCount"/>
+          <Mat Caption="Бруски обрезные, хвойных пород, длина 4-6,5 м, ширина 75-150 мм, толщина 40-75 мм, сорт III" Code="11.1.03.01-0079" Units="м3" Quantity="6,22">
+            <PriceBase Value="1287"/>
+          </Mat>
+          <Mat Caption="Бруски обрезные, хвойных пород, длина 4-6,5 м, ширина 75-150 мм, толщина 150 мм и более, сорт II" Code="11.1.03.01-0086" Units="м3" Quantity="0,99">
+            <PriceBase Value="2156"/>
+          </Mat>
+          <Mat Caption="Доска обрезная, хвойных пород, ширина 75-150 мм, толщина 25 мм, длина 4-6,5 м, сорт III" Code="11.1.03.06-0087" Units="м3" Quantity="0,53">
+            <PriceBase Value="1100"/>
+          </Mat>
+          <Mat Caption="Доска обрезная, хвойных пород, ширина 75-150 мм, толщина 44 мм и более, длина 4-6,5 м, сорт III" Code="11.1.03.06-0095" Units="м3" Quantity="2,61">
+            <PriceBase Value="1056"/>
+          </Mat>
+          <Mat Caption="Щиты из досок, толщина 25 мм" Code="11.2.13.04-0011" Units="м2" Quantity="86,1">
+            <PriceBase Value="35,53"/>
+          </Mat>
+        </Resources>
+        <WorksList>
+          <Work Caption="Раскрой и установка брусьев, брусков и досок."/>
+          <Work Caption="Установка щитов опалубки."/>
+          <Work Caption="Крепление элементов опалубки проволокой и гвоздями строительными."/>
+          <Work Caption="Установка и сварка арматуры."/>
+          <Work Caption="Укладка бетонной смеси."/>
+        </WorksList>
+      </Position>
+      <Position Caption="Смеси бетонные тяжелого бетона (БСТ), класс В25 (М350)" Number="102" Code="ФССЦ-04.1.02.05-0009" Units="м3" SysID="156" DBComment="Приказ Минстроя России от 26.12.2019 №876/пр" Quantity="Ф46.р1" PriceLevel="2001" PzSync="Yes" Vr2001="10011">
+        <Quantity Fx="Ф46.р1" Result="257,2"/>
+        <PriceBase PZ="725,69" MT="725,69"/>
+      </Position>
+      <Position Caption="Устройство балок для перекрытий, подкрановых и обвязочных на высоте от опорной площадки: до 6 м при высоте балок до 800 мм" Identifier="Ф47" Number="103" Code="ФЕР06-07-001-03" Units="100 м3" SysID="219" DBComment="Приказ Минстроя России от 26.12.2019 №876/пр" Quantity="8 / 100" PriceLevel="2001" DBFlags="Comment TechK" PzSync="Yes" Vr2001="10011">
+        <Quantity Fx="=8" KUnit="100" Result="0,08"/>
+        <PriceBase PZ="40717,71" OZ="10368" EM="8655,85" ZM="1055,79" MT="21693,86"/>
+        <Resources>
+          <Tzr Caption="Затраты труда рабочих" Code="1-3-1" Units="чел.-ч" Quantity="1200" WorkClass="3,1">
+            <PriceBase Value="8,64"/>
+          </Tzr>
+          <Tzm Caption="Затраты труда машинистов" Code="2" Units="чел.-ч" Quantity="78,54"/>
+          <Mch Caption="Краны башенные, грузоподъемность 8 т" Code="91.05.01-017" Units="маш.час" Quantity="75,09">
+            <PriceBase Value="86,4" ZM="13,5"/>
+          </Mch>
+          <Mch Caption="Краны на автомобильном ходу, грузоподъемность 16 т" Code="91.05.05-015" Units="маш.час" Quantity="1,28">
+            <PriceBase Value="115,4" ZM="13,5"/>
+          </Mch>
+          <Mch Caption="Погрузчики, грузоподъемность 5 т" Code="91.06.05-011" Units="маш.час" Quantity="0,25">
+            <PriceBase Value="89,99" ZM="10,06"/>
+          </Mch>
+          <Mch Caption="Вибраторы глубинные" Code="91.07.04-001" Units="маш.час" Quantity="60">
+            <PriceBase Value="1,9"/>
+          </Mch>
+          <Mch Caption="Автомобили бортовые, грузоподъемность до 5 т" Code="91.14.02-001" Units="маш.час" Quantity="1,92">
+            <PriceBase Value="65,71" ZM="11,6"/>
+          </Mch>
+          <Mch Caption="Установки для сварки ручной дуговой (постоянного тока)" Code="91.17.04-233" Units="маш.час" Quantity="217">
+            <PriceBase Value="8,1"/>
+          </Mch>
+          <Mat Caption="Вода" Code="01.7.03.01-0001" Units="м3" Quantity="0,171">
+            <PriceBase Value="2,44"/>
+          </Mat>
+          <Mat Caption="Электроды сварочные Э42, диаметр 4 мм" Code="01.7.11.07-0032" Units="т" Quantity="0,31">
+            <PriceBase Value="10315,01"/>
+          </Mat>
+          <Mat Caption="Гвозди строительные" Code="01.7.15.06-0111" Units="т" Quantity="0,045">
+            <PriceBase Value="11978"/>
+          </Mat>
+          <Mat Caption="Известь строительная негашеная комовая, сорт I" Code="03.1.02.03-0011" Units="т" Quantity="0,057">
+            <PriceBase Value="734,5"/>
+          </Mat>
+          <Mat Caption="Смеси бетонные тяжелого бетона" Identifier="р1" Code="04.1.02.05" Units="м3" Quantity="101,5" Options="NotCount"/>
+          <Mat Caption="Проволока горячекатаная в мотках, диаметр 6,3-6,5 мм" Code="08.3.03.06-0002" Units="т" Quantity="0,012">
+            <PriceBase Value="4455,2"/>
+          </Mat>
+          <Mat Caption="Арматура" Code="08.4.03.03" Units="т" Quantity="15,4" Options="NotCount"/>
+          <Mat Caption="Лесоматериалы круглые, хвойных пород, для строительства, диаметр 14-24 см, длина 3-6,5 м" Code="11.1.02.04-0031" Units="м3" Quantity="0,13">
+            <PriceBase Value="558,33"/>
+          </Mat>
+          <Mat Caption="Бруски обрезные, хвойных пород, длина 4-6,5 м, ширина 75-150 мм, толщина 40-75 мм, сорт III" Code="11.1.03.01-0079" Units="м3" Quantity="6,46">
+            <PriceBase Value="1287"/>
+          </Mat>
+          <Mat Caption="Бруски обрезные, хвойных пород, длина 4-6,5 м, ширина 75-150 мм, толщина 150 мм и более, сорт II" Code="11.1.03.01-0086" Units="м3" Quantity="1,02">
+            <PriceBase Value="2156"/>
+          </Mat>
+          <Mat Caption="Доска обрезная, хвойных пород, ширина 75-150 мм, толщина 25 мм, длина 4-6,5 м, сорт III" Code="11.1.03.06-0087" Units="м3" Quantity="0,14">
+            <PriceBase Value="1100"/>
+          </Mat>
+          <Mat Caption="Доска обрезная, хвойных пород, ширина 75-150 мм, толщина 44 мм и более, длина 4-6,5 м, сорт III" Code="11.1.03.06-0095" Units="м3" Quantity="2">
+            <PriceBase Value="1056"/>
+          </Mat>
+          <Mat Caption="Щиты из досок, толщина 25 мм" Code="11.2.13.04-0011" Units="м2" Quantity="141">
+            <PriceBase Value="35,53"/>
+          </Mat>
+        </Resources>
+        <WorksList>
+          <Work Caption="Раскрой и установка брусьев, брусков и досок."/>
+          <Work Caption="Установка щитов опалубки."/>
+          <Work Caption="Крепление элементов опалубки гвоздями строительными."/>
+          <Work Caption="Установка и сварка арматуры."/>
+          <Work Caption="Укладка бетонной смеси."/>
+        </WorksList>
+      </Position>
+      <Position Caption="Смеси бетонные тяжелого бетона (БСТ), класс В25 (М350)" Number="104" Code="ФССЦ-04.1.02.05-0009" Units="м3" SysID="157" DBComment="Приказ Минстроя России от 26.12.2019 №876/пр" Quantity="Ф47.р1" PriceLevel="2001" PzSync="Yes" Vr2001="10011">
+        <Quantity Fx="Ф47.р1" Result="8,12"/>
+        <PriceBase PZ="725,69" MT="725,69"/>
+      </Position>
+      <Position Caption="Устройство балок для перекрытий, подкрановых и обвязочных на высоте от опорной площадки: до 6 м при высоте балок более 800 мм" Identifier="Ф48" Number="105" Code="ФЕР06-07-001-04" Units="100 м3" SysID="220" DBComment="Приказ Минстроя России от 26.12.2019 №876/пр" Quantity="8,9 / 100" PriceLevel="2001" DBFlags="Comment TechK" PzSync="Yes" Vr2001="10011">
+        <Quantity Fx="=8,9" KUnit="100" Result="0,089"/>
+        <PriceBase PZ="33766,14" OZ="8726,4" EM="8014,67" ZM="932,01" MT="17025,07"/>
+        <Resources>
+          <Tzr Caption="Затраты труда рабочих" Code="1-3-1" Units="чел.-ч" Quantity="1010" WorkClass="3,1">
+            <PriceBase Value="8,64"/>
+          </Tzr>
+          <Tzm Caption="Затраты труда машинистов" Code="2" Units="чел.-ч" Quantity="69,36"/>
+          <Mch Caption="Краны башенные, грузоподъемность 8 т" Code="91.05.01-017" Units="маш.час" Quantity="66,05">
+            <PriceBase Value="86,4" ZM="13,5"/>
+          </Mch>
+          <Mch Caption="Краны на автомобильном ходу, грузоподъемность 16 т" Code="91.05.05-015" Units="маш.час" Quantity="1,22">
+            <PriceBase Value="115,4" ZM="13,5"/>
+          </Mch>
+          <Mch Caption="Погрузчики, грузоподъемность 5 т" Code="91.06.05-011" Units="маш.час" Quantity="0,25">
+            <PriceBase Value="89,99" ZM="10,06"/>
+          </Mch>
+          <Mch Caption="Вибраторы глубинные" Code="91.07.04-001" Units="маш.час" Quantity="50,5">
+            <PriceBase Value="1,9"/>
+          </Mch>
+          <Mch Caption="Автомобили бортовые, грузоподъемность до 5 т" Code="91.14.02-001" Units="маш.час" Quantity="1,84">
+            <PriceBase Value="65,71" ZM="11,6"/>
+          </Mch>
+          <Mch Caption="Установки для сварки ручной дуговой (постоянного тока)" Code="91.17.04-233" Units="маш.час" Quantity="238">
+            <PriceBase Value="8,1"/>
+          </Mch>
+          <Mat Caption="Вода" Code="01.7.03.01-0001" Units="м3" Quantity="0,137">
+            <PriceBase Value="2,44"/>
+          </Mat>
+          <Mat Caption="Электроды сварочные Э42, диаметр 4 мм" Code="01.7.11.07-0032" Units="т" Quantity="0,34">
+            <PriceBase Value="10315,01"/>
+          </Mat>
+          <Mat Caption="Гвозди строительные" Code="01.7.15.06-0111" Units="т" Quantity="0,038">
+            <PriceBase Value="11978"/>
+          </Mat>
+          <Mat Caption="Известь строительная негашеная комовая, сорт I" Code="03.1.02.03-0011" Units="т" Quantity="0,046">
+            <PriceBase Value="734,5"/>
+          </Mat>
+          <Mat Caption="Смеси бетонные тяжелого бетона" Identifier="р1" Code="04.1.02.05" Units="м3" Quantity="101,5" Options="NotCount"/>
+          <Mat Caption="Проволока горячекатаная в мотках, диаметр 6,3-6,5 мм" Code="08.3.03.06-0002" Units="т" Quantity="0,056">
+            <PriceBase Value="4455,2"/>
+          </Mat>
+          <Mat Caption="Арматура" Code="08.4.03.03" Units="т" Quantity="16,8" Options="NotCount"/>
+          <Mat Caption="Лесоматериалы круглые, хвойных пород, для строительства, диаметр 14-24 см, длина 3-6,5 м" Code="11.1.02.04-0031" Units="м3" Quantity="0,1">
+            <PriceBase Value="558,33"/>
+          </Mat>
+          <Mat Caption="Бруски обрезные, хвойных пород, длина 4-6,5 м, ширина 75-150 мм, толщина 40-75 мм, сорт III" Code="11.1.03.01-0079" Units="м3" Quantity="4,06">
+            <PriceBase Value="1287"/>
+          </Mat>
+          <Mat Caption="Бруски обрезные, хвойных пород, длина 4-6,5 м, ширина 75-150 мм, толщина 150 мм и более, сорт II" Code="11.1.03.01-0086" Units="м3" Quantity="0,64">
+            <PriceBase Value="2156"/>
+          </Mat>
+          <Mat Caption="Доска обрезная, хвойных пород, ширина 75-150 мм, толщина 25 мм, длина 4-6,5 м, сорт III" Code="11.1.03.06-0087" Units="м3" Quantity="0,24">
+            <PriceBase Value="1100"/>
+          </Mat>
+          <Mat Caption="Доска обрезная, хвойных пород, ширина 75-150 мм, толщина 44 мм и более, длина 4-6,5 м, сорт III" Code="11.1.03.06-0095" Units="м3" Quantity="1,54">
+            <PriceBase Value="1056"/>
+          </Mat>
+          <Mat Caption="Щиты из досок, толщина 25 мм" Code="11.2.13.04-0011" Units="м2" Quantity="119">
+            <PriceBase Value="35,53"/>
+          </Mat>
+        </Resources>
+        <WorksList>
+          <Work Caption="Раскрой и установка брусьев, брусков и досок."/>
+          <Work Caption="Установка щитов опалубки."/>
+          <Work Caption="Крепление элементов опалубки гвоздями строительными."/>
+          <Work Caption="Установка и сварка арматуры."/>
+          <Work Caption="Укладка бетонной смеси."/>
+        </WorksList>
+      </Position>
+      <Position Caption="Смеси бетонные тяжелого бетона (БСТ), класс В25 (М350)" Number="106" Code="ФССЦ-04.1.02.05-0009" Units="м3" SysID="158" DBComment="Приказ Минстроя России от 26.12.2019 №876/пр" Quantity="Ф48.р1" PriceLevel="2001" PzSync="Yes" Vr2001="10011">
+        <Quantity Fx="Ф48.р1" Result="9,034"/>
+        <PriceBase PZ="725,69" MT="725,69"/>
+      </Position>
+      <Position Caption="Горячекатаная арматурная сталь периодического профиля класса: А-III, диаметром 8 мм" Number="107" Code="ФССЦ-08.4.03.03-0030" Units="т" SysID="107" DBComment="Приказ Минстроя России от 26.12.2019 №876/пр" Quantity="0,3168" PriceLevel="2001" PzSync="Yes" Vr2001="10011">
+        <Quantity Fx="0,3168" Result="0,3168"/>
+        <PriceBase PZ="8102,64" MT="8102,64"/>
+      </Position>
+      <Position Caption="Горячекатаная арматурная сталь периодического профиля класса: А-III, диаметром 10 мм" Number="108" Code="ФССЦ-08.4.03.03-0031" Units="т" SysID="118" DBComment="Приказ Минстроя России от 26.12.2019 №876/пр" Quantity="0,778" PriceLevel="2001" PzSync="Yes" Vr2001="10011">
+        <Quantity Fx="=0,778" Result="0,778"/>
+        <PriceBase PZ="8014,15" MT="8014,15"/>
+      </Position>
+      <Position Caption="Горячекатаная арматурная сталь периодического профиля класса: А-III, диаметром 12 мм" Number="109" Code="ФССЦ-08.4.03.03-0032" Units="т" SysID="119" DBComment="Приказ Минстроя России от 26.12.2019 №876/пр" Quantity="27,3624" PriceLevel="2001" PzSync="Yes" Vr2001="10011">
+        <Quantity Fx="27,3624" Result="27,3624"/>
+        <PriceBase PZ="7997,23" MT="7997,23"/>
+      </Position>
+      <Position Caption="Горячекатаная арматурная сталь периодического профиля класса: А-III, диаметром 16-18 мм" Number="110" Code="ФССЦ-08.4.03.03-0034" Units="т" SysID="111" DBComment="Приказ Минстроя России от 26.12.2019 №876/пр" Quantity="2,0388" PriceLevel="2001" PzSync="Yes" Vr2001="10011">
+        <Quantity Fx="2,0388" Result="2,0388"/>
+        <PriceBase PZ="7956,21" MT="7956,21"/>
+      </Position>
+      <Position Caption="Горячекатаная арматурная сталь периодического профиля класса: А-III, диаметром 20-22 мм" Number="111" Code="ФССЦ-08.4.03.03-0035" Units="т" SysID="112" DBComment="Приказ Минстроя России от 26.12.2019 №876/пр" Quantity="1,3896" PriceLevel="2001" PzSync="Yes" Vr2001="10011">
+        <Quantity Fx="=1,3896" Result="1,3896"/>
+        <PriceBase PZ="7917" MT="7917"/>
+      </Position>
+      <Header Caption="ПЛ2п"/>
+      <Position Caption="Устройство перекрытий безбалочных толщиной: до 200 мм на высоте от опорной площади до 6 м" Identifier="Ф50" Number="112" Code="ФЕР06-08-001-01" Units="100 м3" SysID="221" DBComment="Приказ Минстроя России от 26.12.2019 №876/пр" Quantity="15,6 / 100" PriceLevel="2001" DBFlags="Comment TechK" PzSync="Yes" Vr2001="10011">
+        <Quantity Fx="=15,6" KUnit="100" Result="0,156"/>
+        <PriceBase PZ="30515,25" OZ="6963,84" EM="2693,58" ZM="414,54" MT="20857,83"/>
+        <Resources>
+          <Tzr Caption="Затраты труда рабочих" Code="1-3-1" Units="чел.-ч" Quantity="806" WorkClass="3,1">
+            <PriceBase Value="8,64"/>
+          </Tzr>
+          <Tzm Caption="Затраты труда машинистов" Code="2" Units="чел.-ч" Quantity="30,95"/>
+          <Mch Caption="Краны башенные, грузоподъемность 8 т" Code="91.05.01-017" Units="маш.час" Quantity="28,56">
+            <PriceBase Value="86,4" ZM="13,5"/>
+          </Mch>
+          <Mch Caption="Краны на автомобильном ходу, грузоподъемность 16 т" Code="91.05.05-015" Units="маш.час" Quantity="0,86">
+            <PriceBase Value="115,4" ZM="13,5"/>
+          </Mch>
+          <Mch Caption="Погрузчики, грузоподъемность 5 т" Code="91.06.05-011" Units="маш.час" Quantity="0,25">
+            <PriceBase Value="89,99" ZM="10,06"/>
+          </Mch>
+          <Mch Caption="Вибраторы поверхностные" Code="91.07.04-002" Units="маш.час" Quantity="40,3">
+            <PriceBase Value="0,5"/>
+          </Mch>
+          <Mch Caption="Автомобили бортовые, грузоподъемность до 5 т" Code="91.14.02-001" Units="маш.час" Quantity="1,28">
+            <PriceBase Value="65,71" ZM="11,6"/>
+          </Mch>
+          <Mat Caption="Вода" Code="01.7.03.01-0001" Units="м3" Quantity="0,257">
+            <PriceBase Value="2,44"/>
+          </Mat>
+          <Mat Caption="Гвозди строительные" Code="01.7.15.06-0111" Units="т" Quantity="0,079">
+            <PriceBase Value="11978"/>
+          </Mat>
+          <Mat Caption="Стойки деревометаллические раздвижные инвентарные" Code="01.7.16.03-0011" Units="шт" Quantity="2,8">
+            <PriceBase Value="1010"/>
+          </Mat>
+          <Mat Caption="Ткань мешочная" Code="01.7.20.08-0162" Units="10 м2" Quantity="4,29">
+            <PriceBase Value="84,75"/>
+          </Mat>
+          <Mat Caption="Известь строительная негашеная комовая, сорт I" Code="03.1.02.03-0011" Units="т" Quantity="0,086">
+            <PriceBase Value="734,5"/>
+          </Mat>
+          <Mat Caption="Смеси бетонные тяжелого бетона" Identifier="р1" Code="04.1.02.05" Units="м3" Quantity="101,5" Options="NotCount"/>
+          <Mat Caption="Конструкции стальные" Code="07.3.02.11" Units="т" Quantity="0,5" Options="NotCount"/>
+          <Mat Caption="Проволока светлая, диаметр 1,1 мм" Code="08.3.03.04-0012" Units="т" Quantity="0,0116">
+            <PriceBase Value="10200"/>
+          </Mat>
+          <Mat Caption="Арматура" Code="08.4.03.03" Units="т" Quantity="7,66" Options="NotCount"/>
+          <Mat Caption="Бруски обрезные, хвойных пород, длина 4-6,5 м, ширина 75-150 мм, толщина 40-75 мм, сорт III" Code="11.1.03.01-0079" Units="м3" Quantity="6,22">
+            <PriceBase Value="1287"/>
+          </Mat>
+          <Mat Caption="Бруски обрезные, хвойных пород, длина 4-6,5 м, ширина 75-150 мм, толщина 150 мм и более, сорт II" Code="11.1.03.01-0086" Units="м3" Quantity="0,99">
+            <PriceBase Value="2156"/>
+          </Mat>
+          <Mat Caption="Доска обрезная, хвойных пород, ширина 75-150 мм, толщина 25 мм, длина 4-6,5 м, сорт III" Code="11.1.03.06-0087" Units="м3" Quantity="0,53">
+            <PriceBase Value="1100"/>
+          </Mat>
+          <Mat Caption="Доска обрезная, хвойных пород, ширина 75-150 мм, толщина 44 мм и более, длина 4-6,5 м, сорт III" Code="11.1.03.06-0095" Units="м3" Quantity="2,61">
+            <PriceBase Value="1056"/>
+          </Mat>
+          <Mat Caption="Щиты из досок, толщина 25 мм" Code="11.2.13.04-0011" Units="м2" Quantity="86,1">
+            <PriceBase Value="35,53"/>
+          </Mat>
+        </Resources>
+        <WorksList>
+          <Work Caption="Раскрой и установка брусьев, брусков и досок."/>
+          <Work Caption="Установка щитов опалубки."/>
+          <Work Caption="Крепление элементов опалубки проволокой и гвоздями строительными."/>
+          <Work Caption="Установка и сварка арматуры."/>
+          <Work Caption="Укладка бетонной смеси."/>
+        </WorksList>
+      </Position>
+      <Position Caption="Смеси бетонные тяжелого бетона (БСТ), класс В25 (М350)" Number="113" Code="ФССЦ-04.1.02.05-0009" Units="м3" SysID="159" DBComment="Приказ Минстроя России от 26.12.2019 №876/пр" Quantity="Ф50.р1" PriceLevel="2001" PzSync="Yes" Vr2001="10011">
+        <Quantity Fx="Ф50.р1" Result="15,83"/>
+        <PriceBase PZ="725,69" MT="725,69"/>
+      </Position>
+      <Position Caption="Горячекатаная арматурная сталь периодического профиля класса: А-III, диаметром 10 мм" Number="114" Code="ФССЦ-08.4.03.03-0031" Units="т" SysID="108" DBComment="Приказ Минстроя России от 26.12.2019 №876/пр" Quantity="0,2656" PriceLevel="2001" PzSync="Yes" Vr2001="10011">
+        <Quantity Fx="0,2656" Result="0,2656"/>
+        <PriceBase PZ="8014,15" MT="8014,15"/>
+      </Position>
+      <Position Caption="Горячекатаная арматурная сталь периодического профиля класса: А-III, диаметром 12 мм" Number="115" Code="ФССЦ-08.4.03.03-0032" Units="т" SysID="109" DBComment="Приказ Минстроя России от 26.12.2019 №876/пр" Quantity="1,2096" PriceLevel="2001" PzSync="Yes" Vr2001="10011">
+        <Quantity Fx="1,2096" Result="1,2096"/>
+        <PriceBase PZ="7997,23" MT="7997,23"/>
+      </Position>
+      <Position Caption="Изоляция изделиями из пенопласта насухо холодных поверхностей покрытий и перекрытий" Identifier="Ф17" Number="116" Code="ФЕР26-01-041-05" Units="м3" SysID="261" DBComment="Приказ Минстроя России от 26.12.2019 №876/пр" Quantity="0,6" PriceLevel="2001" DBFlags="Comment TechK" PzSync="Yes" Vr2001="10030">
+        <Quantity Fx="0,6" Result="0,6"/>
+        <PriceBase PZ="112,39" OZ="89,02" EM="23,37" ZM="3,6"/>
+        <Resources>
+          <Tzr Caption="Затраты труда рабочих" Code="1-3-8" Units="чел.-ч" Quantity="9,47" WorkClass="3,8">
+            <PriceBase Value="9,4"/>
+          </Tzr>
+          <Tzm Caption="Затраты труда машинистов" Code="2" Units="чел.-ч" Quantity="0,31"/>
+          <Mch Caption="Лебедки электрические тяговым усилием 19,62 кН (2 т)" Code="91.06.03-055" Units="маш.час" Quantity="0,45">
+            <PriceBase Value="6,66"/>
+          </Mch>
+          <Mch Caption="Автомобили бортовые, грузоподъемность до 5 т" Code="91.14.02-001" Units="маш.час" Quantity="0,31">
+            <PriceBase Value="65,71" ZM="11,6"/>
+          </Mch>
+          <Mat Caption="Изделия теплоизоляционные из пенопласта" Identifier="р1" Code="12.2.05.06" Units="м3" Quantity="1,02" Options="NotCount"/>
+        </Resources>
+        <WorksList>
+          <Work Caption="Подготовка изолируемой поверхности."/>
+          <Work Caption="Распиловка плит."/>
+          <Work Caption="Укладка теплоизоляционных материалов с подгонкой и креплением."/>
+        </WorksList>
+      </Position>
+      <Position Caption="Плиты теплоизоляционные из пенопласта полистирольного ППС-15" Number="117" Code="ФССЦ-12.2.05.06-0032" Units="м3" SysID="262" DBComment="Приказ Минстроя России от 26.12.2019 №876/пр" Quantity="Ф17.р1" PriceLevel="2001" PzSync="Yes" Vr2001="10030">
+        <Quantity Fx="Ф17.р1" Result="0,612"/>
+        <PriceBase PZ="471,87" MT="471,87"/>
+      </Position>
+    </Chapter>
+    <Chapter Caption="Парапет" SysID="7">
+      <Header Caption="СТ2"/>
+      <Position Caption="Устройство железобетонных стен и перегородок высотой: до 3 м, толщиной 200 мм" Identifier="Ф51" Number="118" Code="ФЕР06-06-002-03" Units="100 м3" SysID="222" DBComment="Приказ Минстроя России от 26.12.2019 №876/пр" Quantity="24 / 100" PriceLevel="2001" DBFlags="Comment TechK" PzSync="Yes" Vr2001="10011">
+        <Quantity Fx="=24" KUnit="100" Result="0,24"/>
+        <PriceBase PZ="40036,9" OZ="12236" EM="11490,97" ZM="1407,37" MT="16309,93"/>
+        <Resources>
+          <Tzr Caption="Затраты труда рабочих" Code="1-3-2" Units="чел.-ч" Quantity="1400" WorkClass="3,2">
+            <PriceBase Value="8,74"/>
+          </Tzr>
+          <Tzm Caption="Затраты труда машинистов" Code="2" Units="чел.-ч" Quantity="104,57"/>
+          <Mch Caption="Краны башенные, грузоподъемность 8 т" Code="91.05.01-017" Units="маш.час" Quantity="101,27">
+            <PriceBase Value="86,4" ZM="13,5"/>
+          </Mch>
+          <Mch Caption="Краны на автомобильном ходу, грузоподъемность 16 т" Code="91.05.05-015" Units="маш.час" Quantity="1,22">
+            <PriceBase Value="115,4" ZM="13,5"/>
+          </Mch>
+          <Mch Caption="Погрузчики, грузоподъемность 5 т" Code="91.06.05-011" Units="маш.час" Quantity="0,25">
+            <PriceBase Value="89,99" ZM="10,06"/>
+          </Mch>
+          <Mch Caption="Вибраторы глубинные" Code="91.07.04-001" Units="маш.час" Quantity="70">
+            <PriceBase Value="1,9"/>
+          </Mch>
+          <Mch Caption="Автомобили бортовые, грузоподъемность до 5 т" Code="91.14.02-001" Units="маш.час" Quantity="1,83">
+            <PriceBase Value="65,71" ZM="11,6"/>
+          </Mch>
+          <Mch Caption="Установки для сварки ручной дуговой (постоянного тока)" Code="91.17.04-233" Units="маш.час" Quantity="287">
+            <PriceBase Value="8,1"/>
+          </Mch>
+          <Mat Caption="Вода" Code="01.7.03.01-0001" Units="м3" Quantity="0,309">
+            <PriceBase Value="2,44"/>
+          </Mat>
+          <Mat Caption="Электроды сварочные Э42, диаметр 4 мм" Code="01.7.11.07-0032" Units="т" Quantity="0,41">
+            <PriceBase Value="10315,01"/>
+          </Mat>
+          <Mat Caption="Болты с гайками и шайбами строительные" Code="01.7.15.03-0042" Units="кг" Quantity="180">
+            <PriceBase Value="9,04"/>
+          </Mat>
+          <Mat Caption="Гвозди строительные" Code="01.7.15.06-0111" Units="т" Quantity="0,128">
+            <PriceBase Value="11978"/>
+          </Mat>
+          <Mat Caption="Известь строительная негашеная комовая, сорт I" Code="03.1.02.03-0011" Units="т" Quantity="0,103">
+            <PriceBase Value="734,5"/>
+          </Mat>
+          <Mat Caption="Смеси бетонные тяжелого бетона" Identifier="р1" Code="04.1.02.05" Units="м3" Quantity="101,5" Options="NotCount"/>
+          <Mat Caption="Арматура" Code="08.4.03.03" Units="т" Quantity="20,4" Options="NotCount"/>
+          <Mat Caption="Бруски обрезные, хвойных пород, длина 4-6,5 м, ширина 75-150 мм, толщина 40-75 мм, сорт III" Code="11.1.03.01-0079" Units="м3" Quantity="0,27">
+            <PriceBase Value="1287"/>
+          </Mat>
+          <Mat Caption="Доска обрезная, хвойных пород, ширина 75-150 мм, толщина 44 мм и более, длина 4-6,5 м, сорт III" Code="11.1.03.06-0095" Units="м3" Quantity="3,1">
+            <PriceBase Value="1056"/>
+          </Mat>
+          <Mat Caption="Щиты из досок, толщина 25 мм" Code="11.2.13.04-0011" Units="м2" Quantity="147">
+            <PriceBase Value="35,53"/>
+          </Mat>
+        </Resources>
+        <WorksList>
+          <Work Caption="Раскрой и установка брусков и досок."/>
+          <Work Caption="Установка щитов опалубки."/>
+          <Work Caption="Крепление элементов опалубки болтами и гвоздями строительными."/>
+          <Work Caption="Установка и сварка арматуры."/>
+          <Work Caption="Укладка бетонной смеси."/>
+        </WorksList>
+      </Position>
+      <Position Caption="Смеси бетонные тяжелого бетона (БСТ), класс В25 (М350)" Number="119" Code="ФССЦ-04.1.02.05-0009" Units="м3" SysID="160" DBComment="Приказ Минстроя России от 26.12.2019 №876/пр" Quantity="Ф51.р1" PriceLevel="2001" PzSync="Yes" Vr2001="10011">
+        <Quantity Fx="Ф51.р1" Result="24,36"/>
+        <PriceBase PZ="725,69" MT="725,69"/>
+      </Position>
+      <Position Caption="Горячекатаная арматурная сталь периодического профиля класса: А-III, диаметром 8 мм" Number="120" Code="ФССЦ-08.4.03.03-0030" Units="т" SysID="124" DBComment="Приказ Минстроя России от 26.12.2019 №876/пр" Quantity="0,6558" PriceLevel="2001" PzSync="Yes" Vr2001="10011">
+        <Quantity Fx="0,6558" Result="0,6558"/>
+        <PriceBase PZ="8102,64" MT="8102,64"/>
+      </Position>
+      <Position Caption="Горячекатаная арматурная сталь периодического профиля класса: А-III, диаметром 12 мм" Number="121" Code="ФССЦ-08.4.03.03-0032" Units="т" SysID="126" DBComment="Приказ Минстроя России от 26.12.2019 №876/пр" Quantity="1,108" PriceLevel="2001" PzSync="Yes" Vr2001="10011">
+        <Quantity Fx="1,108" Result="1,108"/>
+        <PriceBase PZ="7997,23" MT="7997,23"/>
+      </Position>
+      <Position Caption="Изоляция изделиями из пенопласта насухо холодных поверхностей покрытий и перекрытий" Identifier="Ф18" Number="122" Code="ФЕР26-01-041-05" Units="м3" SysID="263" DBComment="Приказ Минстроя России от 26.12.2019 №876/пр" Quantity="3,2" PriceLevel="2001" DBFlags="Comment TechK" PzSync="Yes" Vr2001="10030">
+        <Quantity Fx="3,2" Result="3,2"/>
+        <PriceBase PZ="112,39" OZ="89,02" EM="23,37" ZM="3,6"/>
+        <Resources>
+          <Tzr Caption="Затраты труда рабочих" Code="1-3-8" Units="чел.-ч" Quantity="9,47" WorkClass="3,8">
+            <PriceBase Value="9,4"/>
+          </Tzr>
+          <Tzm Caption="Затраты труда машинистов" Code="2" Units="чел.-ч" Quantity="0,31"/>
+          <Mch Caption="Лебедки электрические тяговым усилием 19,62 кН (2 т)" Code="91.06.03-055" Units="маш.час" Quantity="0,45">
+            <PriceBase Value="6,66"/>
+          </Mch>
+          <Mch Caption="Автомобили бортовые, грузоподъемность до 5 т" Code="91.14.02-001" Units="маш.час" Quantity="0,31">
+            <PriceBase Value="65,71" ZM="11,6"/>
+          </Mch>
+          <Mat Caption="Изделия теплоизоляционные из пенопласта" Identifier="р1" Code="12.2.05.06" Units="м3" Quantity="1,02" Options="NotCount"/>
+        </Resources>
+        <WorksList>
+          <Work Caption="Подготовка изолируемой поверхности."/>
+          <Work Caption="Распиловка плит."/>
+          <Work Caption="Укладка теплоизоляционных материалов с подгонкой и креплением."/>
+        </WorksList>
+      </Position>
+      <Position Caption="Плиты теплоизоляционные из пенопласта полистирольного ППС-15" Number="123" Code="ФССЦ-12.2.05.06-0032" Units="м3" SysID="264" DBComment="Приказ Минстроя России от 26.12.2019 №876/пр" Quantity="Ф18.р1" PriceLevel="2001" PzSync="Yes" Vr2001="10030">
+        <Quantity Fx="Ф18.р1" Result="3,264"/>
+        <PriceBase PZ="471,87" MT="471,87"/>
+      </Position>
+      <Header Caption="СТ2п"/>
+      <Position Caption="Устройство железобетонных стен и перегородок высотой: до 3 м, толщиной 200 мм" Identifier="Ф52" Number="124" Code="ФЕР06-06-002-03" Units="100 м3" SysID="223" DBComment="Приказ Минстроя России от 26.12.2019 №876/пр" Quantity="6,8 / 100" PriceLevel="2001" DBFlags="Comment TechK" PzSync="Yes" Vr2001="10011">
+        <Quantity Fx="=6,8" KUnit="100" Result="0,068"/>
+        <PriceBase PZ="40036,9" OZ="12236" EM="11490,97" ZM="1407,37" MT="16309,93"/>
+        <Resources>
+          <Tzr Caption="Затраты труда рабочих" Code="1-3-2" Units="чел.-ч" Quantity="1400" WorkClass="3,2">
+            <PriceBase Value="8,74"/>
+          </Tzr>
+          <Tzm Caption="Затраты труда машинистов" Code="2" Units="чел.-ч" Quantity="104,57"/>
+          <Mch Caption="Краны башенные, грузоподъемность 8 т" Code="91.05.01-017" Units="маш.час" Quantity="101,27">
+            <PriceBase Value="86,4" ZM="13,5"/>
+          </Mch>
+          <Mch Caption="Краны на автомобильном ходу, грузоподъемность 16 т" Code="91.05.05-015" Units="маш.час" Quantity="1,22">
+            <PriceBase Value="115,4" ZM="13,5"/>
+          </Mch>
+          <Mch Caption="Погрузчики, грузоподъемность 5 т" Code="91.06.05-011" Units="маш.час" Quantity="0,25">
+            <PriceBase Value="89,99" ZM="10,06"/>
+          </Mch>
+          <Mch Caption="Вибраторы глубинные" Code="91.07.04-001" Units="маш.час" Quantity="70">
+            <PriceBase Value="1,9"/>
+          </Mch>
+          <Mch Caption="Автомобили бортовые, грузоподъемность до 5 т" Code="91.14.02-001" Units="маш.час" Quantity="1,83">
+            <PriceBase Value="65,71" ZM="11,6"/>
+          </Mch>
+          <Mch Caption="Установки для сварки ручной дуговой (постоянного тока)" Code="91.17.04-233" Units="маш.час" Quantity="287">
+            <PriceBase Value="8,1"/>
+          </Mch>
+          <Mat Caption="Вода" Code="01.7.03.01-0001" Units="м3" Quantity="0,309">
+            <PriceBase Value="2,44"/>
+          </Mat>
+          <Mat Caption="Электроды сварочные Э42, диаметр 4 мм" Code="01.7.11.07-0032" Units="т" Quantity="0,41">
+            <PriceBase Value="10315,01"/>
+          </Mat>
+          <Mat Caption="Болты с гайками и шайбами строительные" Code="01.7.15.03-0042" Units="кг" Quantity="180">
+            <PriceBase Value="9,04"/>
+          </Mat>
+          <Mat Caption="Гвозди строительные" Code="01.7.15.06-0111" Units="т" Quantity="0,128">
+            <PriceBase Value="11978"/>
+          </Mat>
+          <Mat Caption="Известь строительная негашеная комовая, сорт I" Code="03.1.02.03-0011" Units="т" Quantity="0,103">
+            <PriceBase Value="734,5"/>
+          </Mat>
+          <Mat Caption="Смеси бетонные тяжелого бетона" Identifier="р1" Code="04.1.02.05" Units="м3" Quantity="101,5" Options="NotCount"/>
+          <Mat Caption="Арматура" Code="08.4.03.03" Units="т" Quantity="20,4" Options="NotCount"/>
+          <Mat Caption="Бруски обрезные, хвойных пород, длина 4-6,5 м, ширина 75-150 мм, толщина 40-75 мм, сорт III" Code="11.1.03.01-0079" Units="м3" Quantity="0,27">
+            <PriceBase Value="1287"/>
+          </Mat>
+          <Mat Caption="Доска обрезная, хвойных пород, ширина 75-150 мм, толщина 44 мм и более, длина 4-6,5 м, сорт III" Code="11.1.03.06-0095" Units="м3" Quantity="3,1">
+            <PriceBase Value="1056"/>
+          </Mat>
+          <Mat Caption="Щиты из досок, толщина 25 мм" Code="11.2.13.04-0011" Units="м2" Quantity="147">
+            <PriceBase Value="35,53"/>
+          </Mat>
+        </Resources>
+        <WorksList>
+          <Work Caption="Раскрой и установка брусков и досок."/>
+          <Work Caption="Установка щитов опалубки."/>
+          <Work Caption="Крепление элементов опалубки болтами и гвоздями строительными."/>
+          <Work Caption="Установка и сварка арматуры."/>
+          <Work Caption="Укладка бетонной смеси."/>
+        </WorksList>
+      </Position>
+      <Position Caption="Смеси бетонные тяжелого бетона (БСТ), класс В25 (М350)" Number="125" Code="ФССЦ-04.1.02.05-0009" Units="м3" SysID="161" DBComment="Приказ Минстроя России от 26.12.2019 №876/пр" Quantity="Ф52.р1" PriceLevel="2001" PzSync="Yes" Vr2001="10011">
+        <Quantity Fx="Ф52.р1" Result="6,902"/>
+        <PriceBase PZ="725,69" MT="725,69"/>
+      </Position>
+      <Position Caption="Горячекатаная арматурная сталь периодического профиля класса: А-III, диаметром 8 мм" Number="126" Code="ФССЦ-08.4.03.03-0030" Units="т" SysID="129" DBComment="Приказ Минстроя России от 26.12.2019 №876/пр" Quantity="0,158" PriceLevel="2001" PzSync="Yes" Vr2001="10011">
+        <Quantity Fx="0,158" Result="0,158"/>
+        <PriceBase PZ="8102,64" MT="8102,64"/>
+      </Position>
+      <Position Caption="Горячекатаная арматурная сталь периодического профиля класса: А-III, диаметром 12 мм" Number="127" Code="ФССЦ-08.4.03.03-0032" Units="т" SysID="130" DBComment="Приказ Минстроя России от 26.12.2019 №876/пр" Quantity="0,294" PriceLevel="2001" PzSync="Yes" Vr2001="10011">
+        <Quantity Fx="0,294" Result="0,294"/>
+        <PriceBase PZ="7997,23" MT="7997,23"/>
+      </Position>
+      <Position Caption="Изоляция изделиями из пенопласта насухо холодных поверхностей покрытий и перекрытий" Identifier="Ф19" Number="128" Code="ФЕР26-01-041-05" Units="м3" SysID="265" DBComment="Приказ Минстроя России от 26.12.2019 №876/пр" Quantity="1" PriceLevel="2001" DBFlags="Comment TechK" PzSync="Yes" Vr2001="10030">
+        <Quantity Fx="1" Result="1"/>
+        <PriceBase PZ="112,39" OZ="89,02" EM="23,37" ZM="3,6"/>
+        <Resources>
+          <Tzr Caption="Затраты труда рабочих" Code="1-3-8" Units="чел.-ч" Quantity="9,47" WorkClass="3,8">
+            <PriceBase Value="9,4"/>
+          </Tzr>
+          <Tzm Caption="Затраты труда машинистов" Code="2" Units="чел.-ч" Quantity="0,31"/>
+          <Mch Caption="Лебедки электрические тяговым усилием 19,62 кН (2 т)" Code="91.06.03-055" Units="маш.час" Quantity="0,45">
+            <PriceBase Value="6,66"/>
+          </Mch>
+          <Mch Caption="Автомобили бортовые, грузоподъемность до 5 т" Code="91.14.02-001" Units="маш.час" Quantity="0,31">
+            <PriceBase Value="65,71" ZM="11,6"/>
+          </Mch>
+          <Mat Caption="Изделия теплоизоляционные из пенопласта" Identifier="р1" Code="12.2.05.06" Units="м3" Quantity="1,02" Options="NotCount"/>
+        </Resources>
+        <WorksList>
+          <Work Caption="Подготовка изолируемой поверхности."/>
+          <Work Caption="Распиловка плит."/>
+          <Work Caption="Укладка теплоизоляционных материалов с подгонкой и креплением."/>
+        </WorksList>
+      </Position>
+      <Position Caption="Плиты теплоизоляционные из пенопласта полистирольного ППС-15" Number="129" Code="ФССЦ-12.2.05.06-0032" Units="м3" SysID="266" DBComment="Приказ Минстроя России от 26.12.2019 №876/пр" Quantity="Ф19.р1" PriceLevel="2001" PzSync="Yes" Vr2001="10030">
+        <Quantity Fx="Ф19.р1" Result="1,02"/>
+        <PriceBase PZ="471,87" MT="471,87"/>
+      </Position>
+    </Chapter>
+    <Chapter Caption="Общестроительные работы" SysID="8">
+      <Position Caption="Монтаж фахверка" Identifier="Ф31" Number="130" Code="ФЕР09-04-006-01" Units="т" SysID="191" DBComment="Приказ Минстроя России от 26.12.2019 №876/пр" Quantity="1,313" PriceLevel="2001" DBFlags="Comment TechK" PzSync="Yes" Vr2001="10016">
+        <Quantity Fx="=1,313" Result="1,313"/>
+        <PriceBase PZ="1016,18" OZ="254,52" EM="536,02" ZM="41,45" MT="225,64"/>
+        <Resources>
+          <Tzr Caption="Затраты труда рабочих" Code="1-4-3" Units="чел.-ч" Quantity="25,3" WorkClass="4,3">
+            <PriceBase Value="10,06"/>
+          </Tzr>
+          <Tzm Caption="Затраты труда машинистов" Code="2" Units="чел.-ч" Quantity="3,08"/>
+          <Mch Caption="Краны козловые, грузоподъемность 32 т" Code="91.05.02-005" Units="маш.час" Quantity="0,1">
+            <PriceBase Value="120,24" ZM="15,42"/>
+          </Mch>
+          <Mch Caption="Краны на автомобильном ходу, грузоподъемность 16 т" Code="91.05.05-015" Units="маш.час" Quantity="0,11">
+            <PriceBase Value="115,4" ZM="13,5"/>
+          </Mch>
+          <Mch Caption="Краны на гусеничном ходу, грузоподъемность 25 т" Code="91.05.06-007" Units="маш.час" Quantity="2,7">
+            <PriceBase Value="120,04" ZM="13,5"/>
+          </Mch>
+          <Mch Caption="Домкраты гидравлические, грузоподъемность 63-100 т" Code="91.06.01-003" Units="маш.час" Quantity="0,08">
+            <PriceBase Value="0,9"/>
+          </Mch>
+          <Mch Caption="Автомобили бортовые, грузоподъемность до 5 т" Code="91.14.02-001" Units="маш.час" Quantity="0,17">
+            <PriceBase Value="65,71" ZM="11,6"/>
+          </Mch>
+          <Mch Caption="Аппараты для газовой сварки и резки" Code="91.17.04-042" Units="маш.час" Quantity="3,02">
+            <PriceBase Value="1,2"/>
+          </Mch>
+          <Mch Caption="Преобразователи сварочные номинальным сварочным током 315-500 А" Code="91.17.04-171" Units="маш.час" Quantity="14">
+            <PriceBase Value="12,31"/>
+          </Mch>
+          <Mat Caption="Кислород газообразный технический" Code="01.3.02.08-0001" Units="м3" Quantity="2,6">
+            <PriceBase Value="6,22"/>
+          </Mat>
+          <Mat Caption="Пропан-бутан смесь техническая" Code="01.3.02.09-0022" Units="кг" Quantity="0,78">
+            <PriceBase Value="6,09"/>
+          </Mat>
+          <Mat Caption="Электроды сварочные Э46, диаметр 4 мм" Code="01.7.11.07-0036" Units="кг" Quantity="16">
+            <PriceBase Value="10,75"/>
+          </Mat>
+          <Mat Caption="Болты с гайками и шайбами строительные" Code="01.7.15.03-0042" Units="кг" Options="Project NotCount">
+            <PriceBase Value="9,04"/>
+          </Mat>
+          <Mat Caption="Гвозди строительные" Code="01.7.15.06-0111" Units="т" Quantity="1E-5">
+            <PriceBase Value="11978"/>
+          </Mat>
+          <Mat Caption="Канат пеньковый пропитанный" Code="01.7.20.08-0071" Units="т" Quantity="0,0001">
+            <PriceBase Value="37900"/>
+          </Mat>
+          <Mat Caption="Конструкции стальные" Identifier="р1" Code="07.2.03.06" Units="т" Quantity="1" Options="NotCount"/>
+          <Mat Caption="Элементы конструктивные зданий и сооружений с преобладанием горячекатаных профилей, средняя масса сборочной единицы от 0,1 до 0,5 т" Code="07.2.07.12-0020" Units="т" Quantity="0,001">
+            <PriceBase Value="7712"/>
+          </Mat>
+          <Mat Caption="Канат двойной свивки ТК, конструкции 6х19(1+6+12)+1 о.с., оцинкованный, из проволок марки В, маркировочная группа 1770 н/мм2, диаметр 5,5 мм" Code="08.2.02.11-0007" Units="10 м" Quantity="0,0187">
+            <PriceBase Value="50,24"/>
+          </Mat>
+          <Mat Caption="Проволока горячекатаная в мотках, диаметр 6,3-6,5 мм" Code="08.3.03.06-0002" Units="т" Quantity="3E-5">
+            <PriceBase Value="4455,2"/>
+          </Mat>
+          <Mat Caption="Швеллеры № 40, марка стали Ст0" Code="08.3.11.01-0091" Units="т" Quantity="0,00194">
+            <PriceBase Value="4920"/>
+          </Mat>
+          <Mat Caption="Грунтовка ГФ-021" Code="14.4.01.01-0003" Units="т" Quantity="0,00031">
+            <PriceBase Value="15620"/>
+          </Mat>
+          <Mat Caption="Растворитель Р-4" Code="14.5.09.07-0030" Units="кг" Quantity="0,6">
+            <PriceBase Value="9,42"/>
+          </Mat>
+        </Resources>
+        <WorksList>
+          <Work Caption="Установка конструкций фахверка."/>
+          <Work Caption="Крепление фахверка."/>
+          <Work Caption="Антикоррозийное покрытие сварных швов."/>
+        </WorksList>
+      </Position>
+      <Position Caption="Стойки фахверка" Number="131" Code="ФССЦ-07.2.03.06-0121" Units="т" SysID="194" DBComment="Приказ Минстроя России от 26.12.2019 №876/пр" Quantity="Ф31.р1" PriceLevel="2001" PzSync="Yes" Vr2001="10016">
+        <Quantity Fx="Ф31.р1" Result="1,313"/>
+        <PriceBase PZ="6435" MT="6435"/>
+      </Position>
+      <Position Caption="Установка закладных деталей весом: до 4 кг (прим. опоры для перемычек)" Identifier="Ф11" Number="132" Code="ФЕР06-03-004-09" Units="т" SysID="230" DBComment="Приказ Минстроя России от 30.06.2020 №352/пр" Quantity="0,06" PriceLevel="2001" DBFlags="TechK" PzSync="Yes" Vr2001="10011">
+        <Quantity Fx="0,06" Result="0,06"/>
+        <PriceBase PZ="1824,5" OZ="1795,86" EM="28,64" ZM="4,09"/>
+        <Resources>
+          <Tzr Caption="Затраты труда рабочих" Code="1-3-5" Units="чел.-ч" Quantity="198" WorkClass="3,5">
+            <PriceBase Value="9,07"/>
+          </Tzr>
+          <Tzm Caption="Затраты труда машинистов" Code="2" Units="чел.-ч" Quantity="0,33"/>
+          <Mch Caption="Краны на автомобильном ходу, грузоподъемность 16 т" Code="91.05.05-015" Units="маш.час" Quantity="0,14">
+            <PriceBase Value="115,4" ZM="13,5"/>
+          </Mch>
+          <Mch Caption="Автомобили бортовые, грузоподъемность до 5 т" Code="91.14.02-001" Units="маш.час" Quantity="0,19">
+            <PriceBase Value="65,71" ZM="11,6"/>
+          </Mch>
+          <Mat Caption="Детали закладные и накладные" Identifier="р1" Code="08.4.01.02" Units="т" Quantity="1" Options="NotCount"/>
+        </Resources>
+        <WorksList>
+          <Work Caption="Вырезка и заделка отверстий в опалубке (при необходимости), установка и закрепление закладных деталей."/>
+        </WorksList>
+      </Position>
+      <Position Caption="Сталь угловая равнополочная, марка стали: Ст3пс, шириной полок 100-100 мм" Number="133" Code="ФССЦ-08.3.08.02-0073" Units="т" SysID="231" DBComment="Приказ Минстроя России от 26.12.2019 №876/пр" Quantity="Ф11.р1" PriceLevel="2001" PzSync="Yes" Vr2001="10011">
+        <Quantity Fx="Ф11.р1" Result="0,06"/>
+        <PriceBase PZ="4840,65" MT="4840,65"/>
+      </Position>
+      <Position Caption="Монтаж каркасов зданий: рамных коробчатого сечения (прим. металлические козырьки)" Number="134" Code="ФЕР09-01-005-03" ColorIndex="4" Units="т" SysID="234" DBComment="Приказ Минстроя России от 26.12.2019 №876/пр" Quantity="ОКР(Ф8+Ф10+Ф13+0,03; 2)" PriceLevel="2001" DBFlags="Comment TechK" PzSync="Yes" Vr2001="10016">
+        <Quantity Fx="=Ф8+Ф10+Ф13+0,03" Precision="2" Result="1,04"/>
+        <PriceBase PZ="1092,28" OZ="220,22" EM="451,57" ZM="51,45" MT="420,49"/>
+        <Resources>
+          <Tzr Caption="Затраты труда рабочих" Code="1-4-2" Units="чел.-ч" Quantity="22,2" WorkClass="4,2">
+            <PriceBase Value="9,92"/>
+          </Tzr>
+          <Tzm Caption="Затраты труда машинистов" Code="2" Units="чел.-ч" Quantity="3,85"/>
+          <Mch Caption="Краны на автомобильном ходу, грузоподъемность 16 т" Code="91.05.05-015" Units="маш.час" Quantity="0,2">
+            <PriceBase Value="115,4" ZM="13,5"/>
+          </Mch>
+          <Mch Caption="Краны на гусеничном ходу, грузоподъемность 25 т" Code="91.05.06-007" Units="маш.час" Quantity="3,37">
+            <PriceBase Value="120,04" ZM="13,5"/>
+          </Mch>
+          <Mch Caption="Домкраты гидравлические, грузоподъемность 63-100 т" Code="91.06.01-003" Units="маш.час" Quantity="0,09">
+            <PriceBase Value="0,9"/>
+          </Mch>
+          <Mch Caption="Автомобили бортовые, грузоподъемность до 5 т" Code="91.14.02-001" Units="маш.час" Quantity="0,28">
+            <PriceBase Value="65,71" ZM="11,6"/>
+          </Mch>
+          <Mch Caption="Аппараты для газовой сварки и резки" Code="91.17.04-042" Units="маш.час" Quantity="2">
+            <PriceBase Value="1,2"/>
+          </Mch>
+          <Mch Caption="Преобразователи сварочные номинальным сварочным током 315-500 А" Code="91.17.04-171" Units="маш.час" Quantity="0,25">
+            <PriceBase Value="12,31"/>
+          </Mch>
+          <Mat Caption="Кислород газообразный технический" Code="01.3.02.08-0001" Units="м3" Quantity="1,95">
+            <PriceBase Value="6,22"/>
+          </Mat>
+          <Mat Caption="Пропан-бутан смесь техническая" Code="01.3.02.09-0022" Units="кг" Quantity="0,59">
+            <PriceBase Value="6,09"/>
+          </Mat>
+          <Mat Caption="Электроды сварочные Э46, диаметр 4 мм" Code="01.7.11.07-0036" Units="кг" Quantity="0,2">
+            <PriceBase Value="10,75"/>
+          </Mat>
+          <Mat Caption="Болты высокопрочные" Code="01.7.15.02-0055" Units="т" Quantity="0,007">
+            <PriceBase Value="27595"/>
+          </Mat>
+          <Mat Caption="Болты с гайками и шайбами строительные" Code="01.7.15.03-0042" Units="кг" Quantity="4">
+            <PriceBase Value="9,04"/>
+          </Mat>
+          <Mat Caption="Гвозди строительные" Code="01.7.15.06-0111" Units="т" Quantity="1E-5">
+            <PriceBase Value="11978"/>
+          </Mat>
+          <Mat Caption="Канат пеньковый пропитанный" Code="01.7.20.08-0071" Units="т" Quantity="0,0001">
+            <PriceBase Value="37900"/>
+          </Mat>
+          <Mat Caption="Конструкции стальные" Code="07.2.07.12" Units="т" Quantity="1" Options="NotCount"/>
+          <Mat Caption="Элементы конструктивные зданий и сооружений с преобладанием горячекатаных профилей, средняя масса сборочной единицы от 0,1 до 0,5 т" Code="07.2.07.12-0020" Units="т" Quantity="0,019">
+            <PriceBase Value="7712"/>
+          </Mat>
+          <Mat Caption="Канат двойной свивки ТК, конструкции 6х19(1+6+12)+1 о.с., оцинкованный, из проволок марки В, маркировочная группа 1770 н/мм2, диаметр 5,5 мм" Code="08.2.02.11-0007" Units="10 м" Quantity="0,0187">
+            <PriceBase Value="50,24"/>
+          </Mat>
+          <Mat Caption="Проволока горячекатаная в мотках, диаметр 6,3-6,5 мм" Code="08.3.03.06-0002" Units="т" Quantity="3E-5">
+            <PriceBase Value="4455,2"/>
+          </Mat>
+          <Mat Caption="Швеллеры № 40, марка стали Ст0" Code="08.3.11.01-0091" Units="т" Quantity="0,00194">
+            <PriceBase Value="4920"/>
+          </Mat>
+          <Mat Caption="Бруски обрезные, хвойных пород, длина 4-6,5 м, ширина 75-150 мм, толщина 40-75 мм, сорт I" Code="11.1.03.01-0077" Units="м3" Quantity="0,00103">
+            <PriceBase Value="1700"/>
+          </Mat>
+          <Mat Caption="Грунтовка ГФ-021" Code="14.4.01.01-0003" Units="т" Quantity="0,00031">
+            <PriceBase Value="15620"/>
+          </Mat>
+          <Mat Caption="Растворитель Р-4" Code="14.5.09.07-0030" Units="кг" Quantity="0,6">
+            <PriceBase Value="9,42"/>
+          </Mat>
+        </Resources>
+        <WorksList>
+          <Work Caption="Сборка и установка конструкций стальных каркасов на болтах и на сварке."/>
+          <Work Caption="Устройство подмостей."/>
+          <Work Caption="Антикоррозийное покрытие сварных швов."/>
+        </WorksList>
+      </Position>
+      <Position Caption="Швеллеры: №12 сталь марки ВСт3пс5" Identifier="Ф8" Number="135" Code="ФССЦ-08.3.11.01-0041" Units="т" SysID="236" DBComment="Приказ Минстроя России от 26.12.2019 №876/пр" Quantity="0,672" PriceLevel="2001" PzSync="Yes" Vr2001="10016">
+        <Quantity Fx="0,672" Result="0,672"/>
+        <PriceBase PZ="4516,54" MT="4516,54"/>
+      </Position>
+      <Position Caption="Прокат толстолистовой горячекатаный в листах, марка стали Ст3кп, толщина 9-12 мм" Identifier="Ф10" Number="136" Code="ФССЦ-08.3.05.02-0091" Units="т" SysID="240" DBComment="Приказ Минстроя России от 26.12.2019 №876/пр" Quantity="0,095" PriceLevel="2001" PzSync="Yes" Vr2001="10016">
+        <Quantity Fx="=0,095" Result="0,095"/>
+        <PriceBase PZ="5150,21" MT="5150,21"/>
+      </Position>
+      <Position Caption="Сталь листовая горячекатаная марки Ст3 толщиной: 6,0 мм" Identifier="Ф13" Number="137" Code="ФССЦ-08.3.05.02-0060" Units="т" SysID="238" DBComment="Приказ Минстроя России от 26.12.2019 №876/пр" Quantity="0,24" PriceLevel="2001" PzSync="Yes" Vr2001="10016">
+        <Quantity Fx="=0,24" Result="0,24"/>
+        <PriceBase PZ="6691,21" MT="6691,21"/>
+      </Position>
+      <Position Caption="Трубы стальные электросварные прямошовные из стали марок БСт2кп-БСт4кп и БСт2пс-БСт4пс, наружный диаметр 32 мм, толщина стенки 2,0 мм" Identifier="Ф14" Number="138" Code="ФССЦ-23.5.02.02-0002" Units="м" SysID="241" DBComment="Приказ Минстроя России от 26.12.2019 №876/пр" Quantity="ОКР(30/1,48; 2)" PriceLevel="2001" PzSync="Yes" Vr2001="10016">
+        <Quantity Fx="=30/1,48" Precision="2" Result="20,27"/>
+        <PriceBase PZ="13,49" MT="13,49"/>
+      </Position>
+      <Position Caption="Монтаж оконных фонарных покрытий из поликарбонатных и акриловых плит с боковыми планками, профилями и резиновыми прокладками" Number="139" Code="ФЕР09-03-022-04" Units="100 м2" SysID="242" DBComment="Приказ Минстроя России от 26.12.2019 №876/пр" Quantity="21 / 100" PriceLevel="2001" DBFlags="Comment TechK" PzSync="Yes" Vr2001="10016">
+        <Quantity Fx="=21" KUnit="100" Result="0,21"/>
+        <PriceBase PZ="3283,49" OZ="1062,29" EM="2187,15" ZM="248,63" MT="34,05"/>
+        <Resources>
+          <Tzr Caption="Затраты труда рабочих" Code="1-3-8" Units="чел.-ч" Quantity="113,01" WorkClass="3,8">
+            <PriceBase Value="9,4"/>
+          </Tzr>
+          <Tzm Caption="Затраты труда машинистов" Code="2" Units="чел.-ч" Quantity="18,5"/>
+          <Mch Caption="Краны на автомобильном ходу, грузоподъемность 16 т" Code="91.05.05-015" Units="маш.час" Quantity="0,33">
+            <PriceBase Value="115,4" ZM="13,5"/>
+          </Mch>
+          <Mch Caption="Краны на гусеничном ходу, грузоподъемность 25 т" Code="91.05.06-007" Units="маш.час" Quantity="17,58">
+            <PriceBase Value="120,04" ZM="13,5"/>
+          </Mch>
+          <Mch Caption="Автомобили бортовые, грузоподъемность до 5 т" Code="91.14.02-001" Units="маш.час" Quantity="0,59">
+            <PriceBase Value="65,71" ZM="11,6"/>
+          </Mch>
+          <Mat Caption="Болты с гайками и шайбами строительные" Code="01.7.15.03-0042" Units="кг" Quantity="1">
+            <PriceBase Value="9,04"/>
+          </Mat>
+          <Mat Caption="Винты самонарезающие для крепления профилированного настила и панелей к несущим конструкциям" Code="01.7.15.04-0045" Units="т" Options="Project NotCount">
+            <PriceBase Value="35011"/>
+          </Mat>
+          <Mat Caption="Гвозди строительные" Code="01.7.15.06-0111" Units="т" Quantity="1E-5">
+            <PriceBase Value="11978"/>
+          </Mat>
+          <Mat Caption="Прокладки резиновые (пластина техническая прессованная)" Code="01.7.19.04-0031" Units="кг" Options="Project NotCount">
+            <PriceBase Value="23,09"/>
+          </Mat>
+          <Mat Caption="Канат пеньковый пропитанный" Code="01.7.20.08-0071" Units="т" Quantity="0,0001">
+            <PriceBase Value="37900"/>
+          </Mat>
+          <Mat Caption="Конструкции стальные" Code="07.2.07.13" Units="шт" Options="Project NotCount"/>
+          <Mat Caption="Канат двойной свивки ТК, конструкции 6х19(1+6+12)+1 о.с., оцинкованный, из проволок марки В, маркировочная группа 1770 н/мм2, диаметр 5,5 мм" Code="08.2.02.11-0007" Units="10 м" Quantity="0,0187">
+            <PriceBase Value="50,24"/>
+          </Mat>
+          <Mat Caption="Проволока горячекатаная в мотках, диаметр 6,3-6,5 мм" Code="08.3.03.06-0002" Units="т" Quantity="3E-5">
+            <PriceBase Value="4455,2"/>
+          </Mat>
+          <Mat Caption="Швеллеры № 40, марка стали Ст0" Code="08.3.11.01-0091" Units="т" Quantity="0,00194">
+            <PriceBase Value="4920"/>
+          </Mat>
+          <Mat Caption="Грунтовка ГФ-021" Code="14.4.01.01-0003" Units="т" Quantity="0,00031">
+            <PriceBase Value="15620"/>
+          </Mat>
+          <Mat Caption="Растворитель Р-4" Code="14.5.09.07-0030" Units="кг" Quantity="0,6">
+            <PriceBase Value="9,42"/>
+          </Mat>
+        </Resources>
+        <WorksList>
+          <Work Caption="Установка и крепление оконных фонарных панелей."/>
+          <Work Caption="Устройство подмостей."/>
+          <Work Caption="Антикоррозийное покрытие сварных швов."/>
+        </WorksList>
+      </Position>
+      <Position Caption="Винты самонарезающие для крепления профилированного настила и панелей к несущим конструкциям" Number="140" Code="ФССЦ-01.7.15.04-0045" Units="т" SysID="244" DBComment="Приказ Минстроя России от 26.12.2019 №876/пр" Quantity="0,001" PriceLevel="2001" PzSync="Yes" Vr2001="10016">
+        <Quantity Fx="0,001" Result="0,001"/>
+        <PriceBase PZ="35011" MT="35011"/>
+      </Position>
+      <Position Caption="Панель из поликарбоната, сотовая, бесцветная, толщина 10,0 мм" Number="141" Code="ФССЦ-11.3.03.19-0216" Units="м2" SysID="243" DBComment="Приказ Минстроя России от 01.06.2020 №294/пр" Quantity="21*1,1" PriceLevel="2001" PzSync="Yes" Vr2001="10016">
+        <Quantity Fx="21*1,1" Result="23,1"/>
+        <PriceBase PZ="56,6" MT="56,6"/>
+      </Position>
+      <Position Caption="Автобетоносмесители, объем барабана 5 м3 (ФЕР06 Т.Ч п. 1.6.39, 1.6.44 часы работы крана с к=0,45) (расчет простоя: 976,26 м3бетона/5м3 миксер=195,25 АБС 196,38 АБС*0,2 маш-час=39,05 маш-час)" Number="142" Code="ФСЭМ-91.14.01-002" Units="маш.-ч" SysID="190" DBComment="Приказ Минстроя России от 26.12.2019 №876/пр" Quantity="ОКР(382,62*0,45-39,05; 2)" PriceLevel="2001" PzSync="Yes" Vr2001="10015">
+        <Quantity Fx="=382,62*0,45-39,05" Precision="2" Result="133,13"/>
+        <PriceBase PZ="173,51" EM="173,51" ZM="13,5"/>
+        <Koefficients>
+          <K Options="Base Curr PzAll EmAll MatQty EmQty OzpTz ZpmTz" Level="1"/>
+        </Koefficients>
+      </Position>
+    </Chapter>
+  </Chapters>
+  <ReportOptions Options="Grouping SeparateZakPodr" Kk="1" RangingGroups="Mch Mat">
+    <RangingRates Mch="20" Mat="20"/>
+  </ReportOptions>
+</Document>
