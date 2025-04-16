@@ -2,11 +2,7 @@ import xml.etree.ElementTree as ET
 import psycopg2
 from typing import Dict, List
 from psycopg2 import sql
-
-import xml.etree.ElementTree as ET
-import psycopg2
-from typing import Dict, List
-from psycopg2 import sql
+import re
 
 
 class EstimateDBHandler:
@@ -31,29 +27,31 @@ class EstimateDBHandler:
     def save_work(self, section_id: int, work_data: Dict) -> int:
         """Сохраняет работу в таблицу work и возвращает её ID"""
         query = sql.SQL("""
-            INSERT INTO work (local_section_id, name_work, price, measurement_unit)
-            VALUES (%s, %s, %s, %s)
+            INSERT INTO work (local_section_id, name_work, price, measurement_unit, code)
+            VALUES (%s, %s, %s, %s, %s)
             RETURNING id
         """)
         self.cur.execute(query, (
             section_id,
             work_data['caption'],
             work_data['price'],
-            work_data['units']
+            work_data['units'],
+            work_data.get('clean_code', '')  # Используем очищенный код без ФЕР/ТЕР
         ))
         return self.cur.fetchone()[0]
 
     def save_material(self, work_id: int, material_data: Dict):
         """Сохраняет материал в таблицу materials"""
         query = sql.SQL("""
-            INSERT INTO materials (work_id, name_material, price, measurement_unit)
-            VALUES (%s, %s, %s, %s)
+            INSERT INTO materials (work_id, name_material, price, measurement_unit, code)
+            VALUES (%s, %s, %s, %s, %s)
         """)
         self.cur.execute(query, (
             work_id,
             material_data['name'],
             material_data['price'],
-            material_data['units']
+            material_data['units'],
+            material_data.get('clean_code', '')  # Используем очищенный код без ФССЦ/ТССЦ
         ))
 
     def update_local_estimate_price(self, estimate_id: int, total_cost: float):
@@ -64,6 +62,26 @@ class EstimateDBHandler:
             WHERE id = %s
         """)
         self.cur.execute(query, (total_cost, estimate_id))
+
+
+def clean_work_code(original_code: str) -> str:
+    """Очищает код работы от префиксов ФЕР/ТЕР и лишних символов"""
+    if not original_code:
+        return ""
+
+    # Удаляем ФЕР- или ТЕР- в начале строки
+    clean_code = re.sub(r'^(ФЕР|ТЕР)[-\s]*', '', original_code, flags=re.IGNORECASE)
+    return clean_code.strip()
+
+
+def clean_material_code(original_code: str) -> str:
+    """Очищает код материала от префиксов ФССЦ/ТССЦ и лишних символов"""
+    if not original_code:
+        return ""
+
+    # Удаляем ФССЦ, ТССЦ и возможные варианты с "пг"
+    clean_code = re.sub(r'^(ФССЦ|ТССЦ)(пг)?[-\s]*', '', original_code, flags=re.IGNORECASE)
+    return clean_code.strip()
 
 
 def parse_xml_estimate(xml_file_path: str, db_params: Dict, estimate_id: int) -> Dict:
@@ -96,22 +114,27 @@ def parse_xml_estimate(xml_file_path: str, db_params: Dict, estimate_id: int) ->
                 result[section_name] = []
 
             elif elem.tag == 'Position' and 'Caption' in elem.attrib:
+                original_code = elem.get('Code', '')
                 position_data = {
                     'caption': elem.get('Caption'),
                     'units': elem.get('Units', ''),
-                    'code': elem.get('Code', ''),
-                    'code_type': None  # Определяем тип кода, но не сохраняем в БД
+                    'code': original_code,
+                    'code_type': None
                 }
 
                 # Определяем тип кода (ФЕР/ТЕР/ФССЦ/ТССЦ) только для внутренней обработки
-                if position_data['code'].startswith('ФЕР'):
+                if original_code.startswith('ФЕР'):
                     position_data['code_type'] = 'ФЕР'
-                elif position_data['code'].startswith('ТЕР'):
+                    position_data['clean_code'] = clean_work_code(original_code)
+                elif original_code.startswith('ТЕР'):
                     position_data['code_type'] = 'ТЕР'
-                elif position_data['code'].startswith('ФССЦ'):
+                    position_data['clean_code'] = clean_work_code(original_code)
+                elif original_code.startswith('ФССЦ'):
                     position_data['code_type'] = 'ФССЦ'
-                elif position_data['code'].startswith('ТССЦ'):
+                    position_data['clean_code'] = clean_material_code(original_code)
+                elif original_code.startswith('ТССЦ'):
                     position_data['code_type'] = 'ТССЦ'
+                    position_data['clean_code'] = clean_material_code(original_code)
 
                 # Обработка работ (ФЕР или ТЕР)
                 if position_data['code_type'] in ('ФЕР', 'ТЕР'):
@@ -128,11 +151,12 @@ def parse_xml_estimate(xml_file_path: str, db_params: Dict, estimate_id: int) ->
                         position_data['materials'] = []
                         result[current_section].append(position_data)
 
-                        # Создаем копию данных для сохранения в БД без code_type
+                        # Создаем копию данных для сохранения в БД
                         work_db_data = {
                             'caption': position_data['caption'],
                             'price': position_data['price'],
-                            'units': position_data['units']
+                            'units': position_data['units'],
+                            'clean_code': position_data['clean_code']  # Очищенный код
                         }
                         current_work_id = db_handler.save_work(current_section_id, work_db_data)
 
@@ -147,14 +171,15 @@ def parse_xml_estimate(xml_file_path: str, db_params: Dict, estimate_id: int) ->
                     material = {
                         'name': position_data['caption'],
                         'units': position_data['units'],
-                        'price': material_price
+                        'price': material_price,
+                        'clean_code': position_data['clean_code']  # Очищенный код
                     }
 
                     # Добавляем материал в текущую работу
                     if 'materials' in result[current_section][-1]:
                         result[current_section][-1]['materials'].append(material)
 
-                    # Сохраняем материал в БД (без code_type)
+                    # Сохраняем материал в БД
                     db_handler.save_material(current_work_id, material)
 
         # Обновляем общую стоимость
