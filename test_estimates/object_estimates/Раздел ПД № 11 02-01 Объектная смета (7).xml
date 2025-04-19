@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="windows-1251"?>
+<Document ProgramVersion="10.0.2.28133" Generator="GrandSmeta" DocumentType="{2B0470FD-477C-4359-9F34-EEBE36B7D345}">
+  <Properties LocNum="02-01 изм.3 от 30.04.2020" Constr="На строительство средней общеобразовательной школы на 1200 мест в районе улиц Интернационалистов и Спортивная, г. Ревда, Свердловской области" Description="Объектная смета"/>
+  <Options Mode="Est" Thousands="Yes" RoundMode="R10">
+    <Numbering Mode="Sequential" Options="Auto"/>
+    <CCChapter Cons="2" Rec="2" Road="2"/>
+  </Options>
+  <Chapters>
+    <Chapter Caption="Локальные сметы (расчеты)" Number="2">
+      <Position Caption="Конструкции железобетонные ниже 0,000 с землей" Number="1" Obosn="02-01-01 изм.4 от 20.05.2020" Sroy="7114244" Fot="394876" Tz="39453.09" Tzm="3399.47">
+        <DocLink Link="C:\Users\admin\Documents\Гранд-Смета\Мои Сметы\Ревда\Раздел ПД № 11 01-02-01 изм.4 Конструкции железобетонные ниже 0,000 с землей.gsfx" LinkTarget="File" LinkType="LB" DocType="LS"/>
+        <Total Sroy="7114240" Fot="394880" Tz="39453.09" Tzm="3399.47" Total="7114240"/>
+        <Mode_BaseNoIdx Sroy="7114244" Fot="394876"/>
+      </Position>
+      <Position Caption="Конструкции железобетонные выше 0,000" Number="2" Obosn="02-01-02 изм.4 от 20.05.2020" Sroy="20450137" Fot="634447" Tz="67631.55" Tzm="3359.56">
+        <DocLink Link="C:\Users\admin\Documents\Гранд-Смета\Мои Сметы\Ревда\Раздел ПД № 11 02-01-02 изм.4 Конструкции железобетонные выше 0,000.gsfx" LinkTarget="File" LinkType="LB" DocType="LS"/>
+        <Total Sroy="20450140" Fot="634450" Tz="67631.55" Tzm="3359.56" Total="20450140"/>
+        <Mode_BaseNoIdx Sroy="20450137" Fot="634447"/>
+      </Position>
+      <Position Caption="Металлоконструкции" Number="3" Obosn="02-01-03 изм.4 от 20.05.2020" Sroy="1396274" Fot="56869" Tz="5232.89" Tzm="478.65">
+        <DocLink Link="C:\Users\admin\Documents\Гранд-Смета\Мои Сметы\Ревда\Раздел ПД № 11 02-01-03 изм.4 Металлоконструкции.gsfx" LinkTarget="File" LinkType="LB" DocType="LS"/>
+        <Total Sroy="1396270" Fot="56870" Tz="5232.89" Tzm="478.65" Total="1396270"/>
+        <Mode_BaseNoIdx Sroy="1396274" Fot="56869"/>
+      </Position>
+      <Position Caption="Общестроительные работы" Number="4" Obosn="02-01-04 изм.4 от 20.05.2020" Sroy="35057976" Mont="13" Fot="2793698" Tz="291140.74" Tzm="14181.47">
+        <DocLink Link="C:\Users\admin\Documents\Гранд-Смета\Мои Сметы\Ревда\Раздел ПД № 11 02-01-04 изм.4 Общестроительные работы.gsfx" LinkTarget="File" LinkType="LB" DocType="LS"/>
+        <Total Sroy="35057980" Mont="10" Fot="2793700" Tz="291140.74" Tzm="14181.47" Total="35057990"/>
+        <Mode_BaseNoIdx Sroy="35057976" Mont="13" Fot="2793698"/>
+      </Position>
+      <Position Caption="Электрообрудование" Number="5" Obosn="02-01-05 изм.4 от 20.05.2020" Mont="2129067" Obor="576074" Fot="124621" Tz="12997.99" Tzm="152.01">
+        <DocLink Link="C:\Users\admin\Documents\Гранд-Смета\Мои Сметы\Ревда\Раздел ПД № 11 02-01-05 изм.4 Электрообрудование.gsfx" LinkTarget="File" LinkType="LB" DocType="LS"/>
+        <Total Mont="2129070" Obor="576070" Fot="124620" Tz="12997.99" Tzm="152.01" Total="2705140"/>
+        <Mode_BaseNoIdx Mont="2129067" Obor="576074" Fot="124621"/>
+      </Position>
+      <Position Caption="Электроосвещение" Number="6" Obosn="02-01-06 изм.4 от 20.05.2020" Mont="2080775" Obor="109840" Fot="88812" Tz="9032.35" Tzm="139.35">
+        <DocLink Link="C:\Users\admin\Documents\Гранд-Смета\Мои Сметы\Ревда\Раздел ПД № 11 02-01-06 изм.4 Электроосвещение.gsfx" LinkTarget="File" LinkType="LB" DocType="LS"/>
+        <Total Mont="2080780" Obor="109840" Fot="88810" Tz="9032.35" Tzm="139.35" Total="2190620"/>
+        <Mode_BaseNoIdx Mont="2080775" Obor="109840" Fot="88812"/>
+      </Position>
+      <Position Caption="Внутренние сети водопровода и канализации" Number="7" Obosn="02-01-07 изм.4 от 20.05.2020" Sroy="1635117" Mont="238" Obor="3263" Fot="125318" Tz="12051.43" Tzm="574.84">
+        <DocLink Link="C:\Users\admin\Documents\Гранд-Смета\Мои Сметы\Ревда\Раздел ПД № 11 02-01-07 изм.4 Внутренние сети водопровода и канализации.gsfx" LinkTarget="File" LinkType="LB" DocType="LS"/>
+        <Total Sroy="1635120" Mont="240" Obor="3260" Fot="125320" Tz="12051.43" Tzm="574.84" Total="1638620"/>
+        <Mode_BaseNoIdx Sroy="1635117" Mont="238" Obor="3263" Fot="125318"/>
+      </Position>
+      <Position Caption="Отопление" Number="8" Obosn="02-01-08 изм.4 от 20.05.2020" Sroy="2422841" Mont="571678" Fot="214854" Tz="21361.59" Tzm="544.59">
+        <DocLink Link="C:\Users\admin\Documents\Гранд-Смета\Мои Сметы\Ревда\Раздел ПД № 11 02-01-08 изм.4 Отопление.gsfx" LinkTarget="File" LinkType="LB" DocType="LS"/>
+        <Total Sroy="2422840" Mont="571680" Fot="214850" Tz="21361.59" Tzm="544.59" Total="2994520"/>
+        <Mode_BaseNoIdx Sroy="2422841" Mont="571678" Fot="214854"/>
+      </Position>
+      <Position Caption="ИТП. УКУТ." Number="9" Obosn="02-01-09 изм.4 от 20.05.2020" Obor="1454185">
+        <DocLink Link="C:\Users\admin\Documents\Гранд-Смета\Мои Сметы\Ревда\Раздел ПД № 11 02-01-09 изм.4 ИТП. УКУТ..gsfx" LinkTarget="File" LinkType="LB" DocType="LS"/>
+        <Total Obor="1454190" Total="1454190"/>
+        <Mode_BaseNoIdx Obor="1454185"/>
+      </Position>
+      <Position Caption="Вентиляция и кондиционирование" Number="10" Obosn="02-01-10 изм.4 от 20.05.2020" Sroy="3698736" Obor="7094377" Fot="159373" Tz="17782.8" Tzm="184.64">
+        <DocLink Link="C:\Users\admin\Documents\Гранд-Смета\Мои Сметы\Ревда\Раздел ПД № 11 02-01-10 изм.4 Вентиляция и кондиционирование.gsfx" LinkTarget="File" LinkType="LB" DocType="LS"/>
+        <Total Sroy="3698740" Obor="7094380" Fot="159370" Tz="17782.8" Tzm="184.64" Total="10793120"/>
+        <Mode_BaseNoIdx Sroy="3698736" Obor="7094377" Fot="159373"/>
+      </Position>
+      <Position Caption="Слаботочные сети" Number="11" Obosn="02-01-11 изм.4 от20.05.2020" Sroy="1013" Mont="2369753" Obor="2635921" Fot="137376" Tz="14441.16" Tzm="61.64">
+        <DocLink Link="C:\Users\admin\Documents\Гранд-Смета\Мои Сметы\Ревда\Раздел ПД № 11 02-01-11 изм.4 Слаботочные сети.gsfx" LinkTarget="File" LinkType="LB" DocType="LS"/>
+        <Total Sroy="1010" Mont="2369750" Obor="2635920" Fot="137380" Tz="14441.16" Tzm="61.64" Total="5006680"/>
+        <Mode_BaseNoIdx Sroy="1013" Mont="2369753" Obor="2635921" Fot="137376"/>
+      </Position>
+      <Position Caption="Пожарная сигнализация" Number="12" Obosn="02-01-12 изм.4 от 20.05.2020" Mont="1081469" Obor="1402459" Fot="71131" Tz="7261.33" Tzm="16.61">
+        <DocLink Link="C:\Users\admin\Documents\Гранд-Смета\Мои Сметы\Ревда\Раздел ПД № 11 02-01-12 изм.4 Пожарная сигнализация.gsfx" LinkTarget="File" LinkType="LB" DocType="LS"/>
+        <Total Mont="1081470" Obor="1402460" Fot="71130" Tz="7261.33" Tzm="16.61" Total="2483930"/>
+        <Mode_BaseNoIdx Mont="1081469" Obor="1402459" Fot="71131"/>
+      </Position>
+      <Position Caption="Технологическое оборудование и мебель. Начальная школа." Number="13" Obosn="02-01-13 изм.4 от 20.05.2020" Mont="38269" Obor="6001427">
+        <DocLink Link="C:\Users\admin\Documents\Гранд-Смета\Мои Сметы\Ревда\Раздел ПД № 11 02-01-13 изм.4 Технологическое оборудование и мебель. Начальная школа..gsfx" LinkTarget="File" LinkType="LB" DocType="LS"/>
+        <Total Mont="38270" Obor="6001430" Total="6039700"/>
+        <Mode_BaseNoIdx Mont="38269" Obor="6001427"/>
+      </Position>
+      <Position Caption="Технологическое оборудование и мебель. Средняя школа." Number="14" Obosn="02-01-14 изм.4 от 20.05.2020" Mont="587441" Obor="10928998">
+        <DocLink Link="C:\Users\admin\Documents\Гранд-Смета\Мои Сметы\Ревда\Раздел ПД № 11 02-01-14 изм.4 Технологическое оборудование и мебель. Средняя школа..gsfx" LinkTarget="File" LinkType="LB" DocType="LS"/>
+        <Total Mont="587440" Obor="10929000" Total="11516440"/>
+        <Mode_BaseNoIdx Mont="587441" Obor="10928998"/>
+      </Position>
+      <Position Caption="Технологические решения. Пищеблок." Number="15" Obosn="20-01-15 изм.4 от 20.05.2020" Sroy="2261" Mont="15952" Obor="2769712" Fot="4840" Tz="513.18" Tzm="14.48">
+        <DocLink Link="C:\Users\admin\Documents\Гранд-Смета\Мои Сметы\Ревда\Раздел ПД № 11 02-01-15 изм.4 Технологические решения. Пищеблок..gsfx" LinkTarget="File" LinkType="LB" DocType="LS"/>
+        <Total Sroy="2260" Mont="15950" Obor="2769710" Fot="4840" Tz="513.18" Tzm="14.48" Total="2787920"/>
+        <Mode_BaseNoIdx Sroy="2261" Mont="15952" Obor="2769712" Fot="4840"/>
+      </Position>
+      <Position Caption="Автоматика ИТП." Number="16" Obosn="02-01-16 изм.4 от 20.05.2020" Mont="28047" Obor="242" Fot="1908" Tz="201.35" Tzm="1.16">
+        <DocLink Link="C:\Users\admin\Documents\Гранд-Смета\Мои Сметы\Ревда\Раздел ПД № 11 02-01-16 изм.4 Автоматика ИТП. УКУТ..gsfx" LinkTarget="File" LinkType="LB" DocType="LS"/>
+        <Total Mont="28050" Obor="240" Fot="1910" Tz="201.35" Tzm="1.16" Total="28290"/>
+        <Mode_BaseNoIdx Mont="28047" Obor="242" Fot="1908"/>
+      </Position>
+      <Position Caption="Технологическое оборудование актового зала" Number="17" Obosn="02-01-17 изм.4 от 20.05.2020" Mont="8968" Obor="3480445" Fot="958" Tz="108" Tzm="1.1">
+        <DocLink Link="C:\Users\admin\Documents\Гранд-Смета\Мои Сметы\Ревда\Раздел ПД № 11 02-01-17 изм.4 Технологическое оборудование актового зала.gsfx" LinkTarget="File" LinkType="LB" DocType="LS"/>
+        <Total Mont="8970" Obor="3480450" Fot="960" Tz="108" Tzm="1.1" Total="3489420"/>
+        <Mode_BaseNoIdx Mont="8968" Obor="3480445" Fot="958"/>
+      </Position>
+      <Position Caption="Монтаж и приобретение лифта" Number="18" Obosn="02-01-18 изм.4 от 20.05.2020" Mont="55512" Obor="1142867" Fot="16331" Tz="1614.4" Tzm="165.46">
+        <DocLink Link="C:\Users\admin\Documents\Гранд-Смета\Мои Сметы\Ревда\Раздел ПД № 11 02-01-18 изм.4 Монтаж и приобретение лифта.gsfx" LinkTarget="File" LinkType="LB" DocType="LS"/>
+        <Total Mont="55510" Obor="1142870" Fot="16330" Tz="1614.4" Tzm="165.46" Total="1198380"/>
+        <Mode_BaseNoIdx Mont="55512" Obor="1142867" Fot="16331"/>
+      </Position>
+      <Position Caption="Оборудование кабинетов технологии. Медблок." Number="19" Obosn="02-01-19 изм.4 от 20.05.2020" Mont="9525" Obor="1949492" Fot="390" Tz="38.34" Tzm="0.68">
+        <DocLink Link="C:\Users\admin\Documents\Гранд-Смета\Мои Сметы\Ревда\Раздел ПД № 11 02-01-19 изм.4 Оборудование кабинетов технологии. Медблок.gsfx" LinkTarget="File" LinkType="LB" DocType="LS"/>
+        <Total Mont="9530" Obor="1949490" Fot="390" Tz="38.34" Tzm="0.68" Total="1959020"/>
+        <Mode_BaseNoIdx Mont="9525" Obor="1949492" Fot="390"/>
+      </Position>
+      <Position Caption="Фундаменты под башенный кран 2шт." Number="20" Obosn="02-01-20 изм.4 от 20.05.2020" Sroy="353463" Fot="36454" Tz="3997.78" Tzm="51.6">
+        <DocLink Link="C:\Users\admin\Documents\Гранд-Смета\Мои Сметы\Ревда\Раздел ПД № 11 02-01-20 изм.4 Фундаменты под башенный кран 2шт..gsfx" LinkTarget="File" LinkType="LB" DocType="LS"/>
+        <Total Sroy="353460" Fot="36450" Tz="3997.78" Tzm="51.6" Total="353460"/>
+        <Mode_BaseNoIdx Sroy="353463" Fot="36454"/>
+      </Position>
+      <Position Caption="Перебазировка башенного крана. Монтаж, демонтаж." Number="21" Obosn="02-01-21 изм.4 от 20.05.2020" Sroy="286894">
+        <DocLink Link="C:\Users\admin\Documents\Гранд-Смета\Мои Сметы\Ревда\Раздел ПД № 11 02-01-21 изм.4 Перебазировка башенного крана. Монтаж, демонтаж..gsfx" LinkTarget="File" LinkType="LB" DocType="LS"/>
+        <Total Sroy="286890" Total="286890"/>
+        <Mode_BaseNoIdx Sroy="286894"/>
+      </Position>
+      <Total Caption="Итого &quot;Локальные сметы (расчеты)&quot;" Sroy="72418950" Mont="8976720" Obor="39549310" Fot="4862260" Tz="504859.97" Tzm="23327.31" Total="120944980"/>
+      <Summary Caption="Итого с учетом &quot;Локальные сметы (расчеты)&quot;" Sroy="72418950" Mont="8976720" Obor="39549310" Fot="4862260" Tz="504859.97" Tzm="23327.31" Total="120944980"/>
+    </Chapter>
+    <Chapter Caption="Временные здания и сооружения" SummaryVisible="Yes" Number="8">
+      <Summary Caption="Итого с учетом &quot;Временные здания и сооружения&quot;" Sroy="72418950" Mont="8976720" Obor="39549310" Fot="4862260" Tz="504859.97" Tzm="23327.31" Total="120944980"/>
+    </Chapter>
+    <Chapter Caption="Прочие работы и затраты" SummaryVisible="Yes" Number="9">
+      <Summary Caption="Итого с учетом &quot;Прочие работы и затраты&quot;" Sroy="72418950" Mont="8976720" Obor="39549310" Fot="4862260" Tz="504859.97" Tzm="23327.31" Total="120944980"/>
+    </Chapter>
+    <Chapter/>
+    <Chapter/>
+    <Chapter Caption="Публичный технологический и ценовой аудит, проектные и изыскательские работы" SummaryVisible="Yes" Number="12">
+      <Summary Caption="Итого с учетом &quot;Публичный технологический и ценовой аудит, проектные и изыскательские работы&quot;" Sroy="72418950" Mont="8976720" Obor="39549310" Fot="4862260" Tz="504859.97" Tzm="23327.31" Total="120944980"/>
+    </Chapter>
+    <Chapter/>
+    <Chapter/>
+    <Chapter/>
+    <Chapter/>
+  </Chapters>
+</Document>

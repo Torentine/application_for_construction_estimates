@@ -1,11 +1,19 @@
 import os
-
 import psycopg2
 from psycopg2 import sql
 from config import DB_CONFIG
-from parsing.parsing_object_smeta import parse_and_save_smeta
-from type_opr import identify_file_type
-from parsing.parsing_xml_db import parse_xml_estimate
+
+# Определения типа файла
+from models.file_type_by_signature import identify_file_type
+
+# парсер локальных смет формата xml
+from parsing.local.processing_of_local_estimates_xml import parse_xml_estimate
+
+# парсеры объектных смет
+from parsing.object.processing_of_object_estimates_xlsx import parse_and_save_smeta as parse_and_save_smeta_xlsx
+from parsing.object.processing_of_object_estimates_xls import parse_and_save_smeta as parse_and_save_smeta_xls
+from parsing.object.processing_of_object_estimates_xml import parse_and_save_smeta as parse_and_save_smeta_xml
+from parsing.object.processing_of_object_estimates_gge import parse_and_save_smeta as parse_and_save_smeta_gge
 
 class SmetaProcessor:
     def __init__(self):
@@ -85,7 +93,13 @@ class SmetaProcessor:
             print(f"Тип файла объектной сметы: {file_type}")
 
             if file_type == "XLSX":
-                return parse_and_save_smeta(file_path, object_id)
+                return parse_and_save_smeta_xlsx(file_path, object_id)
+            elif file_type == "XLS":
+                return parse_and_save_smeta_xls(file_path, object_id)
+            elif file_type == "XML":
+                return parse_and_save_smeta_xml(file_path, object_id)
+            elif file_type == "GGE":
+                return parse_and_save_smeta_gge(file_path, object_id)
             else:
                 raise ValueError(f"Неподдерживаемый формат файла: {file_type}")
 

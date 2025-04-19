@@ -1,24 +1,58 @@
 import os
-
+from typing import Optional
 import pandas as pd
 import re
 import psycopg2
-from psycopg2 import sql
+
+from config import DB_CONFIG
 
 
-def connect_to_db():
-    """Подключение к базе данных PostgreSQL"""
+def connect_to_db(
+        dbname: str = None,
+        user: str = None,
+        password: str = None,
+        host: str = None,
+        port: str = None,
+        **kwargs
+) -> Optional[psycopg2.extensions.connection]:
+    """
+    Подключается к PostgreSQL с возможностью переопределения параметров
+
+    Args:
+        dbname: Название БД (переопределяет DB_CONFIG['dbname'])
+        user: Пользователь (переопределяет DB_CONFIG['user'])
+        password: Пароль (переопределяет DB_CONFIG['password'])
+        host: Хост (переопределяет DB_CONFIG['host'])
+        port: Порт (переопределяет DB_CONFIG['port'])
+        **kwargs: Дополнительные параметры для psycopg2.connect()
+
+    Returns:
+        Connection object или None при ошибке
+    """
+    # Копируем базовую конфигурацию, чтобы не менять оригинал
+    connection_params = DB_CONFIG.copy()
+
+    # Переопределяем только те параметры, которые переданы
+    if dbname is not None:
+        connection_params['dbname'] = dbname
+    if user is not None:
+        connection_params['user'] = user
+    if password is not None:
+        connection_params['password'] = password
+    if host is not None:
+        connection_params['host'] = host
+    if port is not None:
+        connection_params['port'] = port
+
+    # Добавляем дополнительные параметры (если есть)
+    connection_params.update(kwargs)
+
     try:
-        conn = psycopg2.connect(
-            dbname="postgres",
-            user="postgres",
-            password="qwerty123!",
-            host="localhost",
-            port="5432"
-        )
+        conn = psycopg2.connect(**connection_params)
+        print("Успешное подключение к БД")
         return conn
-    except Exception as e:
-        print(f"Ошибка подключения к базе данных: {e}")
+    except psycopg2.Error as e:
+        print(f"Ошибка подключения к PostgreSQL: {e}")
         return None
 
 

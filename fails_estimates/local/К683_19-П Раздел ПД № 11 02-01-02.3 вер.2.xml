@@ -1,0 +1,831 @@
+<?xml version="1.0" encoding="windows-1251"?>
+<Document ProgramVersion="6.0.6.10706" Generator="GrandSmeta" DocumentType="{2B0470FD-477C-4359-9F34-EEBE36B7D340}">
+  <Properties LocNum="02-01-02.3 -Изм" Constr="Строительство общеобразовательной школы на 500 мест по адресу: Свердловская область, г. Первоуральск, п. Билимбай, ул. Бахчиванджи, 2." Description="Конструкции железобетонные. Ниже 0,000 добавление."/>
+  <RegionInfo RegionName="Свердловская область (редакция 2014 г.)" RegionID="5660" Zone84ID="1" Zone01Name="Базовый территориальный район" Zone01ID="1"/>
+  <Parameters Options="RoundPos AddZatr SeparateFot TempRound" BasePrices="2001" BaseCalcVrs="Vr2001" BlockRoundMode="Smart" TempZone="1" MatRoundMode="None" MatDigits="4" ItogOptions="SeparateVrs IgnoreZeroQty IgnoreZeroPrice" FirstItogItem="K" ItogExpandTo="Default" TzDigits="2" PosKDigits="2" MultKPosCalcMode="UseTotalMult" PropsConfigNameModified="Yes">
+    <CommonNK ActiveItems="Vk Ck Mk"/>
+    <CommonPK ActiveItems="Vk Ck Mk"/>
+  </Parameters>
+  <Indexes IndexesMode="None" IndexesLinkMode="Default">
+    <CommonIndexA Caption="Письмо Минстроя России №38021-ЮГ/09 от 09.10.2019г Перевод в текущие цены по состоянию на 3 квартал 2019 г.. К смр,Коб.= (п. 28 &quot;Образование&quot; приложение 4 (с дефлятором на 2020г.)" Formula="7,117"/>
+    <CommonIndexB Caption="Понижающий коэффициент" Formula="0,96499999986"/>
+    <OsIndexes/>
+  </Indexes>
+  <RegionalK Options="Percent Base"/>
+  <TerZoneK Caption="Территориальная поправка к базе 2001г" Options="Base PzAll EmAll"/>
+  <VidRab_Catalog Caption="Основной справочник видов работ">
+    <Vids_Rab Type="Виды работ 2001г">
+      <VidRab_Group Caption="Общестроительные работы" ID="0">
+        <Vid_Rab Caption="Скважины" ID="10007" Nacl="112" NaclMask="ФОТ" Plan="51" PlanMask="ФОТ" NaclCurr="112" PlanCurr="51"/>
+        <Vid_Rab Caption="Свайные работы" ID="10008" Nacl="130" NaclMask="ФОТ" Plan="80" PlanMask="ФОТ" NaclCurr="130" PlanCurr="80"/>
+        <Vid_Rab Caption="Бетонные и железобетонные монолитные конструкции в промышленном строительстве" ID="10011" Nacl="105" NaclMask="ФОТ" Plan="65" PlanMask="ФОТ" NaclCurr="105" PlanCurr="65"/>
+        <Vid_Rab Caption="Конструкции из кирпича и блоков" ID="10015" Nacl="122" NaclMask="ФОТ" Plan="80" PlanMask="ФОТ" NaclCurr="122" PlanCurr="80"/>
+        <Vid_Rab Caption="Теплоизоляционные работы" ID="10030" Nacl="100" NaclMask="ФОТ" Plan="70" PlanMask="ФОТ" NaclCurr="100" PlanCurr="70"/>
+        <Vid_Rab Caption="Земляные работы, выполняемые механизированным способом" ID="10001" Nacl="95" NaclMask="ФОТ" Plan="50" PlanMask="ФОТ" NaclCurr="95" PlanCurr="50"/>
+        <Vid_Rab Caption="Земляные работы, выполняемые ручным способом" ID="10002" Nacl="80" NaclMask="ФОТ" Plan="45" PlanMask="ФОТ" NaclCurr="80" PlanCurr="45"/>
+        <Vid_Rab Caption="Полы" ID="10018" Nacl="123" NaclMask="ФОТ" Plan="75" PlanMask="ФОТ" NaclCurr="123" PlanCurr="75"/>
+      </VidRab_Group>
+      <VidRab_Group Caption="Сантехнические работы" ID="4">
+        <Vid_Rab Caption="Материалы" ID="2950" NaclMask="ФОТ" PlanMask="ФОТ"/>
+        <Vid_Rab Caption="Сантехнические работы - внутренние (трубопроводы, водопровод, канализация, отопление, газоснабжение, вентиляция и кондиционирование воздуха)" ID="10026" Nacl="128" NaclMask="ФОТ" Plan="83" PlanMask="ФОТ" NaclCurr="128" PlanCurr="83"/>
+      </VidRab_Group>
+      <VidRab_Group Caption="Перевозка грузов" ID="1013">
+        <Vid_Rab Caption="Перевозка грузов автотранспортом" ID="10133" NaclMask="ФОТ" PlanMask="ФОТ"/>
+        <Vid_Rab Caption="Погрузо-разгрузочные работы" ID="10591" NaclMask="ФОТ" PlanMask="ФОТ"/>
+      </VidRab_Group>
+    </Vids_Rab>
+    <Vids_Rab Type="Виды работ 1984г"/>
+  </VidRab_Catalog>
+  <WinterCatalog WinterMode="None" WinterLinkMode="Table">
+    <CommonWinterK/>
+  </WinterCatalog>
+  <Variables>
+    <Variable Caption="материалы 3 кв 2019г." Identifier="м1" Value="6,57"/>
+    <Variable Caption="оборудование 3 кв 2019г." Identifier="о1" Value="3,74"/>
+    <Variable/>
+  </Variables>
+  <Chapters>
+    <Chapter Caption="Земляные работы" SysID="4">
+      <Position Caption="Разработка грунта в котлованах экскаватором с ковшом вместимостью 0,65 м3, группа грунтов: 2" Identifier="Ф2" Number="1" Code="ТЕР01-01-021-08" SysID="24" Units="1000 м3 грунта" Quantity="ОКР(2248,1 / 1000; 3)" PriceLevel="2001" DBComment="Приказ Минстроя России от 13.03.15 №171/пр" DBFlags="Comment TechK" PzSync="Yes" Vr2001="10001">
+        <Quantity Fx="=2248,1" KUnit="1000" Precision="3" Result="2,248"/>
+        <PriceBase PZ="5505,31" EM="5505,31" ZM="651,21"/>
+        <Resources>
+          <Tzm Caption="Затраты труда машинистов" Code="2" Units="чел.час" Quantity="34,22"/>
+          <Mch Caption="Экскаваторы одноковшовые дизельные на гусеничном ходу при работе на других видах строительства 0,65 м3" Code="060248" Units="маш.час" Quantity="34,22">
+            <PriceBase Value="160,88" ZM="19,03"/>
+          </Mch>
+        </Resources>
+        <WorksList>
+          <Work Caption="Разработка траншей экскаватором по размерам и отметкам."/>
+          <Work Caption="Обработка откосов траншей до проектных."/>
+          <Work Caption="Перемещение экскаватора в пределах фронта работ."/>
+        </WorksList>
+      </Position>
+      <Position Caption="Разработка грунта в котлованах экскаватором с ковшом вместимостью 0,65 м3, группа грунтов: 3" Identifier="Ф3" Number="2" Code="ТЕР01-01-021-09" SysID="36" Units="1000 м3 грунта" Quantity="ОКР(8992,4 / 1000; 3)" PriceLevel="2001" DBComment="Приказ Минстроя России от 13.03.15 №171/пр" DBFlags="Comment TechK" PzSync="Yes" Vr2001="10001">
+        <Quantity Fx="=8992,4" KUnit="1000" Precision="3" Result="8,992"/>
+        <PriceBase PZ="6644,34" EM="6644,34" ZM="785,94"/>
+        <Resources>
+          <Tzm Caption="Затраты труда машинистов" Code="2" Units="чел.час" Quantity="41,3"/>
+          <Mch Caption="Экскаваторы одноковшовые дизельные на гусеничном ходу при работе на других видах строительства 0,65 м3" Code="060248" Units="маш.час" Quantity="41,3">
+            <PriceBase Value="160,88" ZM="19,03"/>
+          </Mch>
+        </Resources>
+        <WorksList>
+          <Work Caption="Разработка траншей экскаватором по размерам и отметкам."/>
+          <Work Caption="Обработка откосов траншей до проектных."/>
+          <Work Caption="Перемещение экскаватора в пределах фронта работ."/>
+        </WorksList>
+      </Position>
+      <Position Caption="Разработка грунта вручную в траншеях глубиной до 2 м без креплений с откосами, группа грунтов: 3" Identifier="Ф6" Number="3" Code="ТЕР01-02-057-03" SysID="25" Units="100 м3 грунта" Quantity="61,5 / 100" PriceLevel="2001" DBComment="Приказ Минстроя России от 13.03.15 №171/пр" DBFlags="Comment TechK" PzSync="Yes" Vr2001="10002">
+        <Quantity Fx="=61,5" KUnit="100" Result="0,615"/>
+        <PriceBase PZ="2725,52" OZ="2725,52"/>
+        <Resources>
+          <Tzr Caption="Затраты труда рабочих" Code="1-2-0" Units="чел.час" Quantity="248" WorkClass="2">
+            <PriceBase Value="10,99"/>
+          </Tzr>
+        </Resources>
+        <WorksList>
+          <Work Caption="Разработка грунта с выбрасыванием на бровку."/>
+          <Work Caption="Зачистка дна и поверхности стенок."/>
+          <Work Caption="Откидка грунта от бровки."/>
+        </WorksList>
+      </Position>
+      <Position Caption="Перевозка грузов автомобилями-самосвалами грузоподъемностью 10 т, работающих вне карьера, на расстояние: до 24 км I класс груза" Number="4" Code="ТССЦпг-03-21-01-024" SysID="37" Units="1 т груза" Quantity="ОКР((Ф2*1,8+Ф3*1,95)*1000+Ф6*100*1,95; 3)" PriceLevel="2001" DBComment="Приказ Минстроя России от 13.03.15 №171/пр" PzSync="Yes" Vr2001="10133">
+        <Quantity Fx="(Ф2*1,8+Ф3*1,95)*1000+Ф6*100*1,95" Precision="3" Result="21700,725"/>
+        <PriceBase PZ="20,71" EM="20,71"/>
+      </Position>
+      <Position Caption="Засыпка вручную траншей, пазух котлованов и ям, группа грунтов: 1" Number="5" Code="ТЕР01-02-061-01" SysID="29" Units="100 м3 грунта" Quantity="ОКР((5073,44*0,07) / 100; 3)" PriceLevel="2001" DBComment="Приказ Минстроя России от 13.03.15 №171/пр" DBFlags="Comment TechK" PzSync="Yes" Vr2001="10002">
+        <Quantity Fx="=5073,44*0,07" KUnit="100" Precision="3" Result="3,551"/>
+        <PriceBase PZ="935,45" OZ="935,45"/>
+        <Resources>
+          <Tzr Caption="Затраты труда рабочих" Code="1-1-5" Units="чел.час" Quantity="88,5" WorkClass="1,5">
+            <PriceBase Value="10,57"/>
+          </Tzr>
+        </Resources>
+        <WorksList>
+          <Work Caption="Засыпка ранее выброшенным грунтом с разбивкой комьев и трамбованием."/>
+          <Work Caption="Поливка водой при необходимости."/>
+        </WorksList>
+      </Position>
+      <Position Caption="Засыпка траншей и котлованов с перемещением грунта до 5 м бульдозерами мощностью: 59 кВт (80 л.с.), группа грунтов 1" Identifier="Ф4" Number="6" Code="ТЕР01-01-033-01" SysID="30" Units="1000 м3 грунта" Quantity="ОКР((5073,44*0,93) / 1000; 3)" PriceLevel="2001" DBComment="Приказ Минстроя России от 13.03.15 №171/пр" DBFlags="Comment TechK" PzSync="Yes" Vr2001="10001">
+        <Quantity Fx="=5073,44*0,93" KUnit="1000" Precision="3" Result="4,718"/>
+        <PriceBase PZ="704,9" EM="704,9" ZM="124,11"/>
+        <Resources>
+          <Tzm Caption="Затраты труда машинистов" Code="2" Units="чел.час" Quantity="7,6"/>
+          <Mch Caption="Бульдозеры при работе на других видах строительства 59 кВт (80 л.с.)" Code="070148" Units="маш.час" Quantity="7,6">
+            <PriceBase Value="92,75" ZM="16,33"/>
+          </Mch>
+        </Resources>
+        <WorksList>
+          <Work Caption="Перемещение грунта с засыпкой траншей и котлованов."/>
+        </WorksList>
+      </Position>
+      <Position Caption="Песок для строительных работ из отсевов дробления, марка 400 средний" Identifier="Ф5" Number="7" Code="ТССЦ-408-0174" SysID="32" Units="м3" Quantity="ОКР(5073,44*1,1; 2)" PriceLevel="2001" DBComment="Приказ Минстроя России от 13.03.15 №171/пр" PzSync="Yes" Vr2001="10001">
+        <Quantity Fx="5073,44*1,1" Precision="2" Result="5580,78"/>
+        <PriceBase PZ="107,77" MT="107,77"/>
+      </Position>
+      <Position Caption="Уплотнение грунта пневматическими трамбовками, группа грунтов: 1-2" Number="8" Code="ТЕР01-02-005-01" SysID="35" Units="100 м3 уплотненного грунта" Quantity="(Ф4*1000) / 100" PriceLevel="2001" DBComment="Приказ Минстроя России от 13.03.15 №171/пр" PzSync="Yes" Vr2001="10001">
+        <Quantity Fx="=Ф4*1000" KUnit="100" Result="47,18"/>
+        <PriceBase PZ="543,94" OZ="150,49" EM="393,45" ZM="43,08"/>
+        <Resources>
+          <Tzr Caption="Затраты труда рабочих" Code="1-3-0" Units="чел.час" Quantity="12,53" WorkClass="3">
+            <PriceBase Value="12,01"/>
+          </Tzr>
+          <Tzm Caption="Затраты труда машинистов" Code="2" Units="чел.час" Quantity="3,04"/>
+          <Mch Caption="Компрессоры передвижные с двигателем внутреннего сгорания давлением до 686 кПа (7 ат), производительность до 5 м3/мин" Code="050101" Units="маш.час" Quantity="3,04">
+            <PriceBase Value="83,35" ZM="14,17"/>
+          </Mch>
+          <Mch Caption="Трамбовки пневматические при работе от передвижных компрессорных станций" Code="331100" Units="маш.час" Quantity="12,18">
+            <PriceBase Value="11,5"/>
+          </Mch>
+        </Resources>
+        <WorksList>
+          <Work Caption="Уплотнение грунта."/>
+        </WorksList>
+      </Position>
+    </Chapter>
+    <Chapter Caption="Сваи." SysID="1">
+      <Position Caption="Погружение дизель-молотом копровой установки на базе трактора железобетонных свай длиной: до 6 м в грунты группы 2" Number="9" Code="ТЕР05-01-001-02" ItemFlags="Green" SysID="7" Units="1 м3 свай" Quantity="0,55*582" PriceLevel="2001" DBComment="Приказ Минстроя России от 13.03.15 №171/пр" DBFlags="TechK" PzSync="Yes" Vr2001="10008">
+        <Quantity Fx="0,55*582" Result="320,1"/>
+        <PriceBase PZ="619,67" OZ="49,58" EM="541,48" ZM="43,54" MT="28,61"/>
+        <Resources>
+          <Tzr Caption="Затраты труда рабочих" Code="1-3-9" Units="чел.час" Quantity="3,7" WorkClass="3,9">
+            <PriceBase Value="13,4"/>
+          </Tzr>
+          <Tzm Caption="Затраты труда машинистов" Code="2" Units="чел.час" Quantity="1,97"/>
+          <Mch Caption="Краны на гусеничном ходу при работе на других видах строительства до 16 т" Code="021243" Units="маш.час" Quantity="0,04">
+            <PriceBase Value="116,11" ZM="19,03"/>
+          </Mch>
+          <Mch Caption="Агрегаты копровые без дизель-молота на базе трактора 80 кВт (108 л.с.)" Code="140110" Units="маш.час" Quantity="1,24">
+            <PriceBase Value="253,56" ZM="23,19"/>
+          </Mch>
+          <Mch Caption="Дизель-молоты 1,8 т" Code="140503" Units="маш.час" Quantity="1,24">
+            <PriceBase Value="58,83"/>
+          </Mch>
+          <Mch Caption="Трубоукладчики для труб диаметром до 700 мм грузоподъемностью 12,5 т" Code="150702" Units="маш.час" Quantity="0,69">
+            <PriceBase Value="201,13" ZM="20,33"/>
+          </Mch>
+          <Mch Caption="Тягачи седельные, грузоподъемность 12 т" Code="400101" Units="маш.час" Quantity="0,07">
+            <PriceBase Value="139,12"/>
+          </Mch>
+          <Mch Caption="Полуприцепы общего назначения, грузоподъемность 12 т" Code="400111" Units="маш.час" Quantity="0,07">
+            <PriceBase Value="13,61"/>
+          </Mch>
+          <Mat Caption="Краски масляные земляные марки МА-0115 мумия, сурик железный" Code="101-0388" Units="т" Quantity="2E-5">
+            <PriceBase Value="16871,82"/>
+          </Mat>
+          <Mat Caption="Гвозди строительные" Code="101-1805" Units="т" Quantity="8E-5">
+            <PriceBase Value="10317,3"/>
+          </Mat>
+          <Mat Caption="Доски дубовые II сорта" Code="102-8009" Units="м3" Quantity="0,008">
+            <PriceBase Value="3255,51"/>
+          </Mat>
+          <Mat Caption="Конструктивные элементы вспомогательного назначения массой не более 50 кг с преобладанием толстолистовой стали собираемые из двух и более деталей, с отверстиями и без отверстий, соединяемые на сварке" Code="201-0774" Units="т" Quantity="0,00012">
+            <PriceBase Value="11668,14"/>
+          </Mat>
+          <Mat Caption="Сваи железобетонные" Code="403-9132" Units="м3" Quantity="1,03" Options="NotCount"/>
+        </Resources>
+        <WorksList>
+          <Work Caption="Перемещение сваебойного агрегата."/>
+          <Work Caption="Разметка свай по длине."/>
+          <Work Caption="Подача свай к месту погружения."/>
+          <Work Caption="Погружение свай."/>
+          <Work Caption="Смена наголовников и вкладышей."/>
+        </WorksList>
+      </Position>
+      <Position Caption="Погружение дизель-молотом копровой установки на базе трактора железобетонных свай длиной: до 8 м в грунты группы 2" Number="10" Code="ТЕР05-01-001-04" SysID="50" Units="1 м3 свай" Quantity="0,73*106" PriceLevel="2001" DBComment="Приказ Минстроя России от 13.03.15 №171/пр" DBFlags="TechK" PzSync="Yes" Vr2001="10008">
+        <Quantity Fx="0,73*106" Result="77,38"/>
+        <PriceBase PZ="762,33" OZ="58,29" EM="688,92" ZM="51,82" MT="15,12"/>
+        <Resources>
+          <Tzr Caption="Затраты труда рабочих" Code="1-3-9" Units="чел.час" Quantity="4,35" WorkClass="3,9">
+            <PriceBase Value="13,4"/>
+          </Tzr>
+          <Tzm Caption="Затраты труда машинистов" Code="2" Units="чел.час" Quantity="2,3"/>
+          <Mch Caption="Краны на гусеничном ходу при работе на других видах строительства до 16 т" Code="021243" Units="маш.час" Quantity="0,03">
+            <PriceBase Value="116,11" ZM="19,03"/>
+          </Mch>
+          <Mch Caption="Агрегаты копровые без дизель-молота на базе трактора 80 кВт (108 л.с.)" Code="140110" Units="маш.час" Quantity="1,78">
+            <PriceBase Value="253,56" ZM="23,19"/>
+          </Mch>
+          <Mch Caption="Дизель-молоты 2,5 т" Code="140504" Units="маш.час" Quantity="1,78">
+            <PriceBase Value="71,86"/>
+          </Mch>
+          <Mch Caption="Трубоукладчики для труб диаметром до 700 мм грузоподъемностью 12,5 т" Code="150702" Units="маш.час" Quantity="0,49">
+            <PriceBase Value="201,13" ZM="20,33"/>
+          </Mch>
+          <Mch Caption="Тягачи седельные, грузоподъемность 12 т" Code="400101" Units="маш.час" Quantity="0,05">
+            <PriceBase Value="139,12"/>
+          </Mch>
+          <Mch Caption="Полуприцепы общего назначения, грузоподъемность 12 т" Code="400111" Units="маш.час" Quantity="0,05">
+            <PriceBase Value="13,61"/>
+          </Mch>
+          <Mat Caption="Краски масляные земляные марки МА-0115 мумия, сурик железный" Code="101-0388" Units="т" Quantity="2E-5">
+            <PriceBase Value="16871,82"/>
+          </Mat>
+          <Mat Caption="Гвозди строительные" Code="101-1805" Units="т" Quantity="8E-5">
+            <PriceBase Value="10317,3"/>
+          </Mat>
+          <Mat Caption="Доски дубовые II сорта" Code="102-8009" Units="м3" Quantity="0,004">
+            <PriceBase Value="3255,51"/>
+          </Mat>
+          <Mat Caption="Конструктивные элементы вспомогательного назначения массой не более 50 кг с преобладанием толстолистовой стали собираемые из двух и более деталей, с отверстиями и без отверстий, соединяемые на сварке" Code="201-0774" Units="т" Quantity="8E-5">
+            <PriceBase Value="11668,14"/>
+          </Mat>
+          <Mat Caption="Сваи железобетонные" Code="403-9132" Units="м3" Quantity="1,03" Options="NotCount"/>
+        </Resources>
+        <WorksList>
+          <Work Caption="Перемещение сваебойного агрегата."/>
+          <Work Caption="Разметка свай по длине."/>
+          <Work Caption="Подача свай к месту погружения."/>
+          <Work Caption="Погружение свай."/>
+          <Work Caption="Смена наголовников и вкладышей."/>
+        </WorksList>
+      </Position>
+      <Position Caption="Сваи железобетонные С 60.30-2,3 /бетон В15 (М200), объем 0,55 м3, расход ар-ры 24,30 кг/ (серия 1.011.1-10 вып. 1)" Number="11" Code="ТССЦ-403-1095" SysID="9" Units="шт." Quantity="582" PriceLevel="2001" DBComment="Приказ Минстроя России от 13.03.15 №171/пр" PzSync="Yes" Vr2001="10008">
+        <Quantity Fx="582" Result="582"/>
+        <PriceBase PZ="854,27" MT="854,27"/>
+      </Position>
+      <Position Caption="Сваи железобетонные С 80.30-4,5,6 /бетон В20 (М250), объем 0,73 м3, расход ар-ры 40,40 кг/ (серия 1.011.1-10 вып. 1)" Number="12" Code="ТССЦ-403-1106" SysID="49" Units="шт." Quantity="106" PriceLevel="2001" DBComment="Приказ Минстроя России от 13.03.15 №171/пр" PzSync="Yes" Vr2001="10008">
+        <Quantity Fx="106" Result="106"/>
+        <PriceBase PZ="1204,58" MT="1204,58"/>
+      </Position>
+      <Position Caption="Вырубка бетона из арматурного каркаса железобетонных: свай площадью сечения до 0,1 м2" Number="13" Code="ТЕР05-01-010-01" SysID="10" Units="1 свая" Quantity="582+106" PriceLevel="2001" DBComment="Приказ Минстроя России от 13.03.15 №171/пр" PzSync="Yes" Vr2001="10008">
+        <Quantity Fx="582+106" Result="688"/>
+        <PriceBase PZ="115,02" OZ="18,76" EM="95,21" ZM="9,07" MT="1,05"/>
+        <Resources>
+          <Tzr Caption="Затраты труда рабочих" Code="1-3-9" Units="чел.час" Quantity="1,4" WorkClass="3,9">
+            <PriceBase Value="13,4"/>
+          </Tzr>
+          <Tzm Caption="Затраты труда машинистов" Code="2" Units="чел.час" Quantity="0,64"/>
+          <Mch Caption="Аппарат для газовой сварки и резки" Code="040504" Units="маш.час" Quantity="0,05">
+            <PriceBase Value="1,24"/>
+          </Mch>
+          <Mch Caption="Компрессоры передвижные с двигателем внутреннего сгорания давлением до 686 кПа (7 ат), производительность до 5 м3/мин" Code="050101" Units="маш.час" Quantity="0,64">
+            <PriceBase Value="83,35" ZM="14,17"/>
+          </Mch>
+          <Mch Caption="Молотки при работе от передвижных компрессорных станций отбойные пневматические" Code="330804" Units="маш.час" Quantity="1,28">
+            <PriceBase Value="32,66"/>
+          </Mch>
+          <Mat Caption="Кислород технический газообразный" Code="101-0324" Units="м3" Quantity="0,0396">
+            <PriceBase Value="11,89"/>
+          </Mat>
+          <Mat Caption="Ацетилен газообразный технический" Code="101-1602" Units="м3" Quantity="0,0068">
+            <PriceBase Value="85"/>
+          </Mat>
+        </Resources>
+        <WorksList>
+          <Work Caption="Разметка мест вырубки и вырубка бетона из арматурного каркаса."/>
+          <Work Caption="Перерезка и отгибание арматуры."/>
+        </WorksList>
+      </Position>
+      <Position Caption="Погрузочные работы при автомобильных перевозках: мусора строительного с погрузкой экскаваторами емкостью ковша до 0,5 м3" Number="14" Code="ТССЦпг-01-01-01-043" SysID="51" Units="1 т груза" Quantity="ОКР(Ф12; 2)" PriceLevel="2001" DBComment="Приказ Минстроя России от 13.03.15 №171/пр" PzSync="Yes" Vr2001="10591">
+        <Quantity Fx="Ф12" Precision="2" Result="61,92"/>
+        <PriceBase PZ="4,6" EM="4,6"/>
+      </Position>
+      <Position Caption="Перевозка грузов автомобилями-самосвалами грузоподъемностью 10 т, работающих вне карьера, на расстояние: до 24 км I класс груза" Identifier="Ф12" Number="15" Code="ТССЦпг-03-21-01-024" SysID="52" Units="1 т груза" Quantity="(582+106)*0,3*0,3*0,4*2,5" PriceLevel="2001" DBComment="Приказ Минстроя России от 13.03.15 №171/пр" PzSync="Yes" Vr2001="10133">
+        <Quantity Fx="(582+106)*0,3*0,3*0,4*2,5" Result="61,92"/>
+        <PriceBase PZ="20,71" EM="20,71"/>
+      </Position>
+    </Chapter>
+    <Chapter Caption="Ростверки" SysID="5">
+      <Header Caption="Рм1	Рм1.1	Рм1.2	Рм2	Рм2.1	Рм3	Рм3.1	Рм4	Рм4.1	Рм5	Рм6	Рм7	Рмл1	Рмл2"/>
+      <Position Caption="Устройство бетонной подготовки" Identifier="Ф7" Number="16" Code="ТЕР06-01-001-01" SysID="38" Units="100 м3 бетона, бутобетона и железобетона в деле" Quantity="ОКР(80,8173 / 100; 2)" PriceLevel="2001" DBComment="Приказ Минстроя России от 13.03.15 №171/пр" DBFlags="Comment TechK" PzSync="Yes" Vr2001="10011">
+        <Quantity Fx="=80,8173" KUnit="100" Precision="2" Result="0,81"/>
+        <PriceBase PZ="64980,89" OZ="1978,2" EM="4648,35" ZM="342,54" MT="58354,34"/>
+        <Resources>
+          <Tzr Caption="Затраты труда рабочих" Code="1-2-0" Units="чел.час" Quantity="180" WorkClass="2">
+            <PriceBase Value="10,99"/>
+          </Tzr>
+          <Tzm Caption="Затраты труда машинистов" Code="2" Units="чел.час" Quantity="18"/>
+          <Mch Caption="Краны башенные при работе на других видах строительства 8 т" Code="020129" Units="маш.час" Quantity="18">
+            <PriceBase Value="255,96" ZM="19,03"/>
+          </Mch>
+          <Mch Caption="Вибратор поверхностный" Code="111301" Units="маш.час" Quantity="48">
+            <PriceBase Value="0,56"/>
+          </Mch>
+          <Mch Caption="Автомобили бортовые, грузоподъемность до 5 т" Code="400001" Units="маш.час" Quantity="0,13">
+            <PriceBase Value="109,17"/>
+          </Mch>
+          <Mat Caption="Рогожа" Code="101-1668" Units="м2" Quantity="250">
+            <PriceBase Value="12"/>
+          </Mat>
+          <Mat Caption="Бетон тяжелый, крупность заполнителя 20 мм, класс В3,5 (М50)" Identifier="р1" Code="401-0061" Units="м3" Quantity="102" Attribs="Deleted">
+            <PriceBase Value="542,68"/>
+          </Mat>
+          <Mat Caption="Вода" Code="411-0001" Units="м3" Quantity="0,2">
+            <PriceBase Value="4,88"/>
+          </Mat>
+        </Resources>
+        <WorksList>
+          <Work Caption="Устройство бетонной подготовки."/>
+        </WorksList>
+      </Position>
+      <Position Caption="Бетон тяжелый, крупность заполнителя 20 мм, класс В7,5 (М100)" Number="17" Code="ТССЦ-401-0063" SysID="39" Units="м3" Quantity="ОКР(Ф7.р1; 2)" PriceLevel="2001" DBComment="Приказ Минстроя России от 13.03.15 №171/пр" PzSync="Yes" Vr2001="10011">
+        <Quantity Fx="Ф7.р1" Precision="2" Result="82,62"/>
+        <PriceBase PZ="562,22" MT="562,22"/>
+      </Position>
+      <Position Caption="Устройство ленточных фундаментов: железобетонных при ширине по верху до 1000 мм" Identifier="Ф8" Number="18" Code="ТЕР06-01-001-22" SysID="40" Units="100 м3 бетона, бутобетона и железобетона в деле" Quantity="ОКР(472,6824 / 100; 2)" PriceLevel="2001" DBComment="Приказ Минстроя России от 13.03.15 №171/пр" DBFlags="Comment TechK" PzSync="Yes" Vr2001="10011">
+        <Quantity Fx="=472,6824" KUnit="100" Precision="2" Result="4,73"/>
+        <PriceBase PZ="79747,23" OZ="5566,58" EM="8517,37" ZM="546,05" MT="65663,28"/>
+        <Resources>
+          <Tzr Caption="Затраты труда рабочих" Code="1-3-3" Units="чел.час" Quantity="446,04" WorkClass="3,3">
+            <PriceBase Value="12,48"/>
+          </Tzr>
+          <Tzm Caption="Затраты труда машинистов" Code="2" Units="чел.час" Quantity="28,77"/>
+          <Mch Caption="Краны башенные при работе на других видах строительства 8 т" Code="020129" Units="маш.час" Quantity="27,25">
+            <PriceBase Value="255,96" ZM="19,03"/>
+          </Mch>
+          <Mch Caption="Краны на автомобильном ходу при работе на других видах строительства 10 т" Code="021141" Units="маш.час" Quantity="1,25">
+            <PriceBase Value="127,47" ZM="19,03"/>
+          </Mch>
+          <Mch Caption="Автопогрузчики 5 т" Code="030101" Units="маш.час" Quantity="0,27">
+            <PriceBase Value="76,88" ZM="14,17"/>
+          </Mch>
+          <Mch Caption="Установки для сварки ручной дуговой (постоянного тока)" Code="040502" Units="маш.час" Quantity="123,76">
+            <PriceBase Value="8,97"/>
+          </Mch>
+          <Mch Caption="Вибратор глубинный" Code="111100" Units="маш.час" Quantity="21,42">
+            <PriceBase Value="2,14"/>
+          </Mch>
+          <Mch Caption="Пила цепная электрическая" Code="331532" Units="маш.час" Quantity="0,81">
+            <PriceBase Value="2,78"/>
+          </Mch>
+          <Mch Caption="Автомобили бортовые, грузоподъемность до 5 т" Code="400001" Units="маш.час" Quantity="1,87">
+            <PriceBase Value="109,17"/>
+          </Mch>
+          <Mat Caption="Проволока горячекатаная в мотках, диаметром 6,3-6,5 мм" Code="101-0797" Units="т" Quantity="0,0303">
+            <PriceBase Value="4786,18"/>
+          </Mat>
+          <Mat Caption="Электроды диаметром 4 мм Э42" Code="101-1513" Units="т" Quantity="0,13">
+            <PriceBase Value="10504,65"/>
+          </Mat>
+          <Mat Caption="Рогожа" Code="101-1668" Units="м2" Quantity="88,2">
+            <PriceBase Value="12"/>
+          </Mat>
+          <Mat Caption="Гвозди строительные" Code="101-1805" Units="т" Quantity="0,013">
+            <PriceBase Value="10317,3"/>
+          </Mat>
+          <Mat Caption="Доски обрезные хвойных пород длиной 4-6,5 м, шириной 75-150 мм, толщиной 25 мм, III сорта" Code="102-0053" Units="м3" Quantity="0,14">
+            <PriceBase Value="891,31"/>
+          </Mat>
+          <Mat Caption="Доски обрезные хвойных пород длиной 4-6,5 м, шириной 75-150 мм, толщиной 44 мм и более, III сорта" Code="102-0061" Units="м3" Quantity="0,47">
+            <PriceBase Value="1113,84"/>
+          </Mat>
+          <Mat Caption="Щиты из досок толщиной 25 мм" Code="203-0511" Units="м2" Quantity="39,2">
+            <PriceBase Value="52,36"/>
+          </Mat>
+          <Mat Caption="Арматура" Code="204-9001" Units="т" Quantity="6,6" Options="NotCount"/>
+          <Mat Caption="Бетон тяжелый, крупность заполнителя 20 мм, класс В15 (М200)" Identifier="р1" Code="401-0066" Units="м3" Quantity="101,5" Attribs="Deleted">
+            <PriceBase Value="593,48"/>
+          </Mat>
+          <Mat Caption="Известь строительная негашеная комовая, сорт I" Code="405-0253" Units="т" Quantity="0,025">
+            <PriceBase Value="788,97"/>
+          </Mat>
+          <Mat Caption="Вода" Code="411-0001" Units="м3" Quantity="0,283">
+            <PriceBase Value="4,88"/>
+          </Mat>
+        </Resources>
+        <WorksList>
+          <Work Caption="Раскрой и установка досок."/>
+          <Work Caption="Установка щитов опалубки."/>
+          <Work Caption="Крепление элементов опалубки проволокой и гвоздями строительными."/>
+          <Work Caption="Установка арматуры."/>
+          <Work Caption="Укладка бетонной смеси."/>
+        </WorksList>
+      </Position>
+      <Position Caption="Бетон тяжелый, крупность заполнителя 20 мм, класс В25 (М350)" Number="19" Code="ТССЦ-401-0069" SysID="41" Units="м3" Quantity="ОКР(Ф8.р1; 2)" PriceLevel="2001" DBComment="Приказ Минстроя России от 13.03.15 №171/пр" PzSync="Yes" Vr2001="10011">
+        <Quantity Fx="Ф8.р1" Precision="2" Result="480,1"/>
+        <PriceBase PZ="660,86" MT="660,86"/>
+      </Position>
+      <Position Caption="Горячекатаная арматурная сталь периодического профиля класса А-III, диаметром 16-18 мм" Identifier="Ф13" Number="20" Code="ТССЦ-204-0024" SysID="42" Units="т" Quantity="ОКР(472,6824 * 0,001; 2)" PriceLevel="2001" DBComment="Приказ Минстроя России от 13.03.15 №171/пр" PzSync="Yes" Vr2001="10011">
+        <Quantity Fx="472,6824" KMult="0,001" Precision="2" Result="0,47"/>
+        <PriceBase PZ="4637,69" MT="4637,69"/>
+      </Position>
+      <Position Caption="Надбавки к ценам заготовок за сборку и сварку каркасов и сеток плоских, диаметром 16-18 мм" Number="21" Code="ТССЦ-204-0039" SysID="53" Units="т" Quantity="Ф13" PriceLevel="2001" DBComment="Приказ Минстроя России от 13.03.15 №171/пр" PzSync="Yes" Vr2001="10011">
+        <Quantity Fx="Ф13" Result="0,47"/>
+        <PriceBase PZ="1743,8" MT="1743,8"/>
+      </Position>
+      <Position Caption="Горячекатаная арматурная сталь периодического профиля класса А-III, диаметром 12 мм" Identifier="Ф15" Number="22" Code="ТССЦ-204-0022" SysID="43" Units="т" Quantity="ОКР(7794,4 * 0,001; 2)" PriceLevel="2001" DBComment="Приказ Минстроя России от 13.03.15 №171/пр" PzSync="Yes" Vr2001="10011">
+        <Quantity Fx="7794,4" KMult="0,001" Precision="2" Result="7,79"/>
+        <PriceBase PZ="4874,75" MT="4874,75"/>
+      </Position>
+      <Position Caption="Надбавки к ценам заготовок за сборку и сварку каркасов и сеток плоских, диаметром 12 мм" Number="23" Code="ТССЦ-204-0037" SysID="55" Units="т" Quantity="Ф15" PriceLevel="2001" DBComment="Приказ Минстроя России от 13.03.15 №171/пр" PzSync="Yes" Vr2001="10011">
+        <Quantity Fx="Ф15" Result="7,79"/>
+        <PriceBase PZ="2069,7" MT="2069,7"/>
+      </Position>
+      <Position Caption="Горячекатаная арматурная сталь гладкая класса А-I, диаметром 8 мм" Identifier="Ф14" Number="24" Code="ТССЦ-204-0002" SysID="44" Units="т" Quantity="ОКР(9263,06 * 0,001; 2)" PriceLevel="2001" DBComment="Приказ Минстроя России от 13.03.15 №171/пр" PzSync="Yes" Vr2001="10011">
+        <Quantity Fx="9263,06" KMult="0,001" Precision="2" Result="9,26"/>
+        <PriceBase PZ="4637,69" MT="4637,69"/>
+      </Position>
+      <Position Caption="Надбавки к ценам заготовок за сборку и сварку каркасов и сеток плоских, диаметром 8 мм" Number="25" Code="ТССЦ-204-0035" SysID="54" Units="т" Quantity="Ф14" PriceLevel="2001" DBComment="Приказ Минстроя России от 13.03.15 №171/пр" PzSync="Yes" Vr2001="10011">
+        <Quantity Fx="Ф14" Result="9,26"/>
+        <PriceBase PZ="2484,5" MT="2484,5"/>
+      </Position>
+      <Position Caption="Гидроизоляция боковая обмазочная битумная в 2 слоя по выровненной поверхности бутовой кладки, кирпичу, бетону" Identifier="Ф10" Number="26" Code="ТЕР08-01-003-07" SysID="45" Units="100 м2 изолируемой поверхности" Quantity="ОКР(1355,56 / 100; 2)" PriceLevel="2001" DBComment="Приказ Минстроя России от 13.03.15 №171/пр" PzSync="Yes" Vr2001="10015">
+        <Quantity Fx="=1355,56" KUnit="100" Precision="2" Result="13,56"/>
+        <PriceBase PZ="1496,69" OZ="284,08" EM="104,01" MT="1108,6"/>
+        <Resources>
+          <Tzr Caption="Затраты труда рабочих" Code="1-3-9" Units="чел.час" Quantity="21,2" WorkClass="3,9">
+            <PriceBase Value="13,4"/>
+          </Tzr>
+          <Mch Caption="Котлы битумные передвижные 400 л" Code="121011" Units="маш.час" Quantity="1,95">
+            <PriceBase Value="42,14"/>
+          </Mch>
+          <Mch Caption="Автомобили бортовые, грузоподъемность до 5 т" Code="400001" Units="маш.час" Quantity="0,2">
+            <PriceBase Value="109,17"/>
+          </Mch>
+          <Mat Caption="Битумы нефтяные строительные марки БН-90/10" Code="101-0073" Units="т" Quantity="0,016">
+            <PriceBase Value="2159,16"/>
+          </Mat>
+          <Mat Caption="Керосин для технических целей марок КТ-1, КТ-2" Code="101-0322" Units="т" Quantity="0,024">
+            <PriceBase Value="8330,01"/>
+          </Mat>
+          <Mat Caption="Мастика битумная кровельная горячая" Identifier="р1" Code="101-0594" Units="т" Quantity="0,24" Attribs="Deleted">
+            <PriceBase Value="3641,4"/>
+          </Mat>
+          <Mat Caption="Ветошь" Code="101-1757" Units="кг" Quantity="0,1">
+            <PriceBase Value="1,95"/>
+          </Mat>
+        </Resources>
+        <WorksList>
+          <Work Caption="Огрунтовка поверхности."/>
+          <Work Caption="Нанесение слоев битумной мастики с разогреванием ее."/>
+        </WorksList>
+      </Position>
+      <Position Caption="Устройство гидроизоляции обмазочной: в один слой толщиной 2 мм" Identifier="Ф9" Number="27" Code="ТЕР11-01-004-05" SysID="46" Units="100 м2 изолируемой поверхности" Quantity="1031,52 / 100" PriceLevel="2001" DBComment="Приказ Минстроя России от 13.03.15 №171/пр" PzSync="Yes" Vr2001="10018">
+        <Quantity Fx="=1031,52" KUnit="100" Result="10,3152"/>
+        <PriceBase PZ="1498,8" OZ="415,88" EM="223,72" ZM="3,43" MT="859,2"/>
+        <Resources>
+          <Tzr Caption="Затраты труда рабочих" Code="1-4-9" Units="чел.час" Quantity="26,97" WorkClass="4,9">
+            <PriceBase Value="15,42"/>
+          </Tzr>
+          <Tzm Caption="Затраты труда машинистов" Code="2" Units="чел.час" Quantity="0,18"/>
+          <Mch Caption="Подъемники грузоподъемностью до 500 кг одномачтовые, высота подъема 45 м" Code="030954" Units="маш.час" Quantity="0,18">
+            <PriceBase Value="40,3" ZM="19,03"/>
+          </Mch>
+          <Mch Caption="Котлы битумные передвижные 400 л" Code="121011" Units="маш.час" Quantity="4,37">
+            <PriceBase Value="42,14"/>
+          </Mch>
+          <Mch Caption="Термос 100 л" Code="361101" Units="маш.час" Quantity="1,5">
+            <PriceBase Value="3,35"/>
+          </Mch>
+          <Mch Caption="Автомобили бортовые, грузоподъемность до 5 т" Code="400001" Units="маш.час" Quantity="0,25">
+            <PriceBase Value="109,17"/>
+          </Mch>
+          <Mat Caption="Асбест хризотиловый марки К-6-30" Code="101-0009" Units="т" Quantity="0,008">
+            <PriceBase Value="1246"/>
+          </Mat>
+          <Mat Caption="Битумы нефтяные строительные марки БН-90/10" Identifier="р1" Code="101-0073" Units="т" Quantity="0,157" Attribs="Deleted">
+            <PriceBase Value="2159,16"/>
+          </Mat>
+          <Mat Caption="Битумы нефтяные строительные марки БН-70/30" Identifier="р2" Code="101-0074" Units="т" Quantity="0,019" Attribs="Deleted">
+            <PriceBase Value="2137,99"/>
+          </Mat>
+          <Mat Caption="Бензин растворитель" Code="101-1745" Units="т" Quantity="0,057">
+            <PriceBase Value="6598,59"/>
+          </Mat>
+          <Mat Caption="Ветошь" Code="101-1757" Units="кг" Quantity="0,5">
+            <PriceBase Value="1,95"/>
+          </Mat>
+          <Mat Caption="Мука андезитовая кислотоупорная, марка А" Code="113-0101" Units="т" Quantity="0,125">
+            <PriceBase Value="740,2"/>
+          </Mat>
+        </Resources>
+        <WorksList>
+          <Work Caption="Подготовка основания."/>
+          <Work Caption="Огрунтовка основания."/>
+          <Work Caption="Обмазочная изоляция битумной мастикой."/>
+          <Work Caption="Приготовление грунтовки."/>
+          <Work Caption="Приготовление битумной мастики."/>
+        </WorksList>
+      </Position>
+      <Position Caption="Устройство гидроизоляции обмазочной: на каждый последующий слой толщиной 1 мм добавлять к расценке 11-01-004-05" Identifier="Ф11" Number="28" Code="ТЕР11-01-004-06" SysID="47" Units="100 м2 изолируемой поверхности" Quantity="Ф9" PriceLevel="2001" DBComment="Приказ Минстроя России от 13.03.15 №171/пр" PzSync="Yes" Vr2001="10018">
+        <Quantity Fx="Ф9" KUnit="100" Result="10,3152"/>
+        <PriceBase PZ="475,64" OZ="140,32" EM="115,29" ZM="1,9" MT="220,03"/>
+        <Resources>
+          <Tzr Caption="Затраты труда рабочих" Code="1-4-9" Units="чел.час" Quantity="9,1" WorkClass="4,9">
+            <PriceBase Value="15,42"/>
+          </Tzr>
+          <Tzm Caption="Затраты труда машинистов" Code="2" Units="чел.час" Quantity="0,1"/>
+          <Mch Caption="Подъемники грузоподъемностью до 500 кг одномачтовые, высота подъема 45 м" Code="030954" Units="маш.час" Quantity="0,1">
+            <PriceBase Value="40,3" ZM="19,03"/>
+          </Mch>
+          <Mch Caption="Котлы битумные передвижные 400 л" Code="121011" Units="маш.час" Quantity="2,19">
+            <PriceBase Value="42,14"/>
+          </Mch>
+          <Mch Caption="Термос 100 л" Code="361101" Units="маш.час" Quantity="1,1">
+            <PriceBase Value="3,35"/>
+          </Mch>
+          <Mch Caption="Автомобили бортовые, грузоподъемность до 5 т" Code="400001" Units="маш.час" Quantity="0,14">
+            <PriceBase Value="109,17"/>
+          </Mch>
+          <Mat Caption="Асбест хризотиловый марки К-6-30" Code="101-0009" Units="т" Quantity="0,004">
+            <PriceBase Value="1246"/>
+          </Mat>
+          <Mat Caption="Битумы нефтяные строительные марки БН-90/10" Identifier="р1" Code="101-0073" Units="т" Quantity="0,078" Attribs="Deleted">
+            <PriceBase Value="2159,16"/>
+          </Mat>
+          <Mat Caption="Мука андезитовая кислотоупорная, марка А" Code="113-0101" Units="т" Quantity="0,063">
+            <PriceBase Value="740,2"/>
+          </Mat>
+        </Resources>
+        <WorksList>
+          <Work Caption="Обмазочная изоляция битумной мастикой."/>
+          <Work Caption="Приготовление битумной мастики."/>
+        </WorksList>
+      </Position>
+      <Position Caption="Мастика гидроизоляционная холодная ТЕХНОНИКОЛЬ №24 (МГТН)" Number="29" Code="ТССЦ-101-4728" SysID="48" Units="кг" Quantity="ОКР(Ф10.р1+Ф9.р1+Ф9.р2+Ф11.р1; 3)" PriceLevel="2001" DBComment="Приказ Минстроя России от 13.03.15 №171/пр" PzSync="Yes" Vr2001="10018">
+        <Quantity Fx="Ф10.р1+Ф9.р1+Ф9.р2+Ф11.р1" Precision="3" Result="5,874"/>
+        <PriceBase PZ="9,56" MT="9,56"/>
+      </Position>
+    </Chapter>
+    <Chapter Caption="Новый Раздел" SysID="6">
+      <Header Caption="Силовой пол (S=2562,5 м2)"/>
+      <Position Caption="Надбавки к ценам заготовок за сборку и сварку каркасов и сеток плоских, диаметром 8 мм" Number="30" Code="ТССЦ-204-0035" SysID="56" Units="т" Quantity="0,395*68400/1000" PriceLevel="2001" DBComment="Приказ Минстроя России от 13.03.15 №171/пр" PzSync="Yes" Vr2001="10011">
+        <Quantity Fx="0,395*68400/1000" Result="27,018"/>
+        <PriceBase PZ="2484,5" MT="2484,5"/>
+      </Position>
+      <Header Caption="Стены подвала и лестничные клетки"/>
+      <Position Caption="Надбавки к ценам заготовок за сборку и сварку каркасов и сеток плоских, диаметром 5-6 мм" Number="31" Code="ТССЦ-204-0034" SysID="57" Units="т" Quantity="1,2844" PriceLevel="2001" DBComment="Приказ Минстроя России от 13.03.15 №171/пр" PzSync="Yes" Vr2001="10011">
+        <Quantity Fx="1,2844" Result="1,2844"/>
+        <PriceBase PZ="3145,5" MT="3145,5"/>
+      </Position>
+      <Position Caption="Надбавки к ценам заготовок за сборку и сварку каркасов и сеток плоских, диаметром 8 мм" Number="32" Code="ТССЦ-204-0035" SysID="58" Units="т" Quantity="0,495" PriceLevel="2001" DBComment="Приказ Минстроя России от 13.03.15 №171/пр" PzSync="Yes" Vr2001="10011">
+        <Quantity Fx="0,495" Result="0,495"/>
+        <PriceBase PZ="2484,5" MT="2484,5"/>
+      </Position>
+      <Position Caption="Надбавки к ценам заготовок за сборку и сварку каркасов и сеток плоских, диаметром 10 мм" Number="33" Code="ТССЦ-204-0036" SysID="59" Units="т" Quantity="18,1601" PriceLevel="2001" DBComment="Приказ Минстроя России от 13.03.15 №171/пр" PzSync="Yes" Vr2001="10011">
+        <Quantity Fx="18,1601" Result="18,1601"/>
+        <PriceBase PZ="2208,6" MT="2208,6"/>
+      </Position>
+      <Position Caption="Надбавки к ценам заготовок за сборку и сварку каркасов и сеток плоских, диаметром 12 мм" Number="34" Code="ТССЦ-204-0037" SysID="60" Units="т" Quantity="32,7167" PriceLevel="2001" DBComment="Приказ Минстроя России от 13.03.15 №171/пр" PzSync="Yes" Vr2001="10011">
+        <Quantity Fx="32,7167" Result="32,7167"/>
+        <PriceBase PZ="2069,7" MT="2069,7"/>
+      </Position>
+      <Position Caption="Надбавки к ценам заготовок за сборку и сварку каркасов и сеток плоских, диаметром 16-18 мм" Number="35" Code="ТССЦ-204-0039" SysID="61" Units="т" Quantity="6,7445" PriceLevel="2001" DBComment="Приказ Минстроя России от 13.03.15 №171/пр" PzSync="Yes" Vr2001="10011">
+        <Quantity Fx="6,7445" Result="6,7445"/>
+        <PriceBase PZ="1743,8" MT="1743,8"/>
+      </Position>
+    </Chapter>
+    <Chapter Caption="Колонны и перекрытия" SysID="7">
+      <Header Caption="Колонны К-1...К-25"/>
+      <Position Caption="Надбавки к ценам заготовок за сборку и сварку каркасов и сеток плоских, диаметром 8 мм" Number="36" Code="ТССЦ-204-0035" SysID="62" Units="т" Quantity="(0,63*681+0,65*1005+0,64*3873)/1000" PriceLevel="2001" DBComment="Приказ Минстроя России от 13.03.15 №171/пр" PzSync="Yes" Vr2001="10011">
+        <Quantity Fx="(0,63*681+0,65*1005+0,64*3873)/1000" Result="3,561"/>
+        <PriceBase PZ="2484,5" MT="2484,5"/>
+      </Position>
+      <Position Caption="Надбавки к ценам заготовок за сборку и сварку каркасов и сеток плоских, диаметром 20-22 мм" Number="37" Code="ТССЦ-204-0040" SysID="63" Units="т" Quantity="(1196,6+21155,6)/1000" PriceLevel="2001" DBComment="Приказ Минстроя России от 13.03.15 №171/пр" PzSync="Yes" Vr2001="10011">
+        <Quantity Fx="(1196,6+21155,6)/1000" Result="22,3522"/>
+        <PriceBase PZ="1533,9" MT="1533,9"/>
+      </Position>
+      <Position Caption="Надбавки к ценам заготовок за сборку и сварку каркасов и сеток плоских, диаметром 25-28 мм" Number="38" Code="ТССЦ-204-0041" SysID="64" Units="т" Quantity="(8623,5+6804,2)/1000" PriceLevel="2001" DBComment="Приказ Минстроя России от 13.03.15 №171/пр" PzSync="Yes" Vr2001="10011">
+        <Quantity Fx="(8623,5+6804,2)/1000" Result="15,4277"/>
+        <PriceBase PZ="1417,8" MT="1417,8"/>
+      </Position>
+      <Header Caption="Перекрытие на отм.-0,320"/>
+      <Position Caption="Надбавки к ценам заготовок за сборку и сварку каркасов и сеток плоских, диаметром 12 мм" Number="39" Code="ТССЦ-204-0037" SysID="65" Units="т" Quantity="60375*0,888/1000" PriceLevel="2001" DBComment="Приказ Минстроя России от 13.03.15 №171/пр" PzSync="Yes" Vr2001="10011">
+        <Quantity Fx="60375*0,888/1000" Result="53,613"/>
+        <PriceBase PZ="2069,7" MT="2069,7"/>
+      </Position>
+      <Position Caption="Надбавки к ценам заготовок за сборку и сварку каркасов и сеток плоских, диаметром 16-18 мм" Number="40" Code="ТССЦ-204-0039" SysID="66" Units="т" Quantity="3440*1,58/1000" PriceLevel="2001" DBComment="Приказ Минстроя России от 13.03.15 №171/пр" PzSync="Yes" Vr2001="10011">
+        <Quantity Fx="3440*1,58/1000" Result="5,4352"/>
+        <PriceBase PZ="1743,8" MT="1743,8"/>
+      </Position>
+      <Position Caption="Надбавки к ценам заготовок за сборку и сварку каркасов и сеток плоских, диаметром 20-22 мм" Number="41" Code="ТССЦ-204-0040" SysID="67" Units="т" Quantity="2855*2,47/1000" PriceLevel="2001" DBComment="Приказ Минстроя России от 13.03.15 №171/пр" PzSync="Yes" Vr2001="10011">
+        <Quantity Fx="2855*2,47/1000" Result="7,05185"/>
+        <PriceBase PZ="1533,9" MT="1533,9"/>
+      </Position>
+      <Header Caption="Перекрытие на отм.+3,600"/>
+      <Position Caption="Надбавки к ценам заготовок за сборку и сварку каркасов и сеток плоских, диаметром 12 мм" Number="42" Code="ТССЦ-204-0037" SysID="68" Units="т" Quantity="64400*0,888/1000" PriceLevel="2001" DBComment="Приказ Минстроя России от 13.03.15 №171/пр" PzSync="Yes" Vr2001="10011">
+        <Quantity Fx="64400*0,888/1000" Result="57,1872"/>
+        <PriceBase PZ="2069,7" MT="2069,7"/>
+      </Position>
+      <Position Caption="Надбавки к ценам заготовок за сборку и сварку каркасов и сеток плоских, диаметром 16-18 мм" Number="43" Code="ТССЦ-204-0039" SysID="69" Units="т" Quantity="4020*1,58/1000" PriceLevel="2001" DBComment="Приказ Минстроя России от 13.03.15 №171/пр" PzSync="Yes" Vr2001="10011">
+        <Quantity Fx="4020*1,58/1000" Result="6,3516"/>
+        <PriceBase PZ="1743,8" MT="1743,8"/>
+      </Position>
+      <Position Caption="Надбавки к ценам заготовок за сборку и сварку каркасов и сеток плоских, диаметром 20-22 мм" Number="44" Code="ТССЦ-204-0040" SysID="70" Units="т" Quantity="(4715*2,47+4930*2,98)/1000" PriceLevel="2001" DBComment="Приказ Минстроя России от 13.03.15 №171/пр" PzSync="Yes" Vr2001="10011">
+        <Quantity Fx="(4715*2,47+4930*2,98)/1000" Result="26,33745"/>
+        <PriceBase PZ="1533,9" MT="1533,9"/>
+      </Position>
+      <Position Caption="Надбавки к ценам заготовок за сборку и сварку каркасов и сеток плоских, диаметром 25-28 мм" Number="45" Code="ТССЦ-204-0041" SysID="71" Units="т" Quantity="(1210*3,85+1420*4,83)/1000" PriceLevel="2001" DBComment="Приказ Минстроя России от 13.03.15 №171/пр" PzSync="Yes" Vr2001="10011">
+        <Quantity Fx="(1210*3,85+1420*4,83)/1000" Result="11,5171"/>
+        <PriceBase PZ="1417,8" MT="1417,8"/>
+      </Position>
+      <Position Caption="Надбавки к ценам заготовок за сборку и сварку каркасов и сеток плоских, диаметром 8 мм" Number="46" Code="ТССЦ-204-0035" SysID="72" Units="т" Quantity="(0,65*850+0,73*420)/1000" PriceLevel="2001" DBComment="Приказ Минстроя России от 13.03.15 №171/пр" PzSync="Yes" Vr2001="10011">
+        <Quantity Fx="(0,65*850+0,73*420)/1000" Result="0,8591"/>
+        <PriceBase PZ="2484,5" MT="2484,5"/>
+      </Position>
+      <Position Caption="Надбавки к ценам заготовок за сборку и сварку каркасов и сеток плоских, диаметром 10 мм" Number="47" Code="ТССЦ-204-0036" SysID="73" Units="т" Quantity="(1,2*88+1,04*670+1,14*330)/1000" PriceLevel="2001" DBComment="Приказ Минстроя России от 13.03.15 №171/пр" PzSync="Yes" Vr2001="10011">
+        <Quantity Fx="(1,2*88+1,04*670+1,14*330)/1000" Result="1,1786"/>
+        <PriceBase PZ="2208,6" MT="2208,6"/>
+      </Position>
+      <Position Caption="Надбавки к ценам заготовок за сборку и сварку каркасов и сеток плоских, диаметром 12 мм" Number="48" Code="ТССЦ-204-0037" SysID="74" Units="т" Quantity="(120*0,81+1,32*22+1,5*71)/1000" PriceLevel="2001" DBComment="Приказ Минстроя России от 13.03.15 №171/пр" PzSync="Yes" Vr2001="10011">
+        <Quantity Fx="(120*0,81+1,32*22+1,5*71)/1000" Result="0,23274"/>
+        <PriceBase PZ="2069,7" MT="2069,7"/>
+      </Position>
+      <Position Caption="Надбавки к ценам заготовок за сборку и сварку каркасов и сеток плоских, диаметром 20-22 мм" Number="49" Code="ТССЦ-204-0040" SysID="75" Units="т" Quantity="(6,35*69+11,41*21+14,28*78)/1000" PriceLevel="2001" DBComment="Приказ Минстроя России от 13.03.15 №171/пр" PzSync="Yes" Vr2001="10011">
+        <Quantity Fx="(6,35*69+11,41*21+14,28*78)/1000" Result="1,7916"/>
+        <PriceBase PZ="1533,9" MT="1533,9"/>
+      </Position>
+      <Position Caption="Надбавки к ценам заготовок за сборку и сварку каркасов и сеток плоских, диаметром 25-28 мм" Number="50" Code="ТССЦ-204-0041" SysID="76" Units="т" Quantity="15,7*24/1000" PriceLevel="2001" DBComment="Приказ Минстроя России от 13.03.15 №171/пр" PzSync="Yes" Vr2001="10011">
+        <Quantity Fx="15,7*24/1000" Result="0,3768"/>
+        <PriceBase PZ="1417,8" MT="1417,8"/>
+      </Position>
+      <Header Caption="Перекрытие на отм.+7,500"/>
+      <Position Caption="Надбавки к ценам заготовок за сборку и сварку каркасов и сеток плоских, диаметром 12 мм" Number="51" Code="ТССЦ-204-0037" SysID="77" Units="т" Quantity="36500*0,888/1000" PriceLevel="2001" DBComment="Приказ Минстроя России от 13.03.15 №171/пр" PzSync="Yes" Vr2001="10011">
+        <Quantity Fx="36500*0,888/1000" Result="32,412"/>
+        <PriceBase PZ="2069,7" MT="2069,7"/>
+      </Position>
+      <Position Caption="Надбавки к ценам заготовок за сборку и сварку каркасов и сеток плоских, диаметром 16-18 мм" Number="52" Code="ТССЦ-204-0039" SysID="78" Units="т" Quantity="1780*1,58/1000" PriceLevel="2001" DBComment="Приказ Минстроя России от 13.03.15 №171/пр" PzSync="Yes" Vr2001="10011">
+        <Quantity Fx="1780*1,58/1000" Result="2,8124"/>
+        <PriceBase PZ="1743,8" MT="1743,8"/>
+      </Position>
+      <Position Caption="Надбавки к ценам заготовок за сборку и сварку каркасов и сеток плоских, диаметром 20-22 мм" Number="53" Code="ТССЦ-204-0040" SysID="79" Units="т" Quantity="(3460*2,47+3065*2,98)/1000" PriceLevel="2001" DBComment="Приказ Минстроя России от 13.03.15 №171/пр" PzSync="Yes" Vr2001="10011">
+        <Quantity Fx="(3460*2,47+3065*2,98)/1000" Result="17,6799"/>
+        <PriceBase PZ="1533,9" MT="1533,9"/>
+      </Position>
+      <Position Caption="Надбавки к ценам заготовок за сборку и сварку каркасов и сеток плоских, диаметром 25-28 мм" Number="54" Code="ТССЦ-204-0041" SysID="80" Units="т" Quantity="(910*3,85+700*4,83)/1000" PriceLevel="2001" DBComment="Приказ Минстроя России от 13.03.15 №171/пр" PzSync="Yes" Vr2001="10011">
+        <Quantity Fx="(910*3,85+700*4,83)/1000" Result="6,8845"/>
+        <PriceBase PZ="1417,8" MT="1417,8"/>
+      </Position>
+      <Position Caption="Надбавки к ценам заготовок за сборку и сварку каркасов и сеток плоских, диаметром 8 мм" Number="55" Code="ТССЦ-204-0035" SysID="81" Units="т" Quantity="(0,65*870+0,73*430)/1000" PriceLevel="2001" DBComment="Приказ Минстроя России от 13.03.15 №171/пр" PzSync="Yes" Vr2001="10011">
+        <Quantity Fx="(0,65*870+0,73*430)/1000" Result="0,8794"/>
+        <PriceBase PZ="2484,5" MT="2484,5"/>
+      </Position>
+      <Position Caption="Надбавки к ценам заготовок за сборку и сварку каркасов и сеток плоских, диаметром 10 мм" Number="56" Code="ТССЦ-204-0036" SysID="82" Units="т" Quantity="1,2*48/1000" PriceLevel="2001" DBComment="Приказ Минстроя России от 13.03.15 №171/пр" PzSync="Yes" Vr2001="10011">
+        <Quantity Fx="1,2*48/1000" Result="0,0576"/>
+        <PriceBase PZ="2208,6" MT="2208,6"/>
+      </Position>
+      <Position Caption="Надбавки к ценам заготовок за сборку и сварку каркасов и сеток плоских, диаметром 12 мм" Number="57" Code="ТССЦ-204-0037" SysID="83" Units="т" Quantity="(1,5*86+0,81*410)/1000" PriceLevel="2001" DBComment="Приказ Минстроя России от 13.03.15 №171/пр" PzSync="Yes" Vr2001="10011">
+        <Quantity Fx="(1,5*86+0,81*410)/1000" Result="0,4611"/>
+        <PriceBase PZ="2069,7" MT="2069,7"/>
+      </Position>
+      <Position Caption="Надбавки к ценам заготовок за сборку и сварку каркасов и сеток плоских, диаметром 20-22 мм" Number="58" Code="ТССЦ-204-0040" SysID="84" Units="т" Quantity="(6,35*42)/1000" PriceLevel="2001" DBComment="Приказ Минстроя России от 13.03.15 №171/пр" PzSync="Yes" Vr2001="10011">
+        <Quantity Fx="(6,35*42)/1000" Result="0,2667"/>
+        <PriceBase PZ="1533,9" MT="1533,9"/>
+      </Position>
+      <Position Caption="Надбавки к ценам заготовок за сборку и сварку каркасов и сеток плоских, диаметром 25-28 мм" Number="59" Code="ТССЦ-204-0041" SysID="85" Units="т" Quantity="(15,7*24+19,13*21+23,75*21)/1000" PriceLevel="2001" DBComment="Приказ Минстроя России от 13.03.15 №171/пр" PzSync="Yes" Vr2001="10011">
+        <Quantity Fx="(15,7*24+19,13*21+23,75*21)/1000" Result="1,27728"/>
+        <PriceBase PZ="1417,8" MT="1417,8"/>
+      </Position>
+      <Header Caption="Перекрытие на отм.+11,400"/>
+      <Position Caption="Надбавки к ценам заготовок за сборку и сварку каркасов и сеток плоских, диаметром 12 мм" Number="60" Code="ТССЦ-204-0037" SysID="86" Units="т" Quantity="47450*0,888/1000" PriceLevel="2001" DBComment="Приказ Минстроя России от 13.03.15 №171/пр" PzSync="Yes" Vr2001="10011">
+        <Quantity Fx="47450*0,888/1000" Result="42,1356"/>
+        <PriceBase PZ="2069,7" MT="2069,7"/>
+      </Position>
+      <Position Caption="Надбавки к ценам заготовок за сборку и сварку каркасов и сеток плоских, диаметром 16-18 мм" Number="61" Code="ТССЦ-204-0039" SysID="87" Units="т" Quantity="1930*1,58/1000" PriceLevel="2001" DBComment="Приказ Минстроя России от 13.03.15 №171/пр" PzSync="Yes" Vr2001="10011">
+        <Quantity Fx="1930*1,58/1000" Result="3,0494"/>
+        <PriceBase PZ="1743,8" MT="1743,8"/>
+      </Position>
+      <Position Caption="Надбавки к ценам заготовок за сборку и сварку каркасов и сеток плоских, диаметром 20-22 мм" Number="62" Code="ТССЦ-204-0040" SysID="88" Units="т" Quantity="(4425*2,47+2780*2,98)/1000" PriceLevel="2001" DBComment="Приказ Минстроя России от 13.03.15 №171/пр" PzSync="Yes" Vr2001="10011">
+        <Quantity Fx="(4425*2,47+2780*2,98)/1000" Result="19,21415"/>
+        <PriceBase PZ="1533,9" MT="1533,9"/>
+      </Position>
+      <Position Caption="Надбавки к ценам заготовок за сборку и сварку каркасов и сеток плоских, диаметром 25-28 мм" Number="63" Code="ТССЦ-204-0041" SysID="89" Units="т" Quantity="(2960*3,85+815*4,83)/1000" PriceLevel="2001" DBComment="Приказ Минстроя России от 13.03.15 №171/пр" PzSync="Yes" Vr2001="10011">
+        <Quantity Fx="(2960*3,85+815*4,83)/1000" Result="15,33245"/>
+        <PriceBase PZ="1417,8" MT="1417,8"/>
+      </Position>
+      <Position Caption="Надбавки к ценам заготовок за сборку и сварку каркасов и сеток плоских, диаметром 8 мм" Number="64" Code="ТССЦ-204-0035" SysID="90" Units="т" Quantity="(0,65*860+0,73*430)/1000" PriceLevel="2001" DBComment="Приказ Минстроя России от 13.03.15 №171/пр" PzSync="Yes" Vr2001="10011">
+        <Quantity Fx="(0,65*860+0,73*430)/1000" Result="0,8729"/>
+        <PriceBase PZ="2484,5" MT="2484,5"/>
+      </Position>
+      <Position Caption="Надбавки к ценам заготовок за сборку и сварку каркасов и сеток плоских, диаметром 10 мм" Number="65" Code="ТССЦ-204-0036" SysID="91" Units="т" Quantity="(1,2*76+1,33*189)/1000" PriceLevel="2001" DBComment="Приказ Минстроя России от 13.03.15 №171/пр" PzSync="Yes" Vr2001="10011">
+        <Quantity Fx="(1,2*76+1,33*189)/1000" Result="0,34257"/>
+        <PriceBase PZ="2208,6" MT="2208,6"/>
+      </Position>
+      <Position Caption="Надбавки к ценам заготовок за сборку и сварку каркасов и сеток плоских, диаметром 12 мм" Number="66" Code="ТССЦ-204-0037" SysID="92" Units="т" Quantity="(1,32*44+1,5*86+0,81*500)/1000" PriceLevel="2001" DBComment="Приказ Минстроя России от 13.03.15 №171/пр" PzSync="Yes" Vr2001="10011">
+        <Quantity Fx="(1,32*44+1,5*86+0,81*500)/1000" Result="0,59208"/>
+        <PriceBase PZ="2069,7" MT="2069,7"/>
+      </Position>
+      <Position Caption="Надбавки к ценам заготовок за сборку и сварку каркасов и сеток плоских, диаметром 20-22 мм" Number="67" Code="ТССЦ-204-0040" SysID="93" Units="т" Quantity="(6,35*42+5,36*18)/1000" PriceLevel="2001" DBComment="Приказ Минстроя России от 13.03.15 №171/пр" PzSync="Yes" Vr2001="10011">
+        <Quantity Fx="(6,35*42+5,36*18)/1000" Result="0,36318"/>
+        <PriceBase PZ="1533,9" MT="1533,9"/>
+      </Position>
+      <Position Caption="Надбавки к ценам заготовок за сборку и сварку каркасов и сеток плоских, диаметром 25-28 мм" Number="68" Code="ТССЦ-204-0041" SysID="94" Units="т" Quantity="(15,7*24+19,13*21+23,75*21+13,32*39)/1000" PriceLevel="2001" DBComment="Приказ Минстроя России от 13.03.15 №171/пр" PzSync="Yes" Vr2001="10011">
+        <Quantity Fx="(15,7*24+19,13*21+23,75*21+13,32*39)/1000" Result="1,79676"/>
+        <PriceBase PZ="1417,8" MT="1417,8"/>
+      </Position>
+      <Header Caption="Перекрытие на отм.+15,300"/>
+      <Position Caption="Надбавки к ценам заготовок за сборку и сварку каркасов и сеток плоских, диаметром 12 мм" Number="69" Code="ТССЦ-204-0037" SysID="95" Units="т" Quantity="34400*0,888/1000" PriceLevel="2001" DBComment="Приказ Минстроя России от 13.03.15 №171/пр" PzSync="Yes" Vr2001="10011">
+        <Quantity Fx="34400*0,888/1000" Result="30,5472"/>
+        <PriceBase PZ="2069,7" MT="2069,7"/>
+      </Position>
+      <Position Caption="Надбавки к ценам заготовок за сборку и сварку каркасов и сеток плоских, диаметром 16-18 мм" Number="70" Code="ТССЦ-204-0039" SysID="96" Units="т" Quantity="2690*1,58/1000" PriceLevel="2001" DBComment="Приказ Минстроя России от 13.03.15 №171/пр" PzSync="Yes" Vr2001="10011">
+        <Quantity Fx="2690*1,58/1000" Result="4,2502"/>
+        <PriceBase PZ="1743,8" MT="1743,8"/>
+      </Position>
+      <Position Caption="Надбавки к ценам заготовок за сборку и сварку каркасов и сеток плоских, диаметром 20-22 мм" Number="71" Code="ТССЦ-204-0040" SysID="97" Units="т" Quantity="(2160*2,47+450*2,98)/1000" PriceLevel="2001" DBComment="Приказ Минстроя России от 13.03.15 №171/пр" PzSync="Yes" Vr2001="10011">
+        <Quantity Fx="(2160*2,47+450*2,98)/1000" Result="6,6762"/>
+        <PriceBase PZ="1533,9" MT="1533,9"/>
+      </Position>
+      <Position Caption="Надбавки к ценам заготовок за сборку и сварку каркасов и сеток плоских, диаметром 25-28 мм" Number="72" Code="ТССЦ-204-0041" SysID="98" Units="т" Quantity="(180*3,85)/1000" PriceLevel="2001" DBComment="Приказ Минстроя России от 13.03.15 №171/пр" PzSync="Yes" Vr2001="10011">
+        <Quantity Fx="(180*3,85)/1000" Result="0,693"/>
+        <PriceBase PZ="1417,8" MT="1417,8"/>
+      </Position>
+      <Position Caption="Надбавки к ценам заготовок за сборку и сварку каркасов и сеток плоских, диаметром 12 мм" Number="73" Code="ТССЦ-204-0037" SysID="99" Units="т" Quantity="(1,32*200+0,81*870)/1000" PriceLevel="2001" DBComment="Приказ Минстроя России от 13.03.15 №171/пр" PzSync="Yes" Vr2001="10011">
+        <Quantity Fx="(1,32*200+0,81*870)/1000" Result="0,9687"/>
+        <PriceBase PZ="2069,7" MT="2069,7"/>
+      </Position>
+    </Chapter>
+    <Chapter Caption="Монолитный пояс покрытия венткамеры" SysID="8">
+      <Position Caption="Надбавки к ценам заготовок за сборку и сварку каркасов и сеток плоских, диаметром 5-6 мм" Number="74" Code="ТССЦ-204-0034" SysID="100" Units="т" Quantity="34,2/1000" PriceLevel="2001" DBComment="Приказ Минстроя России от 13.03.15 №171/пр" PzSync="Yes" Vr2001="10011">
+        <Quantity Fx="34,2/1000" Result="0,0342"/>
+        <PriceBase PZ="3145,5" MT="3145,5"/>
+      </Position>
+      <Position Caption="Надбавки к ценам заготовок за сборку и сварку каркасов и сеток плоских, диаметром 10 мм" Number="75" Code="ТССЦ-204-0036" SysID="101" Units="т" Quantity="135,7/1000" PriceLevel="2001" DBComment="Приказ Минстроя России от 13.03.15 №171/пр" PzSync="Yes" Vr2001="10011">
+        <Quantity Fx="135,7/1000" Result="0,1357"/>
+        <PriceBase PZ="2208,6" MT="2208,6"/>
+      </Position>
+    </Chapter>
+    <Chapter Caption="Подвал" SysID="3">
+      <Position Caption="Гидроизоляция боковая обмазочная битумная в 2 слоя по выровненной поверхности бутовой кладки, кирпичу, бетону" Identifier="Ф1" Number="76" Code="ТЕР08-01-003-07" SysID="1" Units="100 м2 изолируемой поверхности" Quantity="ОКР(1060 / 100; 2)" PriceLevel="2001" DBComment="Приказ Минстроя России от 13.03.15 №171/пр" PzSync="Yes" Vr2001="10015">
+        <Quantity Fx="=1060" KUnit="100" Precision="2" Result="10,6"/>
+        <PriceBase PZ="1496,69" OZ="284,08" EM="104,01" MT="1108,6"/>
+        <Resources>
+          <Tzr Caption="Затраты труда рабочих" Code="1-3-9" Units="чел.час" Quantity="21,2" WorkClass="3,9">
+            <PriceBase Value="13,4"/>
+          </Tzr>
+          <Mch Caption="Котлы битумные передвижные 400 л" Code="121011" Units="маш.час" Quantity="1,95">
+            <PriceBase Value="42,14"/>
+          </Mch>
+          <Mch Caption="Автомобили бортовые, грузоподъемность до 5 т" Code="400001" Units="маш.час" Quantity="0,2">
+            <PriceBase Value="109,17"/>
+          </Mch>
+          <Mat Caption="Битумы нефтяные строительные марки БН-90/10" Code="101-0073" Units="т" Quantity="0,016">
+            <PriceBase Value="2159,16"/>
+          </Mat>
+          <Mat Caption="Керосин для технических целей марок КТ-1, КТ-2" Code="101-0322" Units="т" Quantity="0,024">
+            <PriceBase Value="8330,01"/>
+          </Mat>
+          <Mat Caption="Мастика битумная кровельная горячая" Identifier="р1" Code="101-0594" Units="т" Quantity="0,24" Attribs="Deleted">
+            <PriceBase Value="3641,4"/>
+          </Mat>
+          <Mat Caption="Ветошь" Code="101-1757" Units="кг" Quantity="0,1">
+            <PriceBase Value="1,95"/>
+          </Mat>
+        </Resources>
+        <WorksList>
+          <Work Caption="Огрунтовка поверхности."/>
+          <Work Caption="Нанесение слоев битумной мастики с разогреванием ее."/>
+        </WorksList>
+      </Position>
+      <Position Caption="Мастика гидроизоляционная холодная ТЕХНОНИКОЛЬ №24 (МГТН)" Number="77" Code="ТССЦ-101-4728" SysID="22" Units="кг" Quantity="Ф1.р1*1000" PriceLevel="2001" DBComment="Приказ Минстроя России от 13.03.15 №171/пр" PzSync="Yes" Vr2001="10015">
+        <Quantity Fx="Ф1.р1*1000" Result="2544"/>
+        <PriceBase PZ="9,56" MT="9,56"/>
+      </Position>
+      <Position Caption="Изоляция изделиями из пенопласта насухо холодных поверхностей покрытий и перекрытий" Identifier="Ф35" Number="78" Code="ТЕР26-01-041-05" SysID="3" Units="1 м3 изоляции" Quantity="42+26,3" PriceLevel="2001" DBComment="Приказ Минстроя России от 13.03.15 №171/пр" DBFlags="Comment TechK" PzSync="Yes" Vr2001="10030">
+        <Quantity Fx="42+26,3" Result="68,3"/>
+        <PriceBase PZ="1325,76" OZ="125,48" EM="37,09" MT="1163,19"/>
+        <Resources>
+          <Tzr Caption="Затраты труда рабочих" Code="1-3-8" Units="чел.час" Quantity="9,47" WorkClass="3,8">
+            <PriceBase Value="13,25"/>
+          </Tzr>
+          <Mch Caption="Лебедки электрические тяговым усилием 19,62 кН (2 т)" Code="030403" Units="маш.час" Quantity="0,45">
+            <PriceBase Value="7,21"/>
+          </Mch>
+          <Mch Caption="Автомобили бортовые, грузоподъемность до 5 т" Code="400001" Units="маш.час" Quantity="0,31">
+            <PriceBase Value="109,17"/>
+          </Mch>
+          <Mat Caption="Плиты из пенопласта полистирольного ПСБС-40" Identifier="р1" Code="104-0103" Units="м3" Quantity="1,02" Attribs="Deleted">
+            <PriceBase Value="1140,38"/>
+          </Mat>
+        </Resources>
+        <WorksList>
+          <Work Caption="Подготовка изолируемой поверхности."/>
+          <Work Caption="Распиловка плит."/>
+          <Work Caption="Укладка теплоизоляционных материалов с подгонкой и креплением."/>
+        </WorksList>
+      </Position>
+      <Position Caption="Пенополистирол экструдированный ТЕХНОНИКОЛЬ XPS CARBON 35-300" Number="79" Code="ТССЦ-104-1224" SysID="23" Units="м3" Quantity="Ф35.р1" PriceLevel="2001" DBComment="Приказ Минстроя России от 13.03.15 №171/пр" PzSync="Yes" Vr2001="10030">
+        <Quantity Fx="Ф35.р1" Result="69,666"/>
+        <PriceBase PZ="1656,41" MT="1656,41"/>
+      </Position>
+    </Chapter>
+  </Chapters>
+  <AddZatrats>
+    <AddZatrGlava Glava="8">
+      <AddZatr Caption="Временные здания и сооружения, школы, детские сады, ясли, магазины, административные здания, кинотеатры, театры, картинные галереи и другие здания гражданского строительства -" Value="1,8" Options="Percent InSmr"/>
+    </AddZatrGlava>
+    <AddZatrGlava Glava="9">
+      <AddZatr Caption="Производство работ в зимнее время, здания общественного назначения (школы, учебные заведения, детские сады и ясли, больницы, санатории, дома отдыха и др.) и объекты коммунального хозяйства - 2,2%*1,1=" Value="2,42" Options="Percent InSmr"/>
+    </AddZatrGlava>
+    <AddZatrGlava Glava="10"/>
+    <AddZatrGlava Glava="11"/>
+    <AddZatrGlava Glava="12"/>
+    <AddZatrGlava Glava="13">
+      <AddZatr Caption="Непредвиденные затраты для объектов социальной сферы -" Value="2" Options="Percent"/>
+    </AddZatrGlava>
+    <AddZatrGlava Glava="14"/>
+    <AddZatrGlava Glava="15">
+      <AddZatr Caption="НДС" Value="20" Options="Percent" Level="1"/>
+    </AddZatrGlava>
+  </AddZatrats>
+  <OsInfo OSChapter="1" LinkType="LB">
+    <CCChapter Cons="2" Rec="2" Road="2"/>
+  </OsInfo>
+  <GsDocSignatures>
+    <Item Caption="Основание" ID="100" Value="К683/19-П-КР1"/>
+    <Item Caption="Дата составления сметы" ID="102" Value="01.01.2000"/>
+    <Item Caption="Составил" ID="300" Value="В.И. Пан"/>
+  </GsDocSignatures>
+</Document>

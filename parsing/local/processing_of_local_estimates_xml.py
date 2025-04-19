@@ -1,6 +1,6 @@
 import xml.etree.ElementTree as ET
 import psycopg2
-from typing import Dict, List
+from typing import Dict
 from psycopg2 import sql
 import re
 
@@ -365,20 +365,5 @@ if __name__ == "__main__":
 
     if len(sys.argv) > 1:
         xml_file_path = sys.argv[1]
-        try:
-            # Пример параметров подключения к БД
-            db_params = {
-                'dbname': 'your_db',
-                'user': 'your_user',
-                'password': 'your_password',
-                'host': 'localhost'
-            }
-            estimate_id = 1  # ID сметы в БД
-
-            sections = parse_xml_estimate(xml_file_path, db_params, estimate_id)
-            print_estimate_structure(sections)
-            run_tests(sections)
-        except Exception as e:
-            print(f"Ошибка: {e}")
     else:
         print("Пожалуйста, укажите путь к XML файлу сметы")

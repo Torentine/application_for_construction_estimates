@@ -6,9 +6,11 @@ from config import DB_CONFIG
 from models.widgets import DragDropWidget
 from models.processor import SmetaProcessor
 from tkinterdnd2 import TkinterDnD
-from reports.sorting_1 import generate_report as generate_all_entries_report
-from reports.sorting_2 import generate_report as generate_estimates_report
-from reports.sorting_3 import generate_report as generate_cost_report
+
+# отчеты
+from reports.sorting_1_by_the_number_of_occurrences import generate_report as generate_all_entries_report
+from reports.sorting_2_by_the_number_of_estimates import generate_report as generate_estimates_report
+from reports.sorting_3_by_unit_cost import generate_report as generate_cost_report
 from reports.ar_kr_procent import generate_report as generate_ar_kr_report
 
 class SmetaApp(TkinterDnD.Tk):
@@ -58,6 +60,50 @@ class SmetaApp(TkinterDnD.Tk):
         self.object_name_entry = ttk.Entry(self.object_name_frame)
         self.object_name_entry.pack(side=tk.LEFT, expand=True, fill=tk.X, padx=5)
 
+        # Функция для вставки из буфера обмена
+        def handle_paste(event=None):
+            try:
+                # Получаем текст из буфера обмена
+                clipboard_text = self.clipboard_get()
+                if not clipboard_text:
+                    return
+
+                # Удаляем выделенный текст (если есть)
+                try:
+                    self.object_name_entry.delete(tk.SEL_FIRST, tk.SEL_LAST)
+                except tk.TclError:
+                    pass
+
+                # Вставляем текст на место курсора
+                self.object_name_entry.insert(tk.INSERT, clipboard_text)
+
+            except tk.TclError as e:
+                print(f"Ошибка вставки: {e}")
+
+            return 'break'  # Блокируем стандартное поведение
+
+        # Привязываем горячие клавиши
+        self.object_name_entry.bind('<Control-v>', handle_paste)
+        self.object_name_entry.bind('<Command-v>', handle_paste)  # Для Mac
+        self.object_name_entry.bind('<<Paste>>', handle_paste)
+
+        # Создаем контекстное меню
+        context_menu = tk.Menu(self.object_name_entry, tearoff=0)
+        context_menu.add_command(label="Вставить", command=handle_paste)
+        context_menu.add_separator()
+        context_menu.add_command(label="Вырезать", command=lambda: self.object_name_entry.event_generate("<<Cut>>"))
+        context_menu.add_command(label="Копировать", command=lambda: self.object_name_entry.event_generate("<<Copy>>"))
+
+        # Показываем контекстное меню по правой кнопке мыши
+        def show_context_menu(event):
+            try:
+                context_menu.tk_popup(event.x_root, event.y_root)
+            finally:
+                context_menu.grab_release()
+
+        self.object_name_entry.bind("<Button-3>", show_context_menu)
+
+        # Кнопка добавления объекта
         self.set_object_btn = ttk.Button(
             self.object_name_frame,
             text="Добавить объект",
@@ -65,7 +111,7 @@ class SmetaApp(TkinterDnD.Tk):
         )
         self.set_object_btn.pack(side=tk.LEFT, padx=5)
 
-        # Виджет для перетаскивания файлов (важная часть!)
+        # Виджет для перетаскивания файлов
         self.object_drop_frame = ttk.Frame(self.object_tab)
         self.object_drop_frame.pack(fill=tk.BOTH, expand=True, padx=20, pady=10)
 
@@ -106,19 +152,21 @@ class SmetaApp(TkinterDnD.Tk):
         button_frame = ttk.Frame(self.local_tab)
         button_frame.pack(fill=tk.X, padx=20, pady=5)
 
-        # Кнопка обработки
+        # Кнопка обработки (изначально неактивна)
         self.process_local_btn = ttk.Button(
             button_frame,
             text="Обработать выбранную смету",
-            command=self.process_local_smeta
+            command=self.process_local_smeta,
+            state=tk.DISABLED
         )
         self.process_local_btn.pack(side=tk.LEFT, padx=5)
 
-        # Кнопка удаления
+        # Кнопка удаления (изначально неактивна)
         self.delete_local_btn = ttk.Button(
             button_frame,
             text="Удалить выбранную смету",
-            command=self.delete_selected_estimate
+            command=self.delete_selected_estimate,
+            state=tk.DISABLED
         )
         self.delete_local_btn.pack(side=tk.LEFT, padx=5)
 
@@ -356,7 +404,7 @@ class SmetaApp(TkinterDnD.Tk):
             return
 
         try:
-            self.log_message(self.local_log, f"Обработка файла: {file_path}")
+            self.log_message(self.local_log, f"Обработка файла: {os.path.basename(file_path)}")
             with self.processor as p:
                 success, total_cost = p.process_xml_estimate(file_path, self.current_estimate_id)
 
@@ -367,6 +415,10 @@ class SmetaApp(TkinterDnD.Tk):
                 with self.processor as p:
                     p.update_estimate_price(self.current_estimate_id, total_cost)
                 self.update_local_estimates_list()
+                self.local_drop.reset_widget()  # Сбрасываем виджет после успешной обработки
+                # Деактивируем кнопки после обработки
+                self.process_local_btn.config(state=tk.DISABLED)
+                self.delete_local_btn.config(state=tk.DISABLED)
             else:
                 self.log_message(self.local_log, "Ошибка обработки локальной сметы")
 
@@ -382,12 +434,20 @@ class SmetaApp(TkinterDnD.Tk):
 
             if not estimates:
                 self.local_listbox.insert(tk.END, "Нет необработанных локальных смет")
+                # Деактивируем кнопки, если нет смет
+                self.process_local_btn.config(state=tk.DISABLED)
+                self.delete_local_btn.config(state=tk.DISABLED)
                 return
 
             for idx, (id, name, obj_estimate_name, obj_name, _) in enumerate(estimates, 1):
                 self.local_listbox.insert(tk.END, f"{idx}. {name} (Объект: {obj_name}, Смета: {obj_estimate_name})")
 
             self.local_listbox.bind("<<ListboxSelect>>", self.on_estimate_select)
+            # Сбрасываем выбор и деактивируем кнопки при обновлении списка
+            self.local_listbox.selection_clear(0, tk.END)
+            self.process_local_btn.config(state=tk.DISABLED)
+            self.delete_local_btn.config(state=tk.DISABLED)
+            self.current_estimate_id = None
         except Exception as e:
             messagebox.showerror("Ошибка", f"Не удалось загрузить список смет: {str(e)}")
 
@@ -401,8 +461,15 @@ class SmetaApp(TkinterDnD.Tk):
                 if estimates and index < len(estimates):
                     self.current_estimate_id = estimates[index][0]
                     self.log_message(self.local_log, f"Выбрана смета ID: {self.current_estimate_id}")
+                    # Активируем кнопки при выборе сметы
+                    self.process_local_btn.config(state=tk.NORMAL)
+                    self.delete_local_btn.config(state=tk.NORMAL)
             except Exception as e:
                 messagebox.showerror("Ошибка", f"Не удалось выбрать смету: {str(e)}")
+        else:
+            # Деактивируем кнопки, если выбор сброшен
+            self.process_local_btn.config(state=tk.DISABLED)
+            self.delete_local_btn.config(state=tk.DISABLED)
 
     def update_object_list(self):
         """Обновление списка объектов с нумерацией"""
