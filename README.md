@@ -36,7 +36,7 @@
 
 | Анализ | Управление |
 |--------|-------------|
-| ![Анализ](img/analyst.png) | ![Управление](img/management.png) |
+| ![Управление](img/management.png) | ![Анализ](img/analyst.png) |
 
 
 ---
