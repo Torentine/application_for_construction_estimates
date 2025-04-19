@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="img/logo.png" alt="Логотип приложения" width="200"/>
+  <img src="img/logo.ico" alt="Логотип приложения" width="200"/>
 </p>
 
 # Приложение для анализа строительных смет
